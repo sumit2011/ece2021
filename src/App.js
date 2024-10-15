@@ -1,25 +1,37 @@
-import logo from './logo.svg';
 import './App.css';
+import NavBar from './Components/Navbar';
+
+import Dashboard from './Pages/Dashboard';
+import { useState } from 'react';
+import Card from "./Components/Card"
+import MainCard from "./Components/MainCard";
+import ConfessionCard from './Components/ConfessionCard';
+import Main from './Pages/Main';
 
 function App() {
+
+  const [menuOpen , setMenuOpen] = useState(false);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <div className='contain-paint h-full w-full absolute'>
+            <div className="absolute inset-0 bg-gradient-to-br from-gray-900 via-gray-800 to-gray-700 z-0" />
+            {/* Depth elements */}
+            <div className="absolute top-20 -left-20 w-64 h-64 bg-neon-green opacity-10 rounded-full filter blur-3xl" />
+            <div className="absolute bottom-20 -right-20 w-80 h-80 bg-neon-green opacity-10 rounded-full filter blur-3xl" />
+        </div>
+        {/* <NavBar 
+          menuOpen={menuOpen}
+          setMenuOpen= {setMenuOpen}
+          setDarkMode = {setDarkMode}
+          darkMode = {darkMode}
+        /> */}
+        <Dashboard />
+        <Main />
+        <ConfessionCard />
+    </>
   );
 }
 
 export default App;
+
