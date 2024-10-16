@@ -19,9 +19,9 @@ const ConfessionPage = () => {
 
   return (
     <div style={{color: "white" , marginTop: "150px"} }>
-      <h1>Confession Page</h1>
+      <h1 style={{textAlign:"center"}}>Confession Page</h1>
       <Alert>
-        this is coming soon
+        <h2>Coming Soon....</h2>
       </Alert>
         {Confessions.map((item)=>(
           <ConfessionCard  

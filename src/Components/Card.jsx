@@ -1,11 +1,10 @@
 import React from 'react'
 import styled from 'styled-components'
 import InstagramIcon from '@mui/icons-material/Instagram';
-import WhatsAppIcon from '@mui/icons-material/WhatsApp';
+import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import FacebookIcon from '@mui/icons-material/Facebook';
 import XIcon from '@mui/icons-material/X';
-import GitHubIcon from '@mui/icons-material/GitHub';
-
+import LaunchIcon from '@mui/icons-material/Launch';
 
 
 const CardContainer = styled.div`
@@ -80,10 +79,6 @@ const Card = (props) => {
               <Icon href={props.instagram} >
                 <InstagramIcon style={{height: "40px" , width: "40px"}} />
               </Icon>
-
-              <Icon href={props.whatsapp}>
-                <WhatsAppIcon style={{height: "40px" , width: "40px"}}/>
-              </Icon>
               
               <Icon href={props.facebook}>
                 <FacebookIcon style={{height: "40px" , width: "40px"}}/>
@@ -93,8 +88,12 @@ const Card = (props) => {
                 <XIcon style={{height: "40px" , width: "40px"}}/>
               </Icon>
                 
-              <Icon href={props.github} >
-                <GitHubIcon style={{height: "40px" , width: "40px"}}/>
+              <Icon href={props.linkedin}>
+                <LinkedInIcon style={{height: "40px" , width: "40px"}}/>
+              </Icon>
+
+              <Icon href={props.link} >
+                <LaunchIcon style={{height: "40px" , width: "40px"}}/>
               </Icon>
                 
                 

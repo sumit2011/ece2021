@@ -32,6 +32,8 @@ const LogoText = styled.span`
   font-weight: bold;
   color: #FFD700; /* Yellow */
   margin-left: 10px;
+  user-select: none;
+
 `;
 
 const SubLogoText = styled.span`

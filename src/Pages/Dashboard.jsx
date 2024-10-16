@@ -63,9 +63,12 @@ const Footer = styled.div`
 `;
 
 const Title = styled.div`
+display: flex;
   color: white;
   flex-basis: 100%; 
   text-align: center;
+  justify-content: center;
+  align-items: center;
   // cursor: not-allowed;
    user-select: none;
 `;
@@ -80,6 +83,26 @@ const Hr = styled.div`
   border: 2px solid rgba(0, 255, 0, 0.5);
   box-shadow: 0 0 15px rgba(0, 255, 0, 0.3);
   border: none;
+
+`;
+
+const Heart = styled.div`
+/* pulsating heart */
+
+animation: pulse 1s ease infinite;
+width: 40px;
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.3);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
 
 `;
 
@@ -108,13 +131,13 @@ const Dashboard = () => {
       <Hr />
       <Footer>
         <Title>
-          <h3>Designed with ❤️ by</h3> 
+          <span><h2>Designed with</h2></span>
+          <Heart>❤️</Heart>
+          <span><h2>by</h2></span>
         </Title>
-        <br/>
+        <br />
         <CircularCard {...sumit} />
-        <Title>
-          <h3>sumit...</h3> 
-        </Title>
+
       </Footer>
 
 
