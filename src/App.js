@@ -29,7 +29,7 @@ function App() {
         <Dashboard />
         <Main />
         <ConfessionPage />
-        <ConfessionCard />
+        {/* <ConfessionCard /> */}
         
     </Container>
   );

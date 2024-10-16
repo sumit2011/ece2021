@@ -117,15 +117,15 @@ const Navbar = () => {
 
     <SidebarContainer show={showMenu} >
       <SidebarDiv >
-        Gallery
+        Gallery 📷
       </SidebarDiv>
 
       <SidebarDiv >
-        Help
+        Help ❤️
       </SidebarDiv>
 
       <SidebarDiv >
-        Confession
+        Confession  🫣
       </SidebarDiv>
 
       <SidebarDiv >
