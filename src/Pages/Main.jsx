@@ -19,6 +19,8 @@ const Card = styled.div`
 `;
 
 const Main = () => {
+
+
   return (
     <MainContainer>
       <h1 style={{color:"white"}}>All Members Of the Community</h1>

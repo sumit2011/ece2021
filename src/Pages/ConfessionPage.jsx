@@ -16,6 +16,7 @@ const Alert = styled.div`
 `;
 
 const ConfessionPage = () => {
+
   return (
     <div style={{color: "white" , marginTop: "150px"} }>
       <h1>Confession Page</h1>

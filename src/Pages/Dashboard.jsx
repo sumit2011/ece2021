@@ -21,6 +21,8 @@ const Header = styled.div`
   // font-size : 20px;
   align-items: center;
   text-align: center;
+  user-select: none;
+
 `;
 
 const DashboardMain = styled.div`
@@ -64,7 +66,8 @@ const Title = styled.div`
   color: white;
   flex-basis: 100%; 
   text-align: center;
-  
+  // cursor: not-allowed;
+   user-select: none;
 `;
 
 
@@ -81,6 +84,8 @@ const Hr = styled.div`
 `;
 
 const Dashboard = () => {
+
+
 
   const sumit = Datas[0];
 
