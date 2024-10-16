@@ -11,6 +11,7 @@ const MainContainer = styled.div`
   margin: 20px auto;
 
   justify-content: center;
+  margin-top: 100px;
 `;
 
 const Card = styled.div`
@@ -20,6 +21,7 @@ const Card = styled.div`
 const Main = () => {
   return (
     <MainContainer>
+      <h1 style={{color:"white"}}>All Members Of the Community</h1>
       {Datas.map ((Data) => (
         <Card >
             <MainCard {...Data}/>

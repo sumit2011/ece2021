@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import styled from 'styled-components';
 import {Menu } from "@mui/icons-material"; 
+import {Link} from "react-router-dom";
 
 const NavbarContainer = styled.nav`
   position: fixed;
@@ -97,6 +98,8 @@ const Navbar = () => {
     setShowMenu(!showMenu);
   }
 
+  
+
 
   return (
     <div>
@@ -116,25 +119,23 @@ const Navbar = () => {
     </NavbarContainer>
 
     <SidebarContainer show={showMenu} >
-      <SidebarDiv >
-        Gallery 📷
-      </SidebarDiv>
+      
+    <Link to="/" style={{ textDecoration: "none", color: "white", width: "100%" }}>
+        <SidebarDiv>Gallery 📷</SidebarDiv>
+    </Link>
 
-      <SidebarDiv >
-        Help ❤️
-      </SidebarDiv>
+    <Link to="/confessionpage" style={{ textDecoration: "none", color: "white", width: "100%" }}>
+        <SidebarDiv>Confession  🫣</SidebarDiv>
+    </Link>
 
-      <SidebarDiv >
-        Confession  🫣
-      </SidebarDiv>
+        
+    <Link to="/main" style={{ textDecoration: "none", color: "white", width: "100%" }}>
+        <SidebarDiv>All Students</SidebarDiv>
+    </Link>
 
-      <SidebarDiv >
-        All Students
-      </SidebarDiv>
-
-
-
-     
+    <Link to="/main" style={{ textDecoration: "none", color: "white", width: "100%" }}>
+        <SidebarDiv>Help ❤️</SidebarDiv>
+    </Link>
 
     </SidebarContainer>
 
