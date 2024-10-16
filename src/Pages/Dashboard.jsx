@@ -29,7 +29,7 @@ const DashboardMain = styled.div`
   justify-content: center; 
   margin-top: 50px;
   gap: 4px;
-  // background-color: ${({theme}) => theme.bg};
+  // background-color: ${({ theme }) => theme.bg};
 
 `;
 
@@ -53,24 +53,66 @@ const Button = styled.div`
   cursor: pointer;
 `;
 
+const Footer = styled.div`
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 100px;
+  justify-content: center;
+`;
+
+const Title = styled.div`
+  color: white;
+  flex-basis: 100%; 
+  text-align: center;
+  
+`;
+
+
+
+const Hr = styled.div`
+  margin-top: 100px;
+  background: linear-gradient(to right, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.8));
+  padding: 10px 20px;
+  border-radius: 50px;
+  border: 2px solid rgba(0, 255, 0, 0.5);
+  box-shadow: 0 0 15px rgba(0, 255, 0, 0.3);
+  border: none;
+
+`;
+
 const Dashboard = () => {
+
+  const sumit = Datas[0];
+
   return (
     <DashboardContainer >
       <Header>
-      <h1 style={{color:"white"}}>Join the Ultimate <br/><span style={{color:"#00ff00"}}>ECE 2021 Community...</span></h1> 
+        <h1 style={{ color: "white" }}>Join the Ultimate <br /><span style={{ color: "#00ff00" }}>ECE 2021 Community...</span></h1>
       </Header>
       <Button>
         Add Yours
       </Button>
-    <DashboardMain>
-      {Datas.map((data) => (
-        <CardMain > 
-          <CircularCard {...data} />
-        </CardMain>
-      ))}
-    </DashboardMain>
+      <DashboardMain>
+        {Datas.map((data) => (
+          <CardMain >
+            <CircularCard {...data} />
+          </CardMain>
+        ))}
+      </DashboardMain>
 
-    
+      <Hr />
+      <Footer>
+        <Title>
+          <h3>Designed with ❤️ by</h3> 
+        </Title>
+        <br/>
+        <CircularCard {...sumit} />
+        <Title>
+          <h3>sumit...</h3> 
+        </Title>
+      </Footer>
+
+
 
     </DashboardContainer>
   );
