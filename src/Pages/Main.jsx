@@ -7,7 +7,9 @@ const MainContainer = styled.div`
   margin: 10px;
   display: flex;
   flex-wrap: wrap;
-  // width: 80%;
+  width: 80%;
+  margin: 20px auto;
+
   justify-content: center;
 `;
 

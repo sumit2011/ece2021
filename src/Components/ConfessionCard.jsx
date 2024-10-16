@@ -10,8 +10,10 @@ const CardContainer = styled.div`
   max-width: 400px;
   font-family: 'Arial', sans-serif;
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
-  margin: 20px auto;
+  margin: 20px;
   border: 2px solid rgba(0, 255, 0, 0.5);
+  box-shadow: 0 0 15px rgba(0, 255, 0, 0.3);
+
 `;
 
 const TitleSection = styled.div`
@@ -29,6 +31,11 @@ const Icon = styled.div`
 const Title = styled.h2`
   font-size: 24px;
   color: #00ff00;
+  margin: 0;
+`;
+
+const Date = styled.div`
+  font-size: 12px;
 `;
 
 const Description = styled.p`
@@ -38,15 +45,19 @@ const Description = styled.p`
 `;
 
 
-const ConfessionCard = () => {
+const ConfessionCard = (props) => {
   return (
     <CardContainer>
       <TitleSection>
         <Icon>📊</Icon> {/* Replace this with an actual icon or SVG if needed */}
-        <Title>Interactive Dashboard</Title>
+        <div>
+          <Title>{props.name}</Title>
+          <Date>10-12-2024</Date>
+        </div>
+        
       </TitleSection>
       <Description>
-        Explore real-time data and analytics on your chess performance, predictions, and community engagement.
+        {props.confession}
       </Description>
     </CardContainer>
   );

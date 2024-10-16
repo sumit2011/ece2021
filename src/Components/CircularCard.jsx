@@ -3,7 +3,6 @@ import styled from 'styled-components';
 import Card from './Card';
 
 const CardMain = styled.div`
-  // cursor: pointer;
 `;
 
 const CardOverlay = styled.div`
@@ -42,6 +41,7 @@ const CircularCard = (props) => {
   };
 
   return (
+
     <CardMain>
       <img
         src={props.image}

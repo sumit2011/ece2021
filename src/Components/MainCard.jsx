@@ -9,18 +9,19 @@ const MainCardContainer = styled.div`
   padding: 20px;
   width: 300px;
   max-width: 350px;
-  // height: 60px;
   justify-content: center;
   align-items: center;
   font-family: 'Arial', sans-serif;
   border : 2px solid #00ff00;
   transition: all 0.5s ease-in-out;
-
+  background: linear-gradient(to right, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.8));
+  border: 2px solid rgba(0, 255, 0, 0.5);
+  box-shadow: 0 0 15px rgba(0, 255, 0, 0.3);
   &:hover {
-        transform: translateY(-10px);
-        box-shadow: 0 0 50px 4px rgba(0,0,0,0.6);
-        filter: brightness(1.1);
-    }
+    transform: translateY(-10px);
+    box-shadow: 0 0 50px 4px rgba(0,0,0,0.6);
+    filter: brightness(1.1);
+  }
 `;
 
 const Row = styled.div`
@@ -42,13 +43,25 @@ const Avatar = styled.img`
   // margin-right: 10px;
 `;
 
-
+const StudentInfo = styled.div`
+  display: flex;
+  flex-direction: column;
+  margin-left: 40px
+`;
 
 const StudentName = styled.div`
   color:white;
-  font-size: 30px;
+  font-size: 20px;
   font-weight: 800;
-  margin-left: 40px;
+  // margin-left: 40px;
+`;
+
+const Enroll = styled.div`
+  
+  font-size: 15px;
+  font-weight: 800;
+  color: #FFD700; 
+  margin-bottom: -10px;
 `;
 
 
@@ -57,10 +70,12 @@ const MainCard = (props) => {
   return (
     <MainCardContainer>
         <Row key={props.id}>
-          {/* <StudentInfo > */}
+          
             <Avatar src={props.image} />
+          <StudentInfo >
             <StudentName >{props.name}</StudentName>
-          {/* </StudentInfo> */}
+            <Enroll>{props.enroll}</Enroll>
+          </StudentInfo>
         </Row>
     </MainCardContainer>
   );

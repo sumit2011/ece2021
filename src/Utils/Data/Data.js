@@ -9,7 +9,94 @@ export const Datas = [
         "twitter" : 'https://twitter.com/_su__mit___',
         "facebook" : "https://www.facebook.com/sumit2011",
         "whatsapp" : " ",
-        "github": "https://github.com/sumit2011"
+        "github": "https://github.com/sumit2011",
+        "enroll": "2021bece059"
+    },
+    {
+        "id": 2,
+        "name": 'person 2',
+        "image": require('../Images/1.png'),
+        "enroll": "2021bece059"
+    },
+    {
+        "id": 3,
+        "name": 'Person 3',
+        "image": require('../Images/1.png') 
+    },
+    
+    
+    {
+        "id": 4,
+        "name": 'Person 4',
+        "image": require('../Images/1.png') 
+    },
+    {
+        "id": 2,
+        "name": 'Person 2',
+        "image": require('../Images/1.png') 
+    },
+    {
+        "id": 3,
+        "name": 'Person 3',
+        "image": require('../Images/1.png') 
+    },
+    
+    
+    {
+        "id": 4,
+        "name": 'Person 4',
+        "image": require('../Images/1.png') 
+    },
+    {
+        "id": 2,
+        "name": 'Person 2',
+        "image": require('../Images/1.png') 
+    },
+    {
+        "id": 3,
+        "name": 'Person 3',
+        "image": require('../Images/1.png') 
+    },
+    
+    
+    {
+        "id": 4,
+        "name": 'Person 4',
+        "image": require('../Images/1.png') 
+    },
+    {
+        "id": 2,
+        "name": 'Person 2',
+        "image": require('../Images/1.png') 
+    },
+    {
+        "id": 3,
+        "name": 'Person 3',
+        "image": require('../Images/1.png') 
+    },
+    
+    
+    {
+        "id": 4,
+        "name": 'Person 4',
+        "image": require('../Images/1.png') 
+    },
+    {
+        "id": 2,
+        "name": 'Person 2',
+        "image": require('../Images/1.png') 
+    },
+    {
+        "id": 3,
+        "name": 'Person 3',
+        "image": require('../Images/1.png') 
+    },
+    
+    
+    {
+        "id": 4,
+        "name": 'Person 4',
+        "image": require('../Images/1.png') 
     },
     {
         "id": 2,

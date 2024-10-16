@@ -9,14 +9,15 @@ import GitHubIcon from '@mui/icons-material/GitHub';
 
 
 const CardContainer = styled.div`
-    width: 330px;
-    // height: 490px;
-  background-color: #152515;
-  border: 2px solid #00ff00;
+    max-width: 330px;
+    max-height: 700px;
+    background-color: #152515;
+    border: 2px solid #00ff00;
     border-radius: 10px;
     box-shadow: 0 0 12px 4px rgba(0,0,0,0.4);
     overflow: hidden;
-    padding: 26px 20px;
+    padding: 12px 15px;
+    margin: 30px;
     display: flex;
     flex-direction: column;
     gap: 14px;

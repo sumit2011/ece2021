@@ -6,12 +6,12 @@ import ConfessionCard from '../Components/ConfessionCard';
 const ConfessionPage = () => {
   return (
     <div>ConfessionPage
-        {Confessions.map((item)=>{
-            <ConfessionCard  
+        {Confessions.map((item)=>(
+          <ConfessionCard  
                 {...item}
             />
-
-        })}
+        )     
+        )}
     </div>
   )
 }

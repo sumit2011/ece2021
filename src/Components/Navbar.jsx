@@ -1,64 +1,151 @@
-import React from 'react'
+import React, { useState } from 'react';
 import styled from 'styled-components';
-import {IconButton} from "@mui/material";
 import {Menu } from "@mui/icons-material"; 
-import { DarkModeRounded, LightModeRounded } from "@mui/icons-material";
 
-
-const NavbarContainer = styled.div`
-    display: flex;
-    justify-content: space-between;
-    padding: 16px 40px;
-    align-items: center;
-    color: ${({ theme }) => theme.text_primary};
-    background: ${({ theme }) => theme.bgLight};
-    // background: white;
-    gap: 30px;
-    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-    backdrop-filter: blur(5.7px);
-    -webkit-backdrop-filter: blur(5.7px);
-    @media (max-width: 768px){
-        height: 40px;
-        padding: 16px;
-        gap: 0px;
-    }
-`;
-const IconBtn = styled(IconButton)`
-    cursor: pointer;
-    color: ${({ theme }) => theme.text_secondary} !important;
-
-`;
-const Elements = styled.div`
-    padding: 4px 16px;
-    display: flex;
-    align-items: center;
-    gap: 12px;
-    cursor: pointer;
-    color: ${({ theme }) => theme.text_secondary};
-
+const NavbarContainer = styled.nav`
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: linear-gradient(to right, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.8));
+  padding: 10px 20px;
+  border-radius: 50px;
+  border: 2px solid rgba(0, 255, 0, 0.5);
+  width: 80%;
+  margin: 20px auto;
+  box-shadow: 0 0 15px rgba(0, 255, 0, 0.3);
+  z-index: 1000; 
 `;
 
-const Navbar = ({setMenuOpen , menuOpen, setDarkMode, darkMode}) => {
-    const toggleDarkMode = () => {
-        setDarkMode(!darkMode);
-    };
-  
-    return (
+const Logo = styled.div`
+  display: flex;
+  align-items: center;
+`;
+
+
+const LogoText = styled.span`
+  font-size: 24px;
+  font-weight: bold;
+  color: #FFD700; /* Yellow */
+  margin-left: 10px;
+`;
+
+const SubLogoText = styled.span`
+  color: #FF1493; /* Pink for  */
+  font-size: 18px;
+  margin-left: 4px;
+`;
+
+const NavButtons = styled.div`
+  display: flex;
+  gap: 10px;
+`;
+
+const MenuBtn = styled.button`
+  background: transparent;
+  color: #fff;
+  border: none;
+  border-radius: 25px;
+  padding: 8px 20px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+`;
+
+const SidebarDiv = styled.nav`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(to right, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.9));
+  padding: 10px 20px;
+  border-radius: 20px;
+  border: 2px solid rgba(0, 255, 0, 0.5);
+  width: 80%;
+  height: 30px;
+  margin: 4px auto;
+  box-shadow: 0 0 15px rgba(0, 255, 0, 0.3);
+  z-index: 1000; 
+  color: white;
+  font-size: 20px;
+  font-weight: bold;
+`;
+
+
+const SidebarContainer = styled.div`
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transform: translateY(${props => (props.show ? "0" : "-200%")});
+  transition: transform 0.5s ease-in-out; /* Smooth transition */
+  z-index: 999;
+  margin-top: 100px;
+  // background: red;
+`;
+
+
+const Navbar = () => {
+
+  const [showMenu , setShowMenu] = useState(false);
+
+  const toggleMenu = () => {
+    setShowMenu(!showMenu);
+  }
+
+
+  return (
+    <div>
+
     <NavbarContainer>
-        <IconBtn onClick={() => setMenuOpen(!menuOpen)}>
-            <Menu />
-        </IconBtn>
-        <h2>ECE 2021</h2>
-        
-        <Elements onClick={toggleDarkMode}>
-                {darkMode ? <LightModeRounded /> : <DarkModeRounded />}
-        </Elements>
+      <Logo>
+        <LogoText>
+          ECE<SubLogoText>2021</SubLogoText>
+        </LogoText>
+      </Logo>
+      <NavButtons>
+        <MenuBtn onClick={toggleMenu} >
+            <Menu style={{color:"#fff"}} />
+        </MenuBtn>
 
-        
-        
-
+      </NavButtons>
     </NavbarContainer>
-  )
-}
+
+    <SidebarContainer show={showMenu} >
+      <SidebarDiv >
+        Gallery
+      </SidebarDiv>
+
+      <SidebarDiv >
+        Help
+      </SidebarDiv>
+
+      <SidebarDiv >
+        Confession
+      </SidebarDiv>
+
+      <SidebarDiv >
+        All Students
+      </SidebarDiv>
+
+
+
+     
+
+    </SidebarContainer>
+
+
+
+    </div>
+    
+
+
+
+  );
+};
 
 export default Navbar;
