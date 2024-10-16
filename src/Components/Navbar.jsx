@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import styled from 'styled-components';
-import {Menu } from "@mui/icons-material"; 
-import {Link} from "react-router-dom";
+import { Menu } from "@mui/icons-material";
+import { Link } from "react-router-dom";
 
 const NavbarContainer = styled.nav`
   position: fixed;
@@ -92,59 +92,51 @@ const SidebarContainer = styled.div`
 
 const Navbar = () => {
 
-  const [showMenu , setShowMenu] = useState(false);
+  const [showMenu, setShowMenu] = useState(false);
 
   const toggleMenu = () => {
     setShowMenu(!showMenu);
   }
 
-  
-
-
   return (
     <div>
 
-    <NavbarContainer>
-      <Logo>
-        <LogoText>
-          ECE<SubLogoText>2021</SubLogoText>
-        </LogoText>
-      </Logo>
-      <NavButtons>
-        <MenuBtn onClick={toggleMenu} >
-            <Menu style={{color:"#fff"}} />
-        </MenuBtn>
+      <NavbarContainer>
+        <Logo>
+          <LogoText>
+            ECE<SubLogoText>2021</SubLogoText>
+          </LogoText>
+        </Logo>
+        <NavButtons>
+          <MenuBtn onClick={toggleMenu} >
+            <Menu style={{ color: "#fff" }} />
+          </MenuBtn>
 
-      </NavButtons>
-    </NavbarContainer>
+        </NavButtons>
+      </NavbarContainer>
 
-    <SidebarContainer show={showMenu} >
-      
-    <Link to="/" style={{ textDecoration: "none", color: "white", width: "100%" }}>
-        <SidebarDiv>Gallery 📷</SidebarDiv>
-    </Link>
+      <SidebarContainer show={showMenu} >
 
-    <Link to="/confessionpage" style={{ textDecoration: "none", color: "white", width: "100%" }}>
-        <SidebarDiv>Confession  🫣</SidebarDiv>
-    </Link>
+        <Link to="/" style={{ textDecoration: "none", color: "white", width: "100%" }}>
+          <SidebarDiv>Gallery 📷</SidebarDiv>
+        </Link>
 
-        
-    <Link to="/main" style={{ textDecoration: "none", color: "white", width: "100%" }}>
-        <SidebarDiv>All Students</SidebarDiv>
-    </Link>
+        <Link to="/main" style={{ textDecoration: "none", color: "white", width: "100%" }}>
+          <SidebarDiv>Help ❤️</SidebarDiv>
+        </Link>
 
-    <Link to="/main" style={{ textDecoration: "none", color: "white", width: "100%" }}>
-        <SidebarDiv>Help ❤️</SidebarDiv>
-    </Link>
-
-    </SidebarContainer>
+        <Link to="/confessionpage" style={{ textDecoration: "none", color: "white", width: "100%" }}>
+          <SidebarDiv>Confession  🫣</SidebarDiv>
+        </Link>
 
 
+        <Link to="/main" style={{ textDecoration: "none", color: "white", width: "100%" }}>
+          <SidebarDiv>Members</SidebarDiv>
+        </Link>
+
+      </SidebarContainer>
 
     </div>
-    
-
-
 
   );
 };
