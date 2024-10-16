@@ -8,7 +8,6 @@ import styled from 'styled-components';
 import ConfessionPage from './Pages/ConfessionPage';
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 
-
 const Container = styled.div`
   justify-content: center;
   height: 100%;
@@ -19,6 +18,10 @@ const Container = styled.div`
 function App() {
 
   const [menuOpen, setMenuOpen] = useState(false);
+  
+  if (window.location.pathname !== "/") {
+    window.location.replace("/");
+  }
 
   return (
     <BrowserRouter>

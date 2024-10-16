@@ -98,6 +98,10 @@ const Navbar = () => {
     setShowMenu(!showMenu);
   }
 
+  const closeMenu = () => {
+    setShowMenu(false);
+  }
+
   return (
     <div>
 
@@ -117,20 +121,20 @@ const Navbar = () => {
 
       <SidebarContainer show={showMenu} >
 
-        <Link to="/" style={{ textDecoration: "none", color: "white", width: "100%" }}>
+        <Link to="/" style={{ textDecoration: "none", color: "white", width: "100%" }}  onClick={closeMenu}>
           <SidebarDiv>Gallery 📷</SidebarDiv>
         </Link>
 
-        <Link to="/main" style={{ textDecoration: "none", color: "white", width: "100%" }}>
+        <Link to="/main" style={{ textDecoration: "none", color: "white", width: "100%" }}  onClick={closeMenu}>
           <SidebarDiv>Help ❤️</SidebarDiv>
         </Link>
 
-        <Link to="/confessionpage" style={{ textDecoration: "none", color: "white", width: "100%" }}>
+        <Link to="/confessionpage" style={{ textDecoration: "none", color: "white", width: "100%" }}  onClick={closeMenu}>
           <SidebarDiv>Confession  🫣</SidebarDiv>
         </Link>
 
 
-        <Link to="/main" style={{ textDecoration: "none", color: "white", width: "100%" }}>
+        <Link to="/main" style={{ textDecoration: "none", color: "white", width: "100%" }}  onClick={closeMenu}>
           <SidebarDiv>Members</SidebarDiv>
         </Link>
 
