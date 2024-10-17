@@ -12,7 +12,6 @@ const Alert = styled.div`
   background-color: #2d0a0a; /* Dark reddish background */
   border-radius: 10px;
   padding: 20px;
-  margin: 20px;
   max-width: 400px;
   // width: 350px;
   border: 2px solid #ff1a1a; /* Reddish glowing border */
@@ -21,6 +20,7 @@ const Alert = styled.div`
   font-family: Arial, sans-serif;
   display: flex;
   margin: 100px auto;
+  margin: 20px;
 `;
 
 

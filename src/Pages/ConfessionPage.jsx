@@ -24,6 +24,8 @@ const Alert = styled.div`
   font-family: Arial, sans-serif;
   display: flex;
   margin: 100px auto;
+  margin: 20px;
+  margin-top: 40px;
 `;
 
 const ConfessionPage = () => {
