@@ -9,7 +9,7 @@ export const Datas = [
         "twitter" : 'https://twitter.com/_su__mit___',
         "facebook" : "https://www.facebook.com/sumit2011",
         "linkedin" : " ",
-        "enroll": "2021bece059"
+        "enroll": "2021BECE059"
     },
     {
         "id": 2,
@@ -25,15 +25,15 @@ export const Datas = [
     },
     {
         "id": 3,
-        "name": "waiting for your turn",
+        "name": "Prateek Kumar",
         "initials": "sk",
-        "image": require('../Images/1.png'),
+        "image": require('../Images/30.jpeg'),
         "link" : "",
         "instagram" : "",
         "twitter" : "",
         "facebook" : "",
         "linkedin" : " ",
-        "enroll": ""
+        "enroll": "2021BECE030"
     },
     {
         "id": 4,
