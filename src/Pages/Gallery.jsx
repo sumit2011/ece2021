@@ -69,7 +69,7 @@
 
 
 
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import styled from 'styled-components';
 
 import photo1 from "../Utils/Images/1.png";
@@ -127,34 +127,9 @@ const FullSizeImg = styled.img`
   border-radius: 10px;
 `;
 
-const NavigationButton = styled.button`
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  background-color: rgba(255, 255, 255, 0.6);
-  border: none;
-  padding: 10px;
-  font-size: 24px;
-  cursor: pointer;
-  border-radius: 50%;
-  z-index: 1001;
-  user-select: none;
-  
-  &:hover {
-    background-color: rgba(255, 255, 255, 1);
-  }
-`;
-
-const PrevButton = styled(NavigationButton)`
-  left: 20px;
-`;
-
-const NextButton = styled(NavigationButton)`
-  right: 20px;
-`;
-
 const Gallery = () => {
   const [currentIndex, setCurrentIndex] = useState(null); // Track the current index
+  const [startTouch, setStartTouch] = useState({ x: 0, y: 0 }); // Track touch start positions
 
   const allImages = [...Datas.map((data) => data.image), photo1, photo2, photo3, photo4]; // Combine all images
 
@@ -178,6 +153,47 @@ const Gallery = () => {
     setCurrentIndex((prevIndex) => (prevIndex - 1 + allImages.length) % allImages.length);
   };
 
+  // Handle keyboard navigation (for desktop)
+  useEffect(() => {
+    const handleKeyDown = (event) => {
+      if (currentIndex !== null) {
+        if (event.key === 'ArrowRight') {
+          nextImage();
+        } else if (event.key === 'ArrowLeft') {
+          prevImage();
+        } else if (event.key === 'Escape') {
+          closeModal();
+        }
+      }
+    };
+    window.addEventListener('keydown', handleKeyDown);
+    return () => {
+      window.removeEventListener('keydown', handleKeyDown);
+    };
+  }, [currentIndex]);
+
+  // Handle touch start (for mobile)
+  const handleTouchStart = (e) => {
+    const touch = e.touches[0];
+    setStartTouch({ x: touch.clientX, y: touch.clientY });
+  };
+
+  // Handle touch move (for mobile)
+  const handleTouchMove = (e) => {
+    if (!startTouch.x) return;
+    const touch = e.touches[0];
+    const deltaX = touch.clientX - startTouch.x;
+    if (deltaX > 50) {
+      // Swipe right
+      prevImage();
+      setStartTouch({ x: 0, y: 0 }); // Reset after swipe
+    } else if (deltaX < -50) {
+      // Swipe left
+      nextImage();
+      setStartTouch({ x: 0, y: 0 }); // Reset after swipe
+    }
+  };
+
   return (
     <div>
       <Title>
@@ -196,42 +212,22 @@ const Gallery = () => {
             />
           ))}
 
-          {/* Rendering additional photos */}
-          {[photo1, photo2, photo3, photo4].map((photo, index) => (
-            <Img
-              key={`additional-${index}`}
-              src={photo}
-              alt={`additional-photo-${index}`}
-              onClick={() => openModal(Datas.length + index)} // Adjust index for additional photos
-            />
-          ))}
+          
         </Container>
       </GalleryContainer>
 
       {/* Modal for displaying the full-size image */}
       {currentIndex !== null && (
-        <ModalOverlay onClick={closeModal}>
+        <ModalOverlay
+          onTouchStart={handleTouchStart} // Handle swipe start
+          onTouchMove={handleTouchMove}   // Handle swipe move
+          onClick={closeModal}            // Close on background click
+        >
           <FullSizeImg
             src={allImages[currentIndex]}
             alt="Full-size"
             onClick={(e) => e.stopPropagation()} // Prevents modal from closing when image is clicked
           />
-
-          {/* Previous Button */}
-          <PrevButton onClick={(e) => {
-            e.stopPropagation(); // Prevent modal close on click
-            prevImage();
-          }}>
-            &#10094; {/* Left arrow symbol */}
-          </PrevButton>
-
-          {/* Next Button */}
-          <NextButton onClick={(e) => {
-            e.stopPropagation(); // Prevent modal close on click
-            nextImage();
-          }}>
-            &#10095; {/* Right arrow symbol */}
-          </NextButton>
         </ModalOverlay>
       )}
     </div>
