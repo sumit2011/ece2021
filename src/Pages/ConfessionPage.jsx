@@ -2,6 +2,8 @@ import React from 'react'
 import { Confessions } from '../Utils/Data/Confession';
 import ConfessionCard from '../Components/ConfessionCard';
 import styled from 'styled-components';
+import Giscus from '@giscus/react';
+
 
 const Container = styled.div`
   // display: flex;
@@ -28,6 +30,20 @@ const Alert = styled.div`
   margin-top: 40px;
 `;
 
+const Discussions = styled.div`
+  // padding: 10px;
+  
+  // max-width: 400px;
+  // width: 350px;
+
+  display: flex;
+  margin: 100px auto;
+  margin: 20px;
+
+
+  
+`;
+
 const ConfessionPage = () => {
 
   return (
@@ -49,6 +65,28 @@ const ConfessionPage = () => {
           />
       )     
       )}
+
+
+    <Discussions>
+    <Giscus
+      id="comments"
+      repo="sumit2011/ece2021"
+      repoId="R_kgDONAoPpw"
+      category="Announcements"
+      categoryId="DIC_kwDONAoPp84Cjcb6"
+      mapping="pathname"
+      term="Welcome to @giscus/react component!"
+      reactionsEnabled="1"
+      emitMetadata="0"
+      inputPosition="top"
+      theme="dark"
+      lang="en"
+      loading="lazy"
+    />
+    </Discussions>
+
+    
+
     </Container>
   )
 }
