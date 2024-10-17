@@ -1,6 +1,5 @@
 import React from 'react'
-import { Confessions } from '../Utils/Data/Confession';
-import ConfessionCard from '../Components/ConfessionCard';
+
 import styled from 'styled-components';
 import Giscus from '@giscus/react';
 
@@ -45,30 +44,25 @@ const Discussions = styled.div`
 
 `;
 
-const ConfessionPage = () => {
+const DiscussionPage = () => {
 
   return (
     <Container style={{color: "white" , marginTop: "110px"} }>
-      <h1 style={{textAlign:"center"}}>Confession Page</h1>
+      <h1 style={{textAlign:"center"}}>Discussion Page</h1>
       <Alert>
         <div>
         <h2>Under Production ⚒️</h2>
-        <p>It's a confession page here you can confess anything you want.
-          but you can only add your confession if you are the member.
+        <p>It's a Discussion Page page here you can discuss anything you want.
+          but you have to log in with your github id...
         </p>
         </div>
         
       </Alert>
 
-      {Confessions.map((item)=>(
-        <ConfessionCard  
-              {...item}
-          />
-      )     
-      )}
 
 
-    <Discussions>
+<div >
+<Discussions>
     <Giscus
       id="comments"
       repo="sumit2011/ece2021"
@@ -86,10 +80,11 @@ const ConfessionPage = () => {
     />
     </Discussions>
 
-    
 
+</div>
+    
     </Container>
   )
 }
 
-export default ConfessionPage
+export default DiscussionPage

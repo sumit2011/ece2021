@@ -141,6 +141,10 @@ const Navbar = () => {
           <SidebarDiv>Confession  🫣</SidebarDiv>
         </Link>
 
+        <Link to="/discussionpage" style={{ textDecoration: "none", color: "white", width: "100%" }}  onClick={closeMenu}>
+          <SidebarDiv>Discussions</SidebarDiv>
+        </Link>
+
 
         <Link to="/main" style={{ textDecoration: "none", color: "white", width: "100%" }}  onClick={closeMenu}>
           <SidebarDiv>Members</SidebarDiv>

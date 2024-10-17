@@ -9,6 +9,7 @@ import ConfessionPage from './Pages/ConfessionPage';
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Gallery from './Pages/Gallery';
 import Help from './Pages/Help';
+import DiscussionPage from './Pages/DiscussionPage';
 
 
 const Container = styled.div`
@@ -39,6 +40,7 @@ function App() {
           <Route path='/main' element={<Main />} />
           <Route path='/gallery' element={<Gallery />} />
           <Route path='/help' element={<Help />} />
+          <Route path='/discussionpage' element={<DiscussionPage />} />
         </Routes>
       </Container>
     </BrowserRouter>
