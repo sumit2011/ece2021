@@ -6,7 +6,7 @@ import Giscus from '@giscus/react';
 
 
 const Container = styled.div`
-  // display: flex;
+  display: grid;
   // flex-basic: 100;
   justify-content: center;
   align-item: center;
@@ -17,7 +17,7 @@ const Alert = styled.div`
   background-color: #2d0a0a; /* Dark reddish background */
   border-radius: 10px;
   padding: 20px;
-  margin: 20px;
+  // margin: 20px;
   max-width: 400px;
   // width: 350px;
   border: 2px solid #ff1a1a; /* Reddish glowing border */
@@ -28,6 +28,7 @@ const Alert = styled.div`
   margin: 100px auto;
   margin: 20px;
   margin-top: 40px;
+  
 `;
 
 const Discussions = styled.div`

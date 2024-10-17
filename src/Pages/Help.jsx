@@ -6,6 +6,7 @@ const Container = styled.div`
     margin-top: 150px;
     color:white;
     text-align: center;
+    
 `;
 
 const Alert = styled.div`
@@ -19,7 +20,8 @@ const Alert = styled.div`
   color: white;
   font-family: Arial, sans-serif;
   display: flex;
-  margin: 100px auto;
+  margin: 0px auto;
+
   margin: 20px;
   margin-top: 60px;
 `;

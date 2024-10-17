@@ -8,26 +8,11 @@ import photo4 from "../Utils/Images/30.jpeg";
 
 
 const GalleryContainer= styled.div`
-  margin-top: 150px;
-  color: white;
-  text-align: center;
-  // display: flex;
+  display: flex;
+  justify-content: center;
+  margin-top: 40px;
 `;
 
-const Alert = styled.div`
-  background-color: #2d0a0a; /* Dark reddish background */
-  border-radius: 10px;
-  padding: 20px;
-  max-width: 400px;
-  // width: 350px;
-  border: 2px solid #ff1a1a; /* Reddish glowing border */
-  box-shadow: 0 0 15px 5px rgba(255, 26, 26, 0.5);
-  color: white;
-  font-family: Arial, sans-serif;
-  display: flex;
-  margin: 100px auto;
-  margin: 20px;
-`;
 
 const Img = styled.img`
   display: flex;
@@ -45,12 +30,25 @@ const Container = styled.div`
   flex-wrap: wrap;
   // margin: 20px;
   justify-content: center;
+  width: 80%;
+`;
+
+const Title = styled.div`
+margin-top: 150px;
+  color: white;
+    text-align: center;
+
 `;
 
 const Gallery = () => {
   return (
+    <div>
+    <Title><h1>Gallery</h1></Title>
+
     <GalleryContainer>
-      <h2>Gallery</h2>
+     
+      {/*  */}
+      
 {/* 
       <Alert>
         coming soon
@@ -61,10 +59,25 @@ const Gallery = () => {
       <Img src={photo2} alt='photo' />
       <Img src={photo3} alt='photo' />
       <Img src={photo4} alt='photo' />
+      <Img src={photo1} alt='photo' />
+      <Img src={photo2} alt='photo' />
+      <Img src={photo3} alt='photo' />
+      <Img src={photo4} alt='photo' />
+      <Img src={photo1} alt='photo' />
+      <Img src={photo2} alt='photo' />
+      <Img src={photo3} alt='photo' />
+      <Img src={photo4} alt='photo' />
+      <Img src={photo1} alt='photo' />
+      <Img src={photo2} alt='photo' />
+      <Img src={photo3} alt='photo' />
+      <Img src={photo4} alt='photo' />
+      
       </Container>
       
           
     </GalleryContainer>
+    </div>
+
   )
 }
 

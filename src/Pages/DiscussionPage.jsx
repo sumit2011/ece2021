@@ -5,14 +5,15 @@ import Giscus from '@giscus/react';
 
 
 const Container = styled.div`
-  // display: flex;
-  // flex-basic: 100;
+  display: grid;
+
   justify-content: center;
   align-item: center;
 `;
 
 
 const Alert = styled.div`
+
   background-color: #2d0a0a; /* Dark reddish background */
   border-radius: 10px;
   padding: 20px;
