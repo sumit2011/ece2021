@@ -7,7 +7,7 @@ import styled from 'styled-components';
 const DashboardContainer = styled.div`
   justify-content: center;
   align-items: center;
-  padding: 10px 20px;
+  // padding: 10px 20px;
   width: 80%;
   margin: 120px auto;
 `;

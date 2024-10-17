@@ -23,9 +23,9 @@ function App() {
 
   const [menuOpen, setMenuOpen] = useState(false);
   
-  if (window.location.pathname !== "/") {
-    window.location.replace("/");
-  }
+  // if (window.location.pathname !== "/") {
+  //   window.location.replace("/");
+  // }
 
   return (
     <BrowserRouter>
