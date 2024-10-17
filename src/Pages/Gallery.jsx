@@ -3,8 +3,8 @@ import styled from 'styled-components';
 
 import photo1  from "../Utils/Images/1.png";
 import photo2 from "../Utils/Images/54.jpeg";
-import photo3 from "../Utils/Images/59.jpg";
-import photo4 from "../Utils/Images/bg.jpeg";
+import photo3 from "../Utils/Images/59.jpeg";
+import photo4 from "../Utils/Images/30.jpeg";
 
 
 const GalleryContainer= styled.div`
@@ -35,6 +35,7 @@ const Img = styled.img`
   border-radius: 10px;
   padding: 5px;
   max-width: 140px;
+  max-height: 140px;
   margin: 5px;
   
 `;

@@ -3,7 +3,7 @@ export const Datas = [
         "id": 1,
         "name": 'Sumit Kumar',
         "initials": "sk",
-        "image": require('../Images/bg.jpeg'),
+        "image": require('../Images/59.jpeg'),
         "link" : 'https://sumit2011.github.io',
         "instagram" : "https://www.instagram.com/_su__mit___",
         "twitter" : 'https://twitter.com/_su__mit___',
@@ -37,15 +37,15 @@ export const Datas = [
     },
     {
         "id": 4,
-        "name": "",
+        "name": "Md Saif",
         "initials": "sk",
-        "image": require('../Images/1.png'),
+        "image": require('../Images/46.jpeg'),
         "link" : "",
         "instagram" : "",
         "twitter" : "",
         "facebook" : "",
         "linkedin" : " ",
-        "enroll": ""
+        "enroll": "2021BECE046"
     },
     {
         "id": 5,

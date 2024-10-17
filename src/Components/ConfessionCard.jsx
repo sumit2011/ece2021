@@ -49,7 +49,7 @@ const ConfessionCard = (props) => {
   return (
     <CardContainer>
       <TitleSection>
-        <Icon>📊</Icon> {/* Replace this with an actual icon or SVG if needed */}
+        <Icon>🙄</Icon> {/* Replace this with an actual icon or SVG if needed */}
         <div>
           <Title>{props.name}</Title>
           <Date>10-12-2024</Date>
