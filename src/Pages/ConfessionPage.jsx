@@ -35,7 +35,7 @@ const ConfessionPage = () => {
       <h1 style={{textAlign:"center"}}>Confession Page</h1>
       <Alert>
         <div>
-        <h2>Coming Soon....</h2>
+        <h2>Under Production ⚒️</h2>
         <p>It's a confession page here you can confess anything you want.
           but you can only add your confession if you are the member.
         </p>

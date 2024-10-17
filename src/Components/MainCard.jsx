@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import LinkedInIcon from '@mui/icons-material/LinkedIn';
 
 // Styled Components
 const MainCardContainer = styled.div`
@@ -64,6 +65,11 @@ const Enroll = styled.div`
   margin-bottom: -10px;
 `;
 
+const Icon = styled.a`
+    color: white;
+    target: _blank;
+    cursor: pointer;
+`
 
 const MainCard = (props) => {
 
@@ -76,6 +82,11 @@ const MainCard = (props) => {
             <StudentName >{props.name}</StudentName>
             <Enroll>{props.enroll}</Enroll>
           </StudentInfo>
+
+          {/* <Icon href={props.linkedin}>
+                <LinkedInIcon style={{height: "20px" , width: "20px"}}/>
+            </Icon> */}
+
         </Row>
     </MainCardContainer>
   );

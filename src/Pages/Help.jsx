@@ -21,22 +21,46 @@ const Alert = styled.div`
   display: flex;
   margin: 100px auto;
   margin: 20px;
+  margin-top: 60px;
+`;
+
+const Button = styled.div`
+  background: green;
+  height: 35px;
+  border-radius: 30px;
+  justify-content: center;
+  text-align: center;
+  color: white;
+  padding-top: 5px;
+  width: 270px;
+  margin: 0px auto;
+  font-size: 22px;
+  font-weight: bold;
+  cursor: pointer;
+  margin-top: 40px;
 `;
 
 
 const Help = () => {
     return (
         <Container>
+            <h1>Help Page</h1>
             <div>
                 <Alert>
                     <div>
-                        <h2>help page</h2>
+                        <h2>Under Production ⚒️</h2>
                         <p>
-                            coming soon...
+                           if you click on the button it will send notification to the 
+                           10 members of this community which is near by you and then
+                           they will contact you...
+                           <br/>
+                           also the message will appear here...👇
                         </p>
 
                     </div>
+                    
                 </Alert>
+                <Button>Click Me</Button>
             </div>
         </Container>
 

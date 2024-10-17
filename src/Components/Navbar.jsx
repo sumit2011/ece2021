@@ -113,9 +113,9 @@ const Navbar = () => {
   return (
     <div>
 
-      <NavbarContainer>
-        <Logo onClick={handleClick}>
-          <LogoText>
+      <NavbarContainer >
+        <Logo onClick={handleClick} >
+          <LogoText onClick={closeMenu}>
             ECE<SubLogoText>2021</SubLogoText>
           </LogoText>
         </Logo>

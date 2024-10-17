@@ -13,7 +13,7 @@ import Help from './Pages/Help';
 
 const Container = styled.div`
   justify-content: center;
-  height: 100%;
+  // height: 100%;
   
 `;
 
