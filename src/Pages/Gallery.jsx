@@ -30,7 +30,8 @@ const Container = styled.div`
   flex-wrap: wrap;
   // margin: 20px;
   justify-content: center;
-  width: 80%;
+  // width: 80%;
+  max-width: 1300px;
 `;
 
 const Title = styled.div`
