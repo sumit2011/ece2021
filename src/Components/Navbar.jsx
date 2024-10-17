@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import styled from 'styled-components';
 import { Menu } from "@mui/icons-material";
 import { Link } from "react-router-dom";
+import { useNavigate } from 'react-router-dom';
 
 const NavbarContainer = styled.nav`
   position: fixed;
@@ -104,11 +105,16 @@ const Navbar = () => {
     setShowMenu(false);
   }
 
+  const navigate = useNavigate();
+  const handleClick = () => {
+    navigate('/');
+  }
+
   return (
     <div>
 
       <NavbarContainer>
-        <Logo>
+        <Logo onClick={handleClick}>
           <LogoText>
             ECE<SubLogoText>2021</SubLogoText>
           </LogoText>
