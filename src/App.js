@@ -7,6 +7,9 @@ import Main from './Pages/Main';
 import styled from 'styled-components';
 import ConfessionPage from './Pages/ConfessionPage';
 import { BrowserRouter, Route, Routes } from "react-router-dom";
+import Gallery from './Pages/Gallery';
+import Help from './Pages/Help';
+
 
 const Container = styled.div`
   justify-content: center;
@@ -34,6 +37,8 @@ function App() {
           <Route path="/" element={<Dashboard />} />
           <Route path="/confessionpage" element={<ConfessionPage />} />
           <Route path='/main' element={<Main />} />
+          <Route path='/gallery' element={<Gallery />} />
+          <Route path='/help' element={<Help />} />
         </Routes>
       </Container>
     </BrowserRouter>

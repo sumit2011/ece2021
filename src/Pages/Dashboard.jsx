@@ -77,12 +77,14 @@ display: flex;
 
 const Hr = styled.div`
   margin-top: 100px;
-  background: linear-gradient(to right, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.8));
+  // background: linear-gradient(to right, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.8));
   padding: 10px 20px;
-  border-radius: 50px;
-  border: 2px solid rgba(0, 255, 0, 0.5);
-  box-shadow: 0 0 15px rgba(0, 255, 0, 0.3);
+  // border-radius: 50px;
+  // border: 2px solid rgba(0, 255, 0, 0.5);
+  // box-shadow: 0 0 15px rgba(0, 255, 0, 0.3);
+    box-shadow: 0 4px 8px -2px rgba(0, 255, 0, 0.3);
   border: none;
+
 
 `;
 
@@ -131,9 +133,9 @@ const Dashboard = () => {
       <Hr />
       <Footer>
         <Title>
-          <span><h2>Designed with</h2></span>
+          <span><h3>Designed with</h3></span>
           <Heart>❤️</Heart>
-          <span><h2>by</h2></span>
+          <span><h3>by</h3></span>
         </Title>
         <br />
         <CircularCard {...sumit} />

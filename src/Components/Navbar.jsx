@@ -123,11 +123,11 @@ const Navbar = () => {
 
       <SidebarContainer show={showMenu} >
 
-        <Link to="/" style={{ textDecoration: "none", color: "white", width: "100%" }}  onClick={closeMenu}>
+        <Link to="/gallery" style={{ textDecoration: "none", color: "white", width: "100%" }}  onClick={closeMenu}>
           <SidebarDiv>Gallery 📷</SidebarDiv>
         </Link>
 
-        <Link to="/main" style={{ textDecoration: "none", color: "white", width: "100%" }}  onClick={closeMenu}>
+        <Link to="/help" style={{ textDecoration: "none", color: "white", width: "100%" }}  onClick={closeMenu}>
           <SidebarDiv>Help ❤️</SidebarDiv>
         </Link>
 

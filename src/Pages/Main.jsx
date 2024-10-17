@@ -23,7 +23,10 @@ const Main = () => {
 
   return (
     <MainContainer>
+      <div style={{width: "100%" , textAlign:"center", margin:"10px"}}>
       <h1 style={{color:"white"}}>All Members Of the Community</h1>
+      
+      </div>
       {Datas.map ((Data) => (
         <Card >
             <MainCard {...Data}/>
