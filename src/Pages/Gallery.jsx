@@ -11,8 +11,8 @@ import { ThumbnailImageProps } from "react-grid-gallery";
 
 const images = [
   {
-    src: require("../Utils/Photos/1.jpg"),
-    original: require("../Utils/Photos/1.jpg"),
+    src: require("../Utils/Photos/3.jpg"),
+    original: require("../Utils/Photos/3.jpg"),
     width: 320,
     height: 174,
     tags: [
@@ -23,8 +23,8 @@ const images = [
   },
   // Add more images as needed
   {
-    src: require("../Utils/Photos/2.jpg"),
-    original: require("../Utils/Photos/2.jpg"),
+    src: require("../Utils/Photos/4.jpg"),
+    original: require("../Utils/Photos/4.jpg"),
     width: 320,
     height: 212,
     caption: "Boats (Jeshu John - designerspics.com)",
@@ -37,8 +37,8 @@ const images = [
     caption: "Color Pencils (Jeshu John - designerspics.com)",
   },
   {
-    src: require("../Utils/Photos/7.jpg"),
-    original: require("../Utils/Photos/7.jpg"),
+    src: require("../Utils/Photos/9.jpg"),
+    original: require("../Utils/Photos/9.jpg"),
     width: 320,
     height: 213,
     caption: "Red Apples with other Red Fruit (foodiesfeed.com)",
@@ -51,31 +51,31 @@ const images = [
     caption: "37H (gratispgraphy.com)",
   },
   {
-    src: "https://c5.staticflickr.com/9/8768/28941110956_b05ab588c1_b.jpg",
-    original: "https://c5.staticflickr.com/9/8768/28941110956_b05ab588c1_b.jpg",
+    src: require("../Utils/Photos/10.jpg"),
+    original: require("../Utils/Photos/10.jpg"),
     width: 240,
     height: 320,
     tags: [{ value: "Nature", title: "Nature" }],
     caption: "8H (gratisography.com)",
   },
   {
-    src: "https://c3.staticflickr.com/9/8583/28354353794_9f2d08d8c0_b.jpg",
-    original: "https://c3.staticflickr.com/9/8583/28354353794_9f2d08d8c0_b.jpg",
+    src: require("../Utils/Photos/11.jpg"),
+    original: require("../Utils/Photos/11.jpg"),
     width: 320,
     height: 190,
     caption: "286H (gratisography.com)",
   },
   {
-    src: "https://c7.staticflickr.com/9/8569/28941134686_d57273d933_b.jpg",
-    original: "https://c7.staticflickr.com/9/8569/28941134686_d57273d933_b.jpg",
+    src: require("../Utils/Photos/12.jpg"),
+    original: require("../Utils/Photos/12.jpg"),
     width: 320,
     height: 148,
-    tags: [{ value: "People", title: "People" }],
+    tags: [{ value: "Class", title: "Class" }],
     caption: "315H (gratisography.com)",
   },
   {
-    src: "https://c6.staticflickr.com/9/8342/28897193381_800db6419e_b.jpg",
-    original: "https://c6.staticflickr.com/9/8342/28897193381_800db6419e_b.jpg",
+    src: require("../Utils/Photos/5.jpg"),
+    original: require("../Utils/Photos/5.jpg"),
     width: 320,
     height: 213,
     caption: "201H (gratisography.com)",
