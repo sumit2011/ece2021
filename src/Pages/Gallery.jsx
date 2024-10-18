@@ -1,7 +1,8 @@
 import React, { useState } from "react";
 import { Gallery } from "react-grid-gallery";
 import styled from 'styled-components';
-
+import Lightbox from "yet-another-react-lightbox";
+import "yet-another-react-lightbox/styles.css";
 
 // Define the CustomImage interface
 export interface CustomImage {
@@ -219,52 +220,36 @@ margin: 20px;
 
 `;
 
-const ImageContainer = styled.div`
-  border: 4px solid red; // Set the border color and size
-  border-radius: 8px; // Optional: rounded corners
-  margin: 4px; // Optional: spacing between images
-  overflow: hidden; // Prevent image overflow
-`;
+
+const slides = images.map(({ original, width, height }) => ({
+  src: original,
+  width,
+  height,
+}));
 
 const GalleryImages = () => {
-  const [index, setIndex] = useState(-1); // State to manage selected image index
+  const [index, setIndex] = useState(-1);
 
-  // Handle image click in the gallery
-  const handleClick = (index: number) => setIndex(index);
+  const handleClick = (index: number, item: CustomImage) => setIndex(index);
 
-  // Map the images for Lightbox slides
-  const slides = images.map(({ original, width, height }) => ({
-    src: original,
-    width,
-    height,
-  }));
-
-  // Prepare gallery images with custom rendering
-  const galleryImages = images.map(image => ({
-    ...image,
-    thumbnail: image.src, // Use the same URL for the thumbnail
-    customOverlay: (
-      <ImageContainer>
-        <img src={image.src} alt={image.alt} style={{ width: '100%', height: 'auto' }} />
-      </ImageContainer>
-    ),
-  }));
 
   return (
     <Container>
       {/* Render the image gallery */}
-      <h2>Gallery</h2>
+      <h1>Gallery</h1>
       <Gallery
-        images={galleryImages}
+        images={images}
         onClick={handleClick}
         enableImageSelection={false}
         margin={5} // Adjust spacing between images if needed
-        imageContainerStyle={{
-          border: "4px solid red", // Set the border style here
-          borderRadius: "5px", // Optional: for rounded corners
-        }}
       />
 
+      <Lightbox
+        slides={slides}
+        open={index >= 0}
+        index={index}
+        close={() => setIndex(-1)}
+      />
 
     </Container>
   );
