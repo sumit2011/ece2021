@@ -20,27 +20,18 @@ export interface CustomImage {
 
 
 const Container = styled.div`
-  display: flex;
+  // display: grid;
 
   justify-content: center;
   // align-item: center;
-`;
-
-const Images = styled.div`
   
-  background-color: #152515;
-  color: #00ff00;
-  border-radius: 15px;
-  padding: 10px;
-  max-width: 400px;
-  font-family: 'Arial', sans-serif;
-  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
+  color: white;
+  text-align: center;
   margin: 20px;
-  border: 2px solid rgba(0, 255, 0, 0.5);
-  box-shadow: 0 0 15px rgba(0, 255, 0, 0.3);
-  margin-top: 100px;
-
+  margin-top: 130px;
 `;
+
+
 
 // Array of images
 export const images: CustomImage[] = [
@@ -290,17 +281,34 @@ const GalleryImages = () => {
       height,
     }));
 
+    const imageContainerStyle = {
+      border: "4px solid red",
+      borderRadius: "8px", // Optional: add some border-radius for rounded corners
+      margin: "40px", // Optional: spacing between images
+    };
+
   return (
     <Container>
       {/* Render the image gallery */}
-      <Images>
-      <Gallery
+      {/* <Gallery
         images={images}
         onClick={handleClick} 
         enableImageSelection={false} 
+        style={{border: "4px solid red"}}
       />
-      </Images>
-      
+       */}
+      <h1>Gallery</h1>
+      <Gallery
+        images={images.map(image => ({
+          ...image,
+          thumbnail: image.src, // Use the same URL for the thumbnail
+          imageProps: {
+            style: imageContainerStyle // Apply the custom style
+          }
+        }))}
+        onClick={handleClick}
+        enableImageSelection={false}
+      />
 
       {/* Render the lightbox */}
       <Lightbox
@@ -315,3 +323,5 @@ const GalleryImages = () => {
 }
 
 export default GalleryImages
+
+
