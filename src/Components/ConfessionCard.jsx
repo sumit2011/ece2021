@@ -14,6 +14,11 @@ const CardContainer = styled.div`
   border: 2px solid rgba(0, 255, 0, 0.5);
   box-shadow: 0 0 15px rgba(0, 255, 0, 0.3);
 
+@media (max-width: 550px){
+     max-width: 400px;
+  }
+
+
 `;
 
 const TitleSection = styled.div`

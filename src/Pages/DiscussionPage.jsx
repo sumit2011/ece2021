@@ -5,12 +5,24 @@ import Giscus from '@giscus/react';
 
 
 const Container = styled.div`
-  display: grid;
-
   justify-content: center;
-  align-item: center;
+  align-items: center;
+  width: 50%;
+  margin: 120px auto;
+  @media (max-width: 750px){
+     width: 70%;
+  }
+  @media (max-width: 550px){
+     width: 100%;
+  }
 `;
 
+const Title = styled.div`
+margin-top: 110px;
+color: white;
+text-align: center;
+color: white;
+`;
 
 const Alert = styled.div`
 
@@ -28,6 +40,10 @@ const Alert = styled.div`
   margin: 100px auto;
   margin: 20px;
   margin-top: 40px;
+  margin: 50px auto;
+  @media (max-width: 500px){
+      margin: 20px;
+  }
 `;
 
 const Discussions = styled.div`
@@ -36,7 +52,6 @@ const Discussions = styled.div`
   color: #00ff00;
   border-radius: 15px;
   padding: 10px;
-  max-width: 400px;
   font-family: 'Arial', sans-serif;
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
   margin: 20px;
@@ -48,42 +63,45 @@ const Discussions = styled.div`
 const DiscussionPage = () => {
 
   return (
-    <Container style={{color: "white" , marginTop: "110px"} }>
-      <h1 style={{textAlign:"center"}}>Discussion Page</h1>
+    <Container style={{ color: "white", marginTop: "110px" }}>
+      <Title>
+        <h1 >Discussion Page</h1>
+      </Title>
+
       <Alert>
         <div>
-        <h2>Under Production ⚒️</h2>
-        <p>It's a Discussion Page page here you can discuss anything you want.
-          but you have to log in with your github id...
-        </p>
+          <h2>Under Production ⚒️</h2>
+          <p>It's a Discussion Page page here you can discuss anything you want.
+            but you have to log in with your github id...
+          </p>
         </div>
-        
+
       </Alert>
 
 
 
-<div >
-<Discussions>
-    <Giscus
-      id="comments"
-      repo="sumit2011/ece2021"
-      repoId="R_kgDONAoPpw"
-      category="Announcements"
-      categoryId="DIC_kwDONAoPp84Cjcb6"
-      mapping="pathname"
-      term="Welcome to @giscus/react component!"
-      reactionsEnabled="1"
-      emitMetadata="0"
-      inputPosition="top"
-      theme="dark"
-      lang="en"
-      loading="lazy"
-    />
-    </Discussions>
+      <div >
+        <Discussions>
+          <Giscus
+            id="comments"
+            repo="sumit2011/ece2021"
+            repoId="R_kgDONAoPpw"
+            category="Announcements"
+            categoryId="DIC_kwDONAoPp84Cjcb6"
+            mapping="pathname"
+            term="Welcome to @giscus/react component!"
+            reactionsEnabled="1"
+            emitMetadata="0"
+            inputPosition="top"
+            theme="dark"
+            lang="en"
+            loading="lazy"
+          />
+        </Discussions>
 
 
-</div>
-    
+      </div>
+
     </Container>
   )
 }

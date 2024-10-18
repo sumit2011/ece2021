@@ -3,10 +3,24 @@ import styled from 'styled-components';
 
 
 const Container = styled.div`
-    margin-top: 150px;
-    color:white;
-    text-align: center;
+  justify-content: center;
+  align-items: center;
+  width: 80%;
+  margin: 120px auto;
+  @media (max-width: 750px){
+     width: 70%;
+  }
+  @media (max-width: 550px){
+     width: 100%;
+  }
     
+`;
+
+const Title = styled.div`
+margin-top: 110px;
+color: white;
+text-align: center;
+color: white;
 `;
 
 const Alert = styled.div`
@@ -19,11 +33,13 @@ const Alert = styled.div`
   box-shadow: 0 0 15px 5px rgba(255, 26, 26, 0.5);
   color: white;
   font-family: Arial, sans-serif;
-  display: flex;
-  margin: 0px auto;
-
-  margin: 20px;
+//   display: flex;
+ 
   margin-top: 60px;
+  margin: 50px auto;
+  @media (max-width: 500px){
+      margin: 20px;
+  }
 `;
 
 const Button = styled.div`
@@ -40,30 +56,32 @@ const Button = styled.div`
   font-weight: bold;
   cursor: pointer;
   margin-top: 40px;
+
 `;
 
 
 const Help = () => {
     return (
         <Container>
-            <h1>Help Page</h1>
-            <div>
-                <Alert>
-                    <div>
-                        <h2>Under Production ⚒️</h2>
-                        <p>
-                           if you click on the button it will send notification to the 
-                           10 members of this community which is near by you and then
-                           they will contact you...
-                           <br/>
-                           also the message will appear here...👇
-                        </p>
+            <Title>
+                <h1>Help Page</h1>
+            </Title>
 
-                    </div>
-                    
-                </Alert>
-                <Button>Click Me</Button>
-            </div>
+            <Alert>
+                <div>
+                    <h2>Under Production ⚒️</h2>
+                    <p>
+                        if you click on the button it will send notification to the
+                        10 members of this community which is near by you and then
+                        they will contact you...
+                        <br />
+                        also the message will appear here...👇
+                    </p>
+
+                </div>
+
+            </Alert>
+            <Button>Click Me</Button>
         </Container>
 
     )

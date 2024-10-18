@@ -7,9 +7,11 @@ import styled from 'styled-components';
 const DashboardContainer = styled.div`
   justify-content: center;
   align-items: center;
-  // padding: 10px 20px;
   width: 80%;
   margin: 120px auto;
+  @media (max-width: 550px){
+     width: 100%;
+  }
 `;
 
 
@@ -31,7 +33,7 @@ const DashboardMain = styled.div`
   justify-content: center; 
   margin-top: 50px;
   gap: 4px;
-  // background-color: ${({ theme }) => theme.bg};
+  margin-left: 20px;
 
 `;
 
@@ -60,6 +62,7 @@ const Footer = styled.div`
   flex-wrap: wrap;
   margin-top: 100px;
   justify-content: center;
+  
 `;
 
 const Title = styled.div`
@@ -90,7 +93,8 @@ const Hr = styled.div`
 
 const Heart = styled.div`
 /* pulsating heart */
-
+position: relative;
+  z-index: 0; 
 animation: pulse 1s ease infinite;
 width: 40px;
 
@@ -122,6 +126,7 @@ const Dashboard = () => {
       <Button>
         Add Yours
       </Button>
+      <div style={{paddingLeft: "8px"}}>
       <DashboardMain>
         {Datas.map((data) => (
           <CardMain >
@@ -129,12 +134,15 @@ const Dashboard = () => {
           </CardMain>
         ))}
       </DashboardMain>
+      </div>
+     
 
       <Hr />
       <Footer>
         <Title>
           <span><h3>Designed with</h3></span>
           <Heart>❤️</Heart>
+          
           <span><h3>by</h3></span>
         </Title>
         <br />

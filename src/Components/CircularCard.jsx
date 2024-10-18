@@ -48,8 +48,8 @@ const CircularCard = (props) => {
         alt='Circular Card'
         onClick={handleOpenCard}
         style={{
-          width: '80px',
-          height: '80px',
+          width: '70px',
+          height: '70px',
           borderRadius: '50%',
           border: '4px solid rgba(0, 255, 0, 0.5)',
         }}

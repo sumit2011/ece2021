@@ -5,11 +5,25 @@ import styled from 'styled-components';
 import Giscus from '@giscus/react';
 
 
-const Container = styled.div`
-  display: grid;
-  // flex-basic: 100;
+const MainContainer = styled.div`
+  
   justify-content: center;
-  align-item: center;
+  align-items: center;
+  width: 50%;
+  margin: 120px auto;
+  @media (max-width: 750px){
+     width: 70%;
+  }
+  @media (max-width: 550px){
+     width: 100%;
+  }
+`;
+
+const Title = styled.div`
+margin-top: 110px;
+color: white;
+text-align: center;
+color: white;
 `;
 
 
@@ -24,11 +38,20 @@ const Alert = styled.div`
   box-shadow: 0 0 15px 5px rgba(255, 26, 26, 0.5);
   color: white;
   font-family: Arial, sans-serif;
-  display: flex;
+  // display: flex;
   margin: 100px auto;
   margin: 20px;
   margin-top: 40px;
+  margin: 50px auto;
+  @media (max-width: 500px){
+      margin: 20px;
+  }
   
+`;
+
+const Container = styled.div`
+  // display: grid;
+  // justify-content: center;
 `;
 
 const Discussions = styled.div`
@@ -37,7 +60,6 @@ const Discussions = styled.div`
   color: #00ff00;
   border-radius: 15px;
   padding: 10px;
-  max-width: 400px;
   font-family: 'Arial', sans-serif;
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
   margin: 20px;
@@ -49,8 +71,12 @@ const Discussions = styled.div`
 const ConfessionPage = () => {
 
   return (
-    <Container style={{color: "white" , marginTop: "110px"} }>
-      <h1 style={{textAlign:"center"}}>Confession Page</h1>
+    <MainContainer >
+      <Title>
+      <h1>Confession Page</h1>
+
+      </Title>
+
       <Alert>
         <div>
         <h2>Under Production ⚒️</h2>
@@ -61,12 +87,15 @@ const ConfessionPage = () => {
         
       </Alert>
 
+      <Container>
       {Confessions.map((item)=>(
         <ConfessionCard  
               {...item}
           />
       )     
       )}
+      </Container>
+      
 
 
     <Discussions>
@@ -89,7 +118,7 @@ const ConfessionPage = () => {
 
     
 
-    </Container>
+    </MainContainer>
   )
 }
 
