@@ -139,6 +139,7 @@ const GalleryImages = () => {
         margin={5} 
         
       />
+      
       <Lightbox
         slides={slides}
         open={index >= 0}
