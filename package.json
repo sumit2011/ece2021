@@ -15,13 +15,10 @@
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
     "react-grid-gallery": "^1.0.1",
-    "react-image-gallery": "^1.3.0",
-    "react-image-lightbox": "^5.1.4",
     "react-router-dom": "^6.27.0",
     "react-scripts": "5.0.1",
     "styled-components": "^6.1.13",
-    "web-vitals": "^2.1.4",
-    "yet-another-react-lightbox": "^3.21.6"
+    "web-vitals": "^2.1.4"
   },
   "scripts": {
     "start": "react-scripts start",

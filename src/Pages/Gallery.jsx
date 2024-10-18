@@ -1,11 +1,7 @@
-
-
-import React from 'react'
-import { useState } from "react";
+import React, { useState } from "react";
 import { Gallery } from "react-grid-gallery";
 import styled from 'styled-components';
-import Lightbox from "yet-another-react-lightbox";
-import "yet-another-react-lightbox/styles.css";
+
 
 // Define the CustomImage interface
 export interface CustomImage {
@@ -18,23 +14,8 @@ export interface CustomImage {
   caption?: string;
 }
 
-
-const Container = styled.div`
-  // display: grid;
-
-  justify-content: center;
-  // align-item: center;
-  
-  color: white;
-  text-align: center;
-  margin: 20px;
-  margin-top: 130px;
-`;
-
-
-
-// Array of images
-export const images: CustomImage[] = [
+// Sample images array
+const images: CustomImage[] = [
   {
     src: "https://c2.staticflickr.com/9/8817/28973449265_07e3aa5d2e_b.jpg",
     original: "https://c2.staticflickr.com/9/8817/28973449265_07e3aa5d2e_b.jpg",
@@ -45,34 +26,6 @@ export const images: CustomImage[] = [
       { value: "Flora", title: "Flora" },
     ],
     caption: "After Rain (Jeshu John - designerspics.com)",
-  },
-  {
-    src: "https://c2.staticflickr.com/9/8356/28897120681_3b2c0f43e0_b.jpg",
-    original: "https://c2.staticflickr.com/9/8356/28897120681_3b2c0f43e0_b.jpg",
-    width: 320,
-    height: 212,
-    caption: "Boats (Jeshu John - designerspics.com)",
-  },
-  {
-    src: "https://c4.staticflickr.com/9/8887/28897124891_98c4fdd82b_b.jpg",
-    original: "https://c4.staticflickr.com/9/8887/28897124891_98c4fdd82b_b.jpg",
-    width: 320,
-    height: 212,
-    caption: "Color Pencils (Jeshu John - designerspics.com)",
-  },
-  {
-    src: "https://c7.staticflickr.com/9/8546/28354329294_bb45ba31fa_b.jpg",
-    original: "https://c7.staticflickr.com/9/8546/28354329294_bb45ba31fa_b.jpg",
-    width: 320,
-    height: 213,
-    caption: "Red Apples with other Red Fruit (foodiesfeed.com)",
-  },
-  {
-    src: "https://c6.staticflickr.com/9/8890/28897154101_a8f55be225_b.jpg",
-    original: "https://c6.staticflickr.com/9/8890/28897154101_a8f55be225_b.jpg",
-    width: 320,
-    height: 183,
-    caption: "37H (gratispgraphy.com)",
   },
   {
     src: "https://c2.staticflickr.com/9/8356/28897120681_3b2c0f43e0_b.jpg",
@@ -255,73 +208,66 @@ export const images: CustomImage[] = [
     height: 320,
     caption: "A photo by Matthew Wiebe. (unsplash.com)",
   },
-  {
-    src: "https://c7.staticflickr.com/9/8824/28868764222_19f3b30773_b.jpg",
-    original: "https://c7.staticflickr.com/9/8824/28868764222_19f3b30773_b.jpg",
-    width: 226,
-    height: 320,
-    caption: "A photo by Matthew Wiebe. (unsplash.com)",
-  },
+  // Add more images as needed
 ];
 
+const Container = styled.div`
+margin: 20px;
+ margin-top: 150px;
+ color: white;
+ text-align: center;
 
-/////////////////
+`;
+
+const ImageContainer = styled.div`
+  border: 4px solid red; // Set the border color and size
+  border-radius: 8px; // Optional: rounded corners
+  margin: 4px; // Optional: spacing between images
+  overflow: hidden; // Prevent image overflow
+`;
 
 const GalleryImages = () => {
+  const [index, setIndex] = useState(-1); // State to manage selected image index
 
-    const [index, setIndex] = useState(-1); // State to manage selected image index
+  // Handle image click in the gallery
+  const handleClick = (index: number) => setIndex(index);
 
-    // Handle image click in the gallery
-    const handleClick = (index) => setIndex(index);
-  
-    // Map the images for Lightbox slides
-    const slides = images.map(({ original, width, height }) => ({
-      src: original,
-      width,
-      height,
-    }));
+  // Map the images for Lightbox slides
+  const slides = images.map(({ original, width, height }) => ({
+    src: original,
+    width,
+    height,
+  }));
 
-    const imageContainerStyle = {
-      border: "4px solid red",
-      borderRadius: "8px", // Optional: add some border-radius for rounded corners
-      margin: "40px", // Optional: spacing between images
-    };
+  // Prepare gallery images with custom rendering
+  const galleryImages = images.map(image => ({
+    ...image,
+    thumbnail: image.src, // Use the same URL for the thumbnail
+    customOverlay: (
+      <ImageContainer>
+        <img src={image.src} alt={image.alt} style={{ width: '100%', height: 'auto' }} />
+      </ImageContainer>
+    ),
+  }));
 
   return (
     <Container>
       {/* Render the image gallery */}
-      {/* <Gallery
-        images={images}
-        onClick={handleClick} 
-        enableImageSelection={false} 
-        style={{border: "4px solid red"}}
-      />
-       */}
-      <h1>Gallery</h1>
+      <h2>Gallery</h2>
       <Gallery
-        images={images.map(image => ({
-          ...image,
-          thumbnail: image.src, // Use the same URL for the thumbnail
-          imageProps: {
-            style: imageContainerStyle // Apply the custom style
-          }
-        }))}
+        images={galleryImages}
         onClick={handleClick}
         enableImageSelection={false}
+        margin={5} // Adjust spacing between images if needed
+        imageContainerStyle={{
+          border: "4px solid red", // Set the border style here
+          borderRadius: "5px", // Optional: for rounded corners
+        }}
       />
 
-      {/* Render the lightbox */}
-      <Lightbox
-        slides={slides} // The slides for the lightbox
-        open={index >= 0} // Lightbox is open when index >= 0
-        index={index} // Set the current image index
-        close={() => setIndex(-1)} // Close the lightbox by resetting index
-      />
-      
+
     </Container>
-  )
-}
+  );
+};
 
-export default GalleryImages
-
-
+export default GalleryImages;
