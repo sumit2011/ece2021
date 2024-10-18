@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import { Person, Email, Assignment, Instagram, Facebook, Twitter, LinkedIn, Link } from '@mui/icons-material';
 
 const ModalBackground = styled.div`
   position: fixed;
@@ -54,18 +55,35 @@ const CloseButton = styled.button`
   color: white;
   border: none;
   padding: 5px 10px;
-  font-size: 14px;
+  font-size: 18px;
   cursor: pointer;
   border-radius: 5px;
+  font-weight: bold;
+`;
+
+const InputContainer = styled.div`
+  display: flex;
+  align-items: center;
+  margin: 10px 0;
+`;
+
+const InputIcon = styled.div`
+  margin-right: 10px;
+  font-size: 30px; /* Adjust icon size */
+  color: white;
 `;
 
 const Input = styled.input`
-  width: 94%;
+  width: 100%;
   padding: 10px;
   margin: 10px 0;
-  border-radius: 15px;
-  border: 1px solid #ddd;
-  // background: transparent;
+  border-radius: 5px;
+  border: 1px solid #00ff00;
+  background-color: transparent; /* Make background transparent */
+  color: white; /* Text color */
+  &::placeholder {
+    color: rgba(255, 255, 255, 0.7); /* Placeholder text color */
+  }
 `;
 
 const SubmitButton = styled.button`
@@ -77,7 +95,7 @@ const SubmitButton = styled.button`
   border: none;
   border-radius: 5px;
   cursor: pointer;
-  width: 100%;
+  width: 97%;
   margin-top: 10px;
 `;
 
@@ -111,70 +129,94 @@ const JoinForm = ({ onClose }) => {
         <h2>Join the Community</h2>
         <FormContainer>
           <form>
-            <Input
-              type="text"
-              name="name"
-              placeholder="Name"
-              value={formData.name}
-              onChange={handleInputChange}
-              required
-            />
-            <Input
-              type="email"
-              name="email"
-              placeholder="Email"
-              value={formData.email}
-              onChange={handleInputChange}
-              required
-            />
-            <Input
-              type="text"
-              name="enroll"
-              placeholder="Enrollment"
-              value={formData.enroll}
-              onChange={handleInputChange}
-              required
-            />
-            <Input
-              type="text"
-              name="instaid"
-              placeholder="Instagram ID"
-              value={formData.instaid}
-              onChange={handleInputChange}
-              required
-            />
-            <Input
-              type="text"
-              name="facebookid"
-              placeholder="Facebook ID"
-              value={formData.facebookid}
-              onChange={handleInputChange}
-              required
-            />
-            <Input
-              type="text"
-              name="twitterid"
-              placeholder="Twitter ID"
-              value={formData.twitterid}
-              onChange={handleInputChange}
-              required
-            />
-            <Input
-              type="text"
-              name="linkedinid"
-              placeholder="LinkedIn ID"
-              value={formData.linkedinid}
-              onChange={handleInputChange}
-              required
-            />
-            <Input
-              type="text"
-              name="link"
-              placeholder="Portfolio Link"
-              value={formData.link}
-              onChange={handleInputChange}
-              required
-            />
+            <InputContainer>
+              <InputIcon><Person /></InputIcon>
+              <Input
+                type="text"
+                name="name"
+                placeholder="Name"
+                value={formData.name}
+                onChange={handleInputChange}
+                required
+              />
+            </InputContainer>
+            <InputContainer>
+              <InputIcon><Email /></InputIcon>
+              <Input
+                type="email"
+                name="email"
+                placeholder="Email"
+                value={formData.email}
+                onChange={handleInputChange}
+                required
+              />
+            </InputContainer>
+            <InputContainer>
+              <InputIcon><Assignment /></InputIcon>
+              <Input
+                type="text"
+                name="enroll"
+                placeholder="Enrollment"
+                value={formData.enroll}
+                onChange={handleInputChange}
+                required
+              />
+            </InputContainer>
+            <InputContainer>
+              <InputIcon><Instagram /></InputIcon>
+              <Input
+                type="text"
+                name="instaid"
+                placeholder="Instagram ID"
+                value={formData.instaid}
+                onChange={handleInputChange}
+                required
+              />
+            </InputContainer>
+            <InputContainer>
+              <InputIcon><Facebook /></InputIcon>
+              <Input
+                type="text"
+                name="facebookid"
+                placeholder="Facebook ID"
+                value={formData.facebookid}
+                onChange={handleInputChange}
+                required
+              />
+            </InputContainer>
+            <InputContainer>
+              <InputIcon><Twitter /></InputIcon>
+              <Input
+                type="text"
+                name="twitterid"
+                placeholder="Twitter ID"
+                value={formData.twitterid}
+                onChange={handleInputChange}
+                required
+              />
+            </InputContainer>
+            <InputContainer>
+              <InputIcon><LinkedIn /></InputIcon>
+              <Input
+                type="text"
+                name="linkedinid"
+                placeholder="LinkedIn ID"
+                value={formData.linkedinid}
+                onChange={handleInputChange}
+                required
+              />
+            </InputContainer>
+            <InputContainer>
+              <InputIcon><Link /></InputIcon>
+              <Input
+                type="text"
+                name="link"
+                placeholder="Portfolio Link"
+                value={formData.link}
+                onChange={handleInputChange}
+                required
+              />
+            </InputContainer>
           </form>
         </FormContainer>
         {/* Submit button placed outside the form */}

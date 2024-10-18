@@ -44,7 +44,7 @@ const CardMain = styled.div`
 `;
 
 const Button = styled.div`
-  height: 35px;
+  // height: 35px;
   
   // justify-content: center;
   text-align: center;
@@ -52,7 +52,7 @@ const Button = styled.div`
   margin: 0px auto;
   background: green;
   color: white;
-  // padding: 10px 20px;
+  padding: 4px 20px;
   font-size: 22px;
   font-weight: bold;
   border: none;
