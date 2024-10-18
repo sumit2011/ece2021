@@ -11,6 +11,7 @@ import Gallery from './Pages/Gallery';
 import Help from './Pages/Help';
 import DiscussionPage from './Pages/DiscussionPage';
 
+import Logo from "./Components/logo";
 
 const Container = styled.div`
   justify-content: center;
@@ -42,6 +43,8 @@ function App() {
           <Route path='/help' element={<Help />} />
           <Route path='/discussionpage' element={<DiscussionPage />} />
         </Routes>
+
+        <Logo />
       </Container>
     </BrowserRouter>
 
