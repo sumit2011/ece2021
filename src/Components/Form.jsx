@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import { Person, Email, Assignment, Instagram, Facebook, Twitter, LinkedIn, Link } from '@mui/icons-material';
+import { Person, Email, Assignment, Instagram, Facebook, Twitter, LinkedIn, Link, Image as ImageIcon } from '@mui/icons-material';
 
 const ModalBackground = styled.div`
   position: fixed;
@@ -20,7 +20,7 @@ const ModalContainer = styled.div`
   border-radius: 10px;
   width: 400px;
   max-width: 90%;
-  max-height: 50vh; /* Limit the height to 90% of the viewport */
+  max-height: 50vh; /* Limit the height to 70% of the viewport */
   display: flex;
   flex-direction: column;
   position: relative;
@@ -36,7 +36,7 @@ const FormContainer = styled.div`
   overflow-y: auto; /* Enable vertical scrolling */
   padding-right: 10px; /* Add space to avoid scrollbar overlapping */
   margin-top: 20px;
-  max-height: 70vh; /* Limit the form height to make it scrollable */
+  max-height: 60vh; /* Limit the form height to make it scrollable */
 
   /* Hide the scrollbar */
   ::-webkit-scrollbar {
@@ -81,6 +81,7 @@ const Input = styled.input`
   border: 1px solid #00ff00;
   background-color: transparent; /* Make background transparent */
   color: white; /* Text color */
+  
   &::placeholder {
     color: rgba(255, 255, 255, 0.7); /* Placeholder text color */
   }
@@ -108,12 +109,17 @@ const JoinForm = ({ onClose }) => {
     facebookid: '',
     twitterid: '',
     linkedinid: '',
-    link: ''
+    link: '',
+    image: null, // State to hold the selected image
   });
 
   const handleInputChange = (e) => {
     const { name, value } = e.target;
     setFormData({ ...formData, [name]: value });
+  };
+
+  const handleImageChange = (e) => {
+    setFormData({ ...formData, image: e.target.files[0] }); // Store the selected image file
   };
 
   const handleSubmit = (e) => {
@@ -128,7 +134,17 @@ const JoinForm = ({ onClose }) => {
         <CloseButton onClick={onClose}>X</CloseButton>
         <h2>Join the Community</h2>
         <FormContainer>
-          <form>
+          <form onSubmit={handleSubmit}>
+          <InputContainer>
+              <InputIcon><ImageIcon /></InputIcon>
+              <Input
+                type="file"
+                name="image"
+                accept="image/*"
+                onChange={handleImageChange}
+                required
+              />
+            </InputContainer>
             <InputContainer>
               <InputIcon><Person /></InputIcon>
               <Input
@@ -217,12 +233,10 @@ const JoinForm = ({ onClose }) => {
                 required
               />
             </InputContainer>
+            
+            <SubmitButton type="submit">Submit</SubmitButton>
           </form>
         </FormContainer>
-        {/* Submit button placed outside the form */}
-        <SubmitButton type="submit" onClick={handleSubmit}>
-          Submit
-        </SubmitButton>
       </ModalContainer>
     </ModalBackground>
   );
