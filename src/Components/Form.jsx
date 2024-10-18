@@ -1,8 +1,3 @@
-
-
-//  CHAT GPT
-
-
 import React from 'react';
 import styled from 'styled-components';
 
@@ -16,23 +11,39 @@ const ModalBackground = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  // z-index: 1000;
-
 `;
 
 const ModalContainer = styled.div`
-  background-color: white;
+  background-color: #152515;
   padding: 30px;
   border-radius: 10px;
   width: 400px;
   max-width: 90%;
+  max-height: 50vh; /* Limit the height to 90% of the viewport */
+  display: flex;
+  flex-direction: column;
   position: relative;
   z-index: 1001;
-    border: 2px solid rgba(0, 255, 0, 0.5);
+  border: 2px solid rgba(0, 255, 0, 0.5);
   box-shadow: 0 0 15px rgba(0, 255, 0, 0.3);
-    background-color: #152515;
   color: #00ff00;
   margin: 20px;
+`;
+
+const FormContainer = styled.div`
+  flex-grow: 1;
+  overflow-y: auto; /* Enable vertical scrolling */
+  padding-right: 10px; /* Add space to avoid scrollbar overlapping */
+  margin-top: 20px;
+  max-height: 70vh; /* Limit the form height to make it scrollable */
+
+  /* Hide the scrollbar */
+  ::-webkit-scrollbar {
+    width: 0px;
+    background: transparent;
+  }
+
+  scrollbar-width: none; /* Firefox */
 `;
 
 const CloseButton = styled.button`
@@ -49,11 +60,12 @@ const CloseButton = styled.button`
 `;
 
 const Input = styled.input`
-  width: 100%;
+  width: 94%;
   padding: 10px;
   margin: 10px 0;
-  border-radius: 5px;
+  border-radius: 15px;
   border: 1px solid #ddd;
+  // background: transparent;
 `;
 
 const SubmitButton = styled.button`
@@ -66,12 +78,19 @@ const SubmitButton = styled.button`
   border-radius: 5px;
   cursor: pointer;
   width: 100%;
+  margin-top: 10px;
 `;
 
 const JoinForm = ({ onClose }) => {
   const [formData, setFormData] = React.useState({
     name: '',
-    email: ''
+    email: '',
+    enroll: '',
+    instaid: '',
+    facebookid: '',
+    twitterid: '',
+    linkedinid: '',
+    link: ''
   });
 
   const handleInputChange = (e) => {
@@ -90,25 +109,78 @@ const JoinForm = ({ onClose }) => {
       <ModalContainer>
         <CloseButton onClick={onClose}>X</CloseButton>
         <h2>Join the Community</h2>
-        <form onSubmit={handleSubmit}>
-          <Input
-            type="text"
-            name="name"
-            placeholder="Name"
-            value={formData.name}
-            onChange={handleInputChange}
-            required
-          />
-          <Input
-            type="email"
-            name="email"
-            placeholder="Email"
-            value={formData.email}
-            onChange={handleInputChange}
-            required
-          />
-          <SubmitButton type="submit">Submit</SubmitButton>
-        </form>
+        <FormContainer>
+          <form>
+            <Input
+              type="text"
+              name="name"
+              placeholder="Name"
+              value={formData.name}
+              onChange={handleInputChange}
+              required
+            />
+            <Input
+              type="email"
+              name="email"
+              placeholder="Email"
+              value={formData.email}
+              onChange={handleInputChange}
+              required
+            />
+            <Input
+              type="text"
+              name="enroll"
+              placeholder="Enrollment"
+              value={formData.enroll}
+              onChange={handleInputChange}
+              required
+            />
+            <Input
+              type="text"
+              name="instaid"
+              placeholder="Instagram ID"
+              value={formData.instaid}
+              onChange={handleInputChange}
+              required
+            />
+            <Input
+              type="text"
+              name="facebookid"
+              placeholder="Facebook ID"
+              value={formData.facebookid}
+              onChange={handleInputChange}
+              required
+            />
+            <Input
+              type="text"
+              name="twitterid"
+              placeholder="Twitter ID"
+              value={formData.twitterid}
+              onChange={handleInputChange}
+              required
+            />
+            <Input
+              type="text"
+              name="linkedinid"
+              placeholder="LinkedIn ID"
+              value={formData.linkedinid}
+              onChange={handleInputChange}
+              required
+            />
+            <Input
+              type="text"
+              name="link"
+              placeholder="Portfolio Link"
+              value={formData.link}
+              onChange={handleInputChange}
+              required
+            />
+          </form>
+        </FormContainer>
+        {/* Submit button placed outside the form */}
+        <SubmitButton type="submit" onClick={handleSubmit}>
+          Submit
+        </SubmitButton>
       </ModalContainer>
     </ModalBackground>
   );
