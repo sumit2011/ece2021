@@ -20,7 +20,7 @@ const ModalContainer = styled.div`
   border-radius: 10px;
   width: 400px;
   max-width: 90%;
-  max-height: 50vh; /* Limit the height to 70% of the viewport */
+  max-height: 50vh;
   display: flex;
   flex-direction: column;
   position: relative;
@@ -33,18 +33,17 @@ const ModalContainer = styled.div`
 
 const FormContainer = styled.div`
   flex-grow: 1;
-  overflow-y: auto; /* Enable vertical scrolling */
-  padding-right: 10px; /* Add space to avoid scrollbar overlapping */
+  overflow-y: auto;
+  padding-right: 10px;
   margin-top: 20px;
-  max-height: 60vh; /* Limit the form height to make it scrollable */
+  max-height: 70vh;
 
-  /* Hide the scrollbar */
   ::-webkit-scrollbar {
     width: 0px;
     background: transparent;
   }
 
-  scrollbar-width: none; /* Firefox */
+  scrollbar-width: none;
 `;
 
 const CloseButton = styled.button`
@@ -69,21 +68,19 @@ const InputContainer = styled.div`
 
 const InputIcon = styled.div`
   margin-right: 10px;
-  font-size: 30px; /* Adjust icon size */
+  font-size: 30px;
   color: white;
 `;
 
 const Input = styled.input`
   width: 100%;
   padding: 10px;
-  margin: 10px 0;
   border-radius: 5px;
   border: 1px solid #00ff00;
-  background-color: transparent; /* Make background transparent */
-  color: white; /* Text color */
-  
+  background-color: transparent;
+  color: white;
   &::placeholder {
-    color: rgba(255, 255, 255, 0.7); /* Placeholder text color */
+    color: rgba(255, 255, 255, 0.7);
   }
 `;
 
@@ -110,21 +107,58 @@ const JoinForm = ({ onClose }) => {
     twitterid: '',
     linkedinid: '',
     link: '',
-    image: null, // State to hold the selected image
+    image: null // To store image file
   });
 
+  // Handle input changes
   const handleInputChange = (e) => {
     const { name, value } = e.target;
     setFormData({ ...formData, [name]: value });
   };
 
+  // Handle image file changes
   const handleImageChange = (e) => {
-    setFormData({ ...formData, image: e.target.files[0] }); // Store the selected image file
+    setFormData({ ...formData, image: e.target.files[0] });
   };
 
-  const handleSubmit = (e) => {
+  // Handle form submission
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    console.log(formData); // Handle form submission (e.g., send to backend)
+    
+    // Create a 2D array for the data
+    const data = [
+      [
+        formData.name,
+        formData.email,
+        formData.enroll,
+        formData.instaid,
+        formData.facebookid,
+        formData.twitterid,
+        formData.linkedinid,
+        formData.link,
+      ],
+    ];
+
+    try {
+      const response = await fetch('https://v1.nocodeapi.com/sumit2011/google_sheets/olakhZguFbKubafv?tabId=Sheet1', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(data), // Send the 2D array as JSON
+      });
+
+      if (response.ok) {
+        alert('Form submitted successfully');
+        // Optionally reset form or provide feedback to the user
+      } else {
+        const errorResponse = await response.json();
+        console.error('Error submitting form:', errorResponse);
+      }
+    } catch (error) {
+      console.error('Error:', error);
+    }
+
     onClose(); // Close modal after form submission
   };
 
@@ -135,16 +169,6 @@ const JoinForm = ({ onClose }) => {
         <h2>Join the Community</h2>
         <FormContainer>
           <form onSubmit={handleSubmit}>
-          <InputContainer>
-              <InputIcon><ImageIcon /></InputIcon>
-              <Input
-                type="file"
-                name="image"
-                accept="image/*"
-                onChange={handleImageChange}
-                required
-              />
-            </InputContainer>
             <InputContainer>
               <InputIcon><Person /></InputIcon>
               <Input
@@ -233,8 +257,20 @@ const JoinForm = ({ onClose }) => {
                 required
               />
             </InputContainer>
-            
-            <SubmitButton type="submit">Submit</SubmitButton>
+            {/* Image upload */}
+            <InputContainer>
+              <InputIcon><ImageIcon /></InputIcon>
+              <Input
+                type="file"
+                name="image"
+                onChange={handleImageChange}
+                accept="image/*"
+              />
+            </InputContainer>
+            {/* Submit button */}
+            <SubmitButton type="submit">
+              Submit
+            </SubmitButton>
           </form>
         </FormContainer>
       </ModalContainer>
