@@ -138,7 +138,7 @@ const Navbar = () => {
         </Link>
 
         <Link to="/confessionpage" style={{ textDecoration: "none", color: "white", width: "100%" }}  onClick={closeMenu}>
-          <SidebarDiv>Confession  🫣</SidebarDiv>
+          <SidebarDiv>Confession 🫣</SidebarDiv>
         </Link>
 
         <Link to="/discussionpage" style={{ textDecoration: "none", color: "white", width: "100%" }}  onClick={closeMenu}>
@@ -147,7 +147,7 @@ const Navbar = () => {
 
 
         <Link to="/main" style={{ textDecoration: "none", color: "white", width: "100%" }}  onClick={closeMenu}>
-          <SidebarDiv>Members</SidebarDiv>
+          <SidebarDiv>Members 🫂</SidebarDiv>
         </Link>
 
       </SidebarContainer>
