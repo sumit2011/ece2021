@@ -44,7 +44,7 @@ function App() {
           <Route path='/discussionpage' element={<DiscussionPage />} />
         </Routes>
 
-        <Logo />
+        {/* <Logo /> */}
       </Container>
     </BrowserRouter>
 
