@@ -43,19 +43,21 @@ const Alert = styled.div`
 `;
 
 const Button = styled.div`
-  background: green;
-  height: 35px;
-  border-radius: 30px;
-  justify-content: center;
-  text-align: center;
-  color: white;
-  padding-top: 5px;
-  width: 270px;
+ text-align: center;
+  
   margin: 0px auto;
-  font-size: 22px;
+  border-radius: 30px;
+  max-width: 270px;
+  background: green;
+  color: white;
+  padding: 10px 20px;
+  font-size: 18px;
   font-weight: bold;
+  border: none;
+  // border-radius: 5px;
   cursor: pointer;
-  margin-top: 40px;
+  width: 97%;
+  margin-top: 10px;
 
 `;
 
@@ -81,7 +83,7 @@ const Help = () => {
                 </div>
 
             </Alert>
-            <Button>Click Me</Button>
+            <Button>Help Me 😩</Button>
         </Container>
 
     )

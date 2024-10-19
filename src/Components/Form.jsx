@@ -107,16 +107,16 @@ const SubmitButton = styled.button`
 
 const Warning = styled.div`
   text-align: center;
-  background-color: #2d0a0a;
+  background-color: #0a1f2d;
   border-radius: 10px;
   padding: 10px;
   width: 90%;
-  border: 2px solid #ff1a1a;
-  box-shadow: 0 0 15px 5px rgba(255, 26, 26, 0.5);
   color: grey;
   font-family: Arial, sans-serif;
   font-weight: bold;
   font-size: 14px;
+  border: 2px solid #1a6cff;
+  box-shadow: 0 0 15px 5px rgba(26, 108, 255, 0.5);
 `;
 
 const CustomAlertContainer = styled.div`

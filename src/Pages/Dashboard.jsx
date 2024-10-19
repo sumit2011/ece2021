@@ -44,21 +44,20 @@ const CardMain = styled.div`
 `;
 
 const Button = styled.div`
-  // height: 35px;
-  
-  // justify-content: center;
-  text-align: center;
+text-align: center;
   
   margin: 0px auto;
+  border-radius: 30px;
+  max-width: 270px;
   background: green;
   color: white;
-  padding: 4px 20px;
-  font-size: 22px;
+  padding: 10px 20px;
+  font-size: 18px;
   font-weight: bold;
   border: none;
-  border-radius: 30px;
+  // border-radius: 5px;
   cursor: pointer;
-  max-width: 270px;
+  width: 97%;
   margin-top: 10px;
 `;
 
@@ -111,6 +110,14 @@ const Heart = styled.div`
 
 `;
 
+const FeatureContainer = styled.div`
+  background: red;
+  width: 50%;
+  margin: opx auto;
+  justify-content: center;
+
+`;
+
 const Dashboard = () => {
 
   const [isFormOpen, setIsFormOpen] = useState(false);
@@ -148,8 +155,18 @@ const Dashboard = () => {
         </DashboardMain>
       </div>
 
-
       <Hr />
+{/* 
+      <Header>
+        <h1 style={{ color: "white" }}>Community Features </h1>
+      </Header>
+        <FeatureContainer>
+
+            <h3>Interactive Dashboard</h3>
+
+        </FeatureContainer> */}
+      
+
       <Footer>
         <Title>
           <span><h3>Designed with</h3></span>

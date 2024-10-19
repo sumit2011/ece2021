@@ -74,23 +74,21 @@ const Discussions = styled.div`
 `;
 
 const Button = styled.div`
-  // height: 35px;
-  
-  // justify-content: center;
   text-align: center;
   
   margin: 0px auto;
+  border-radius: 30px;
+  max-width: 270px;
   background: green;
   color: white;
-  padding: 4px 20px;
-  font-size: 22px;
+  padding: 10px 20px;
+  font-size: 18px;
   font-weight: bold;
   border: none;
-  border-radius: 30px;
+  // border-radius: 5px;
   cursor: pointer;
-  max-width: 270px;
+  width: 97%;
   margin-top: 10px;
-  user-select: none;
 `;
 
 const ConfessionPage = () => {
@@ -122,7 +120,7 @@ const ConfessionPage = () => {
         </div>
         
       </Alert>
-      <Button onClick={handleClick}>Add Confession</Button>
+      <Button onClick={handleClick}>Add Confession </Button>
 
       {isFormOpen && <ConfessionForm onClose={handleCloseForm} />}
 
