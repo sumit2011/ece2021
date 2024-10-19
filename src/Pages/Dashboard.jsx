@@ -88,7 +88,6 @@ const Hr = styled.div`
   padding: 10px 20px;
   box-shadow: 0 4px 8px -2px rgba(0, 255, 0, 0.3);
   border: none;
-  margin: 20px;
 `;
 
 const Heart = styled.div`

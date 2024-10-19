@@ -21,7 +21,7 @@ const ModalContainer = styled.div`
   border-radius: 10px;
   width: 400px;
   max-width: 90%;
-  max-height: 50vh;
+  max-height: 70vh;
   display: flex;
   flex-direction: column;
   position: relative;
@@ -30,6 +30,7 @@ const ModalContainer = styled.div`
   box-shadow: 0 0 15px rgba(0, 255, 0, 0.3);
   color: #00ff00;
   margin: 20px;
+  padding-top: 0px;
 `;
 
 const FormContainer = styled.div`
@@ -49,13 +50,13 @@ const FormContainer = styled.div`
 
 const CloseButton = styled.button`
   position: absolute;
-  top: 10px;
-  right: 10px;
+  top: 5px;
+  right: 5px;
   background: red;
   color: white;
   border: none;
   padding: 5px 10px;
-  font-size: 18px;
+  font-size: 14px;
   cursor: pointer;
   border-radius: 5px;
   font-weight: bold;
@@ -99,33 +100,49 @@ const SubmitButton = styled.button`
   margin-top: 10px;
 `;
 
-const CustomAlertContainer = styled.div`
+const Warning = styled.div`
   text-align: center;
-     z-index: 2000;
-position: fixed;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+
   // box-shadow: 0 0 15px rgba(0, 255, 0, 0.5);
 
   background-color: #2d0a0a; /* Dark reddish background */
   border-radius: 10px;
   padding: 10px;
   // margin: 20px;
-  max-width: 400px;
-  width: 220px;
+  width: 90%;
   border: 2px solid #ff1a1a; /* Reddish glowing border */
   box-shadow: 0 0 15px 5px rgba(255, 26, 26, 0.5);
-  color: white;
+  color: grey;
   font-family: Arial, sans-serif;
   // display: flex;
-  justify-content: 
+  // justify-content: center;
  
-  @media (max-width: 500px){
-      margin: 20px;
-  }
+  font-weight: bold;
+  font-size: 14px;
   
 `;
+
+const CustomAlertContainer = styled.div`
+  text-align: center;
+  z-index: 2000;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  
+  background-color: #0a1f2d; /* Dark blueish background */
+  border-radius: 10px;
+  padding: 10px;
+  max-width: 400px;
+  width: 220px;
+  border: 2px solid #1a6cff; /* Blueish glowing border */
+  box-shadow: 0 0 15px 5px rgba(26, 108, 255, 0.5); /* Soft blue glow */
+  color: white;
+  font-family: Arial, sans-serif;
+
+
+`;
+
 
 const CustomAlertButton = styled.button`
   background-color: black;
@@ -209,6 +226,7 @@ const JoinForm = ({ onClose }) => {
         <ModalContainer>
           <CloseButton onClick={onClose}>X</CloseButton>
           <h2>Join the Community 🚀</h2>
+          <Warning><span>⚠️ </span><span>Upload sqared and zoomed photo for better visibiity.</span></Warning>
           <FormContainer>
             <form onSubmit={handleSubmit}>
               <InputContainer>
@@ -321,7 +339,7 @@ const JoinForm = ({ onClose }) => {
       {/* Custom Alert */}
       {alertVisible && (
         <CustomAlertContainer>
-          <h3>Form Submitted Successfully!<br/>
+          <h3>Form Submitted Successfully! 😃<br/>
             Thank you for joining 🤗...
             
           </h3>
