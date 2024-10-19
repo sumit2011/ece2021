@@ -2,13 +2,14 @@ import React, { useState } from 'react';
 import styled from 'styled-components';
 import { Person, Email, Assignment, Instagram, Facebook, Twitter, LinkedIn, Link, Image as ImageIcon } from '@mui/icons-material';
 
+// Styled components
 const ModalBackground = styled.div`
   position: fixed;
   top: 0;
   left: 0;
   right: 0;
   bottom: 0;
-  background: rgba(0, 0, 0, 0.7);
+  background: rgba(0, 0, 0, ${(props) => (props.alertVisible ? 0.7 : 0.7)});
   display: flex;
   justify-content: center;
   align-items: center;
@@ -31,6 +32,9 @@ const ModalContainer = styled.div`
   color: #00ff00;
   margin: 20px;
   padding-top: 0px;
+    opacity: ${(props) => (props.alertVisible ? 0.1 : 1)}; // Conditional opacity
+
+
 `;
 
 const FormContainer = styled.div`
@@ -38,7 +42,8 @@ const FormContainer = styled.div`
   overflow-y: auto;
   padding-right: 10px;
   margin-top: 20px;
-  // max-height: 50vh;
+    opacity: ${(props) => (props.alertVisible ? 0.1 : 1)}; // Conditional opacity
+  transition: opacity 0.3s ease; // Smooth transition for opacity change
 
   ::-webkit-scrollbar {
     width: 0px;
@@ -102,24 +107,16 @@ const SubmitButton = styled.button`
 
 const Warning = styled.div`
   text-align: center;
-
-  // box-shadow: 0 0 15px rgba(0, 255, 0, 0.5);
-
-  background-color: #2d0a0a; /* Dark reddish background */
+  background-color: #2d0a0a;
   border-radius: 10px;
   padding: 10px;
-  // margin: 20px;
   width: 90%;
-  border: 2px solid #ff1a1a; /* Reddish glowing border */
+  border: 2px solid #ff1a1a;
   box-shadow: 0 0 15px 5px rgba(255, 26, 26, 0.5);
   color: grey;
   font-family: Arial, sans-serif;
-  // display: flex;
-  // justify-content: center;
- 
   font-weight: bold;
   font-size: 14px;
-  
 `;
 
 const CustomAlertContainer = styled.div`
@@ -129,20 +126,16 @@ const CustomAlertContainer = styled.div`
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  
-  background-color: #0a1f2d; /* Dark blueish background */
+  background-color: #0a1f2d;
   border-radius: 10px;
   padding: 10px;
   max-width: 400px;
   width: 220px;
-  border: 2px solid #1a6cff; /* Blueish glowing border */
-  box-shadow: 0 0 15px 5px rgba(26, 108, 255, 0.5); /* Soft blue glow */
+  border: 2px solid #1a6cff;
+  box-shadow: 0 0 15px 5px rgba(26, 108, 255, 0.5);
   color: white;
   font-family: Arial, sans-serif;
-
-
 `;
-
 
 const CustomAlertButton = styled.button`
   background-color: black;
@@ -154,6 +147,7 @@ const CustomAlertButton = styled.button`
   margin-top: 10px;
 `;
 
+// Main component
 const JoinForm = ({ onClose }) => {
   const [formData, setFormData] = useState({
     name: '',
@@ -204,11 +198,12 @@ const JoinForm = ({ onClose }) => {
         headers: {
           'Content-Type': 'application/json',
         },
-        body: JSON.stringify(data), // Send the 2D array as JSON
+        body: JSON.stringify(data), 
       });
 
       if (response.ok) {
-        setAlertVisible(true); // Show success alert
+        console.log('Form submitted successfully');
+        setAlertVisible(true); // Show the alert on successful submission
       } else {
         const errorResponse = await response.json();
         console.error('Error submitting form:', errorResponse);
@@ -222,12 +217,12 @@ const JoinForm = ({ onClose }) => {
 
   return (
     <>
-      <ModalBackground>
+      <ModalBackground alertVisible={alertVisible}>
         <ModalContainer>
           <CloseButton onClick={onClose}>X</CloseButton>
           <h2>Join the Community 🚀</h2>
-          <Warning><span>⚠️ </span><span>Upload sqared and zoomed photo for better visibiity.</span></Warning>
-          <FormContainer>
+          <Warning><span>⚠️ </span><span>Upload squared and zoomed photo for better visibility.</span></Warning>
+          <FormContainer alertVisible={alertVisible}> {/* Pass alertVisible as prop */}
             <form onSubmit={handleSubmit}>
               <InputContainer>
                 <InputIcon><Person /></InputIcon>
@@ -270,7 +265,6 @@ const JoinForm = ({ onClose }) => {
                   placeholder="Instagram ID"
                   value={formData.instaid}
                   onChange={handleInputChange}
-                  required
                 />
               </InputContainer>
               <InputContainer>
@@ -281,7 +275,6 @@ const JoinForm = ({ onClose }) => {
                   placeholder="Facebook ID"
                   value={formData.facebookid}
                   onChange={handleInputChange}
-                  required
                 />
               </InputContainer>
               <InputContainer>
@@ -292,7 +285,6 @@ const JoinForm = ({ onClose }) => {
                   placeholder="Twitter ID"
                   value={formData.twitterid}
                   onChange={handleInputChange}
-                  required
                 />
               </InputContainer>
               <InputContainer>
@@ -303,7 +295,6 @@ const JoinForm = ({ onClose }) => {
                   placeholder="LinkedIn ID"
                   value={formData.linkedinid}
                   onChange={handleInputChange}
-                  required
                 />
               </InputContainer>
               <InputContainer>
@@ -314,7 +305,6 @@ const JoinForm = ({ onClose }) => {
                   placeholder="Portfolio Link"
                   value={formData.link}
                   onChange={handleInputChange}
-                  required
                 />
               </InputContainer>
               {/* Image upload */}
@@ -341,7 +331,6 @@ const JoinForm = ({ onClose }) => {
         <CustomAlertContainer>
           <h3>Form Submitted Successfully! 😃<br/>
             Thank you for joining 🤗...
-            
           </h3>
           <CustomAlertButton onClick={() => {
             setAlertVisible(false);
