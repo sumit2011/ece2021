@@ -14,14 +14,16 @@ const ModalBackground = styled.div`
   justify-content: center;
   align-items: center;
   z-index: 1000;
+  flex-direction: column;
+  
 `;
 
 const ModalContainer = styled.div`
   background-color: #152515;
   padding: 30px;
   border-radius: 10px;
-  width: 400px;
-  max-width: 90%;
+  max-width: 400px;
+  // max-width: 100%;
   max-height: 50vh;
   display: flex;
   flex-direction: column;
@@ -30,9 +32,9 @@ const ModalContainer = styled.div`
   border: 2px solid rgba(0, 255, 0, 0.5);
   box-shadow: 0 0 15px rgba(0, 255, 0, 0.3);
   color: #00ff00;
+  // padding-top: 35px;
+  opacity: ${(props) => (props.alertVisible ? 0.1 : 1)}; // Conditional opacity
   margin: 20px;
-  padding-top: 0px;
-    opacity: ${(props) => (props.alertVisible ? 0.1 : 1)}; // Conditional opacity
 
 
 `;
@@ -49,19 +51,18 @@ const FormContainer = styled.div`
     width: 0px;
     background: transparent;
   }
-
   scrollbar-width: none;
 `;
 
 const CloseButton = styled.button`
   position: absolute;
-  top: 5px;
-  right: 5px;
+  top: 10px;
+  right: 10px;
   background: red;
   color: white;
   border: none;
   padding: 5px 10px;
-  font-size: 14px;
+  font-size: 18px;
   cursor: pointer;
   border-radius: 5px;
   font-weight: bold;
@@ -110,13 +111,16 @@ const Warning = styled.div`
   background-color: #0a1f2d;
   border-radius: 10px;
   padding: 10px;
-  width: 90%;
   color: grey;
   font-family: Arial, sans-serif;
   font-weight: bold;
   font-size: 14px;
   border: 2px solid #1a6cff;
   box-shadow: 0 0 15px 5px rgba(26, 108, 255, 0.5);
+  // width: 400px;
+  max-width: 400px;
+  margin: 20px;
+  margin-bottom: 0px;
 `;
 
 const CustomAlertContainer = styled.div`
@@ -218,10 +222,11 @@ const JoinForm = ({ onClose }) => {
   return (
     <>
       <ModalBackground alertVisible={alertVisible}>
+      <Warning><span>⚠️ </span><span>Try to fill up all the fields in the given form and upload squared and zoomed photo for better visibility.</span></Warning>
+
         <ModalContainer>
           <CloseButton onClick={onClose}>X</CloseButton>
           <h2>Join the Community 🚀</h2>
-          <Warning><span>⚠️ </span><span>Upload squared and zoomed photo for better visibility.</span></Warning>
           <FormContainer alertVisible={alertVisible}> {/* Pass alertVisible as prop */}
             <form onSubmit={handleSubmit}>
               <InputContainer>
@@ -329,7 +334,7 @@ const JoinForm = ({ onClose }) => {
       {/* Custom Alert */}
       {alertVisible && (
         <CustomAlertContainer>
-          <h3>Form Submitted Successfully! 😃<br/>
+          <h3>Form Submitted Successfully! 🎉<br/>
             Thank you for joining 🤗...
           </h3>
           <CustomAlertButton onClick={() => {
