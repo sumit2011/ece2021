@@ -74,8 +74,8 @@ const images = [
     caption: "315H (gratisography.com)",
   },
   {
-    src: require("../Utils/Photos/13.jpg"),
-    original: require("../Utils/Photos/13.jpg"),
+    src: require("../Utils/Photos/10.jpg"),
+    original: require("../Utils/Photos/10.jpg"),
     width: 320,
     height: 213,
     caption: "201H (gratisography.com)",
