@@ -26,7 +26,7 @@ export const Datas = [
     {
         "id": 3,
         "name": "Prateek Kumar",
-        "initials": "sk",
+        "initials": "Pk",
         "image": require('../Images/30.jpeg'),
         "link" : "",
         "instagram" : "",
@@ -38,7 +38,7 @@ export const Datas = [
     {
         "id": 4,
         "name": "Md Saif",
-        "initials": "sk",
+        "initials": "Ms",
         "image": require('../Images/46.jpeg'),
         "link" : "",
         "instagram" : "",
@@ -49,15 +49,15 @@ export const Datas = [
     },
     {
         "id": 5,
-        "name": "",
-        "initials": "sk",
-        "image": require('../Images/1.png'),
+        "name": "Nitendra Kumar",
+        "initials": "Nk",
+        "image": require('../Images/79.jpg'),
         "link" : "",
         "instagram" : "",
         "twitter" : "",
         "facebook" : "",
         "linkedin" : " ",
-        "enroll": ""
+        "enroll": "2021BECE079"
     },
     {
         "id": 6,
