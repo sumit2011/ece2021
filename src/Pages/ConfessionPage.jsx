@@ -1,9 +1,10 @@
 import React from 'react'
+import { useState } from 'react';
 import { Confessions } from '../Utils/Data/Confession';
 import ConfessionCard from '../Components/ConfessionCard';
 import styled from 'styled-components';
 import Giscus from '@giscus/react';
-
+import ConfessionForm from '../Components/ConfessionForm';
 
 const MainContainer = styled.div`
   
@@ -28,14 +29,14 @@ color: white;
 
 
 const Alert = styled.div`
-  background-color: #2d0a0a; /* Dark reddish background */
+  // background-color: #2d0a0a; /* Dark reddish background */
   border-radius: 10px;
   padding: 20px;
   // margin: 20px;
   max-width: 400px;
   // width: 350px;
-  border: 2px solid #ff1a1a; /* Reddish glowing border */
-  box-shadow: 0 0 15px 5px rgba(255, 26, 26, 0.5);
+  // border: 2px solid #ff1a1a; /* Reddish glowing border */
+  // box-shadow: 0 0 15px 5px rgba(255, 26, 26, 0.5);
   color: white;
   font-family: Arial, sans-serif;
   // display: flex;
@@ -43,6 +44,9 @@ const Alert = styled.div`
   margin: 20px;
   margin-top: 40px;
   margin: 50px auto;
+  background-color: #0a1f2d;
+  border: 2px solid #1a6cff;
+  box-shadow: 0 0 15px 5px rgba(26, 108, 255, 0.5);
   @media (max-width: 500px){
       margin: 20px;
   }
@@ -52,6 +56,7 @@ const Alert = styled.div`
 const Container = styled.div`
   // display: grid;
   // justify-content: center;
+  margin-top: 40px;
 `;
 
 const Discussions = styled.div`
@@ -68,7 +73,36 @@ const Discussions = styled.div`
 
 `;
 
+const Button = styled.div`
+  // height: 35px;
+  
+  // justify-content: center;
+  text-align: center;
+  
+  margin: 0px auto;
+  background: green;
+  color: white;
+  padding: 4px 20px;
+  font-size: 22px;
+  font-weight: bold;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  max-width: 270px;
+  margin-top: 10px;
+`;
+
 const ConfessionPage = () => {
+
+  const [isFormOpen, setIsFormOpen] = useState(false);
+
+  const handleClick = () => {
+    setIsFormOpen(true);
+  };
+
+  const handleCloseForm = () => {
+    setIsFormOpen(false);
+  };
 
   return (
     <MainContainer >
@@ -79,13 +113,18 @@ const ConfessionPage = () => {
 
       <Alert>
         <div>
-        <h2>Under Production ⚒️</h2>
+        <h2>Under Upgradation ⚒️</h2>
         <p>It's a confession page here you can confess anything you want.
           but you can only add your confession if you are the member.
+          Click on the button to write your confession. 👇
         </p>
         </div>
         
       </Alert>
+      <Button onClick={handleClick}>Add Confession</Button>
+
+      {isFormOpen && <ConfessionForm onClose={handleCloseForm} />}
+
 
       <Container>
       {Confessions.map((item)=>(
