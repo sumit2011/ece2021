@@ -58,7 +58,7 @@ const Button = styled.div`
   border: none;
   border-radius: 30px;
   cursor: pointer;
-  width: 270px;
+  max-width: 270px;
   margin-top: 10px;
 `;
 

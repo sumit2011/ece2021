@@ -21,7 +21,7 @@ const ModalContainer = styled.div`
   border-radius: 10px;
   width: 400px;
   max-width: 90%;
-  max-height: 70vh;
+  max-height: 50vh;
   display: flex;
   flex-direction: column;
   position: relative;
@@ -38,7 +38,7 @@ const FormContainer = styled.div`
   overflow-y: auto;
   padding-right: 10px;
   margin-top: 20px;
-  max-height: 70vh;
+  // max-height: 50vh;
 
   ::-webkit-scrollbar {
     width: 0px;
