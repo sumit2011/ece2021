@@ -2,14 +2,19 @@ import React, { useState } from 'react';
 import styled from 'styled-components';
 
 // Styled components
+
+const Container = styled.div`
+ margin: 20px;
+`;
+
 const FormContainer = styled.div`
   display: flex;
   flex-direction: column;
-  align-items: center;
+  // align-items: center;
   background-color: #f2f2f2;
   padding: 20px;
   border-radius: 10px;
-  width: 400px;
+  // width: 400px;
   margin: 50px auto;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   position: relative; // for the close button positioning
@@ -80,8 +85,9 @@ const CustomAlertContainer = styled.div`
   transform: translate(-50%, -50%);
   background-color: #0a1f2d;
   border-radius: 10px;
-  padding: 20px;
-  max-width: 300px;
+  padding: 10px;
+  max-width: 400px;
+  width: 220px;
   border: 2px solid #1a6cff;
   box-shadow: 0 0 15px 5px rgba(26, 108, 255, 0.5);
   color: white;
@@ -104,7 +110,7 @@ const NameMessageForm = () => {
     message: ''
   });
 
-  const [alertVisible, setAlertVisible] = useState(false);
+  const [alertVisible, setAlertVisible] = useState(true);
   const [formVisible, setFormVisible] = useState(true); // State for form visibility
 
   const handleInputChange = (e) => {
@@ -120,10 +126,10 @@ const NameMessageForm = () => {
   };
 
   return (
-    <>
+    <Container>
       {formVisible && (
         <FormContainer>
-          <h2>Submit your Message</h2>
+          <h2>Write your Confession 🤫</h2>
           <CloseButton onClick={() => setFormVisible(false)}>X</CloseButton> {/* Close button */}
           <form onSubmit={handleSubmit}>
             <Input
@@ -157,7 +163,7 @@ const NameMessageForm = () => {
           </CustomAlertButton>
         </CustomAlertContainer>
       )}
-    </>
+    </Container>
   );
 };
 

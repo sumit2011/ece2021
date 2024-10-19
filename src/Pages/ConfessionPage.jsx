@@ -90,6 +90,7 @@ const Button = styled.div`
   cursor: pointer;
   max-width: 270px;
   margin-top: 10px;
+  user-select: none;
 `;
 
 const ConfessionPage = () => {
