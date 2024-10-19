@@ -110,7 +110,7 @@ const NameMessageForm = () => {
     message: ''
   });
 
-  const [alertVisible, setAlertVisible] = useState(true);
+  const [alertVisible, setAlertVisible] = useState(false);
   const [formVisible, setFormVisible] = useState(true); // State for form visibility
 
   const handleInputChange = (e) => {
