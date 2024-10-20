@@ -4,9 +4,10 @@ import styled from 'styled-components';
 import Lightbox from "yet-another-react-lightbox";
 import "yet-another-react-lightbox/styles.css";
 import Zoom from "yet-another-react-lightbox/plugins/zoom";
+import Fullscreen from "yet-another-react-lightbox/plugins/fullscreen";
 
-import { ThumbnailImageProps } from "react-grid-gallery";
- 
+import Thumbnails from "yet-another-react-lightbox/plugins/thumbnails";
+import "yet-another-react-lightbox/plugins/thumbnails.css";
 
 
 
@@ -142,11 +143,12 @@ const GalleryImages = () => {
       />
       
       <Lightbox
-        plugins={[Zoom]}
+        plugins={[Zoom,Fullscreen,Thumbnails]}
         slides={slides}
         open={index >= 0}
         index={index}
         close={() => setIndex(-1)}
+        // plugins={[Fullscreen]}
       />
     </Container>
 
