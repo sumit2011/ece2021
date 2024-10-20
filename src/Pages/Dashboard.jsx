@@ -35,9 +35,12 @@ const DashboardMain = styled.div`
   margin-top: 50px;
   gap: 4px;
   margin-left: 20px;
-
+  
 `;
 
+const Container = styled.div`
+// 
+`;
 
 const CardMain = styled.div`
   margin-left: -30px; 
@@ -110,13 +113,7 @@ const Heart = styled.div`
 
 `;
 
-const FeatureContainer = styled.div`
-  background: red;
-  width: 50%;
-  margin: opx auto;
-  justify-content: center;
 
-`;
 
 const Dashboard = () => {
 
@@ -142,6 +139,7 @@ const Dashboard = () => {
       <Button onClick={handleClick}>
         Join Now
       </Button>
+      <Container>
 
       {isFormOpen && <JoinForm onClose={handleCloseForm} />}
 
@@ -154,6 +152,7 @@ const Dashboard = () => {
           ))}
         </DashboardMain>
       </div>
+      </Container>
 
       <Hr />
 {/* 

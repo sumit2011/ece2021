@@ -104,25 +104,55 @@ const CustomAlertButton = styled.button`
   margin-top: 10px;
 `;
 
+
+
 const NameMessageForm = () => {
   const [formData, setFormData] = useState({
     name: '',
-    message: ''
+    message: '',
+    date: '', // added date field
   });
 
   const [alertVisible, setAlertVisible] = useState(false);
-  const [formVisible, setFormVisible] = useState(true); // State for form visibility
+  const [formVisible, setFormVisible] = useState(true);
 
   const handleInputChange = (e) => {
     const { name, value } = e.target;
     setFormData({ ...formData, [name]: value });
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    console.log('Form Data:', formData);
-    setAlertVisible(true); // Show alert after form submission
-    setFormVisible(false); // Hide the form after submission
+
+    // Capture the current date
+    const currentDate = new Date().toLocaleString();
+
+    // Log form data
+    console.log('Form Data:', { ...formData, date: currentDate });
+
+    // Include the date in the data
+    const data = [[formData.name, formData.message, currentDate]];
+
+    try {
+      const response = await fetch('https://v1.nocodeapi.com/sumit2011/google_sheets/olakhZguFbKubafv?tabId=Sheet2', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(data),
+      });
+
+      if (response.ok) {
+        console.log('Form submitted successfully');
+        setAlertVisible(true); // Show alert after form submission
+        setFormVisible(false); // Hide the form after submission
+      } else {
+        const errorResponse = await response.json();
+        console.error('Error submitting form:', errorResponse);
+      }
+    } catch (error) {
+      console.error('Error:', error);
+    }
   };
 
   return (
@@ -130,7 +160,7 @@ const NameMessageForm = () => {
       {formVisible && (
         <FormContainer>
           <h2>Write your Confession 🤫</h2>
-          <CloseButton onClick={() => setFormVisible(false)}>X</CloseButton> {/* Close button */}
+          <CloseButton onClick={() => setFormVisible(false)}>X</CloseButton>
           <form onSubmit={handleSubmit}>
             <Input
               type="text"
@@ -153,11 +183,10 @@ const NameMessageForm = () => {
         </FormContainer>
       )}
 
-      {/* Custom Alert */}
       {alertVisible && (
         <CustomAlertContainer>
           <h3>Thank you, {formData.name}! 🎉</h3>
-          <p>Your message has been submitted successfully.</p>
+          <p>Your confession will be added shortly.</p>
           <CustomAlertButton onClick={() => setAlertVisible(false)}>
             Close
           </CustomAlertButton>

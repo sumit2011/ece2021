@@ -142,7 +142,7 @@ const CustomAlertContainer = styled.div`
 `;
 
 const CustomAlertButton = styled.button`
-  background-color: black;
+ background-color: #ff6347;
   color: white;
   border: none;
   padding: 10px 20px;
@@ -222,11 +222,12 @@ const JoinForm = ({ onClose }) => {
   return (
     <>
       <ModalBackground alertVisible={alertVisible}>
-      <Warning><span>⚠️ </span><span>Try to fill up all the fields in the given form and upload squared and zoomed photo for better visibility.</span></Warning>
+      <Warning><span>⚠️ </span><span>Try to fill up all the fields. and upload squared and zoomed photo for better visibility.(Only for ECE 2021 Batch)</span></Warning>
 
         <ModalContainer>
           <CloseButton onClick={onClose}>X</CloseButton>
-          <h2>Join the Community 🚀</h2>
+          <h2>Join the Community 🚀
+          </h2>          
           <FormContainer alertVisible={alertVisible}> {/* Pass alertVisible as prop */}
             <form onSubmit={handleSubmit}>
               <InputContainer>
@@ -334,9 +335,8 @@ const JoinForm = ({ onClose }) => {
       {/* Custom Alert */}
       {alertVisible && (
         <CustomAlertContainer>
-          <h3>Form Submitted Successfully! 🎉<br/>
-            Thank you for joining 🤗...
-          </h3>
+          <h3>Thank you, {formData.name}! 🎉</h3>
+          <p>You will be added shortly. Don't forget to install the app.</p>
           <CustomAlertButton onClick={() => {
             setAlertVisible(false);
             onClose(); // Close the modal when alert is closed
