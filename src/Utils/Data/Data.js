@@ -91,8 +91,8 @@ export const Datas = [
         "link" : "shamssahi2000@gmail.com",
         "instagram" : "https://www.instagram.com/Arezshams084",
         "twitter" : "https://x.com/Shams@Reza",
-        "facebook" : "https://www.facebook.com/Shamsreza",
-        "linkedin" : "https://www.linkedin.com/in/Shamsreza/",
+        "facebook" : "https://www.facebook.com/shams.sahi.5",
+        "linkedin" : "https://in.linkedin.com/in/shams-reza-96a834246",
         "enroll": "2021BECE037"
     },
     {
