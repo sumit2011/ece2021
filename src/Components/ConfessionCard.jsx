@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import styled from 'styled-components';
 
 // Styled Components for the card
@@ -54,7 +54,7 @@ const ConfessionCard = (props) => {
   return (
     <CardContainer>
       <TitleSection>
-        <Icon>{props.icon}</Icon> {/* Replace this with an actual icon or SVG if needed */}
+        <Icon>🙄</Icon> 
         <div>
           <Title>{props.name}</Title>
           <Date>{props.date}</Date>
@@ -67,4 +67,5 @@ const ConfessionCard = (props) => {
     </CardContainer>
   );
 };
+
 export default ConfessionCard;

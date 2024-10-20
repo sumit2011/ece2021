@@ -1,5 +1,5 @@
 import React from 'react'
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { Confessions } from '../Utils/Data/Confession';
 import ConfessionCard from '../Components/ConfessionCard';
 import styled from 'styled-components';
@@ -96,6 +96,7 @@ const Button = styled.div`
 const ConfessionPage = () => {
 
   const [isFormOpen, setIsFormOpen] = useState(false);
+  const [users, setUsers] = useState([]);
 
   const handleClick = () => {
     setIsFormOpen(true);
@@ -105,22 +106,34 @@ const ConfessionPage = () => {
     setIsFormOpen(false);
   };
 
+  useEffect(() => {
+    // Fetch data from the API
+    const fetchData = async () => {
+      const response = await fetch('https://v1.nocodeapi.com/sumit2011/google_sheets/olakhZguFbKubafv?tabId=Sheet2');
+      const data = await response.json();
+      setUsers(data.data);
+    }
+
+    fetchData();
+  }, []);
+
+
   return (
     <MainContainer >
       <Title>
-      <h1>Confession Page</h1>
+        <h1>Confession Page</h1>
 
       </Title>
 
       <Alert>
         <div>
-        <h2>Under Upgradation ⚒️</h2>
-        <p>It's a confession page here you can confess anything you want.
-          but you can only add your confession if you are the member.
-          Click on the button to write your confession. 👇
-        </p>
+          <h2>Under Upgradation ⚒️</h2>
+          <p>It's a confession page here you can confess anything you want.
+            but you can only add your confession if you are the member.
+            Click on the button to write your confession. 👇
+          </p>
         </div>
-        
+
       </Alert>
       <Button onClick={handleClick}>Add Confession </Button>
 
@@ -128,35 +141,44 @@ const ConfessionPage = () => {
 
 
       <Container>
-      {Confessions.map((item)=>(
-        <ConfessionCard  
-              {...item}
+        {/* {Confessions.map((item) => (
+          <ConfessionCard
+            {...item}
           />
-      )     
-      )}
+        )
+        )} */}
+
+        {users.slice().reverse().map((user) => (
+          <ConfessionCard
+            key={user.row_id} // Ensure that each confession has a unique key
+            name={user.name}
+            confession={user.confession}
+            date={user.date}
+          />
+        ))}
       </Container>
-      
 
 
-    <Discussions>
-    <Giscus
-      id="comments"
-      repo="sumit2011/ece2021"
-      repoId="R_kgDONAoPpw"
-      category="Announcements"
-      categoryId="DIC_kwDONAoPp84Cjcb6"
-      mapping="pathname"
-      term="Welcome to @giscus/react component!"
-      reactionsEnabled="1"
-      emitMetadata="0"
-      inputPosition="top"
-      theme="dark"
-      lang="en"
-      loading="lazy"
-    />
-    </Discussions>
 
-    
+      <Discussions>
+        <Giscus
+          id="comments"
+          repo="sumit2011/ece2021"
+          repoId="R_kgDONAoPpw"
+          category="Announcements"
+          categoryId="DIC_kwDONAoPp84Cjcb6"
+          mapping="pathname"
+          term="Welcome to @giscus/react component!"
+          reactionsEnabled="1"
+          emitMetadata="0"
+          inputPosition="top"
+          theme="dark"
+          lang="en"
+          loading="lazy"
+        />
+      </Discussions>
+
+
 
     </MainContainer>
   )

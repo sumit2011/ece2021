@@ -128,8 +128,7 @@ const NameMessageForm = () => {
     // Capture the current date
     const currentDate = new Date().toLocaleString();
 
-    // Log form data
-    console.log('Form Data:', { ...formData, date: currentDate });
+    // console.log('Form Data:', { ...formData, date: currentDate });
 
     // Include the date in the data
     const data = [[formData.name, formData.message, currentDate]];
