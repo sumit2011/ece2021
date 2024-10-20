@@ -10,10 +10,10 @@ import Fullscreen from "yet-another-react-lightbox/plugins/fullscreen";
 
 const images = [
   {
-    src: require("../Utils/Photos/3.jpg"),
-    original: require("../Utils/Photos/3.jpg"),
-    width: 320,
-    height: 174,
+    src: require("../Utils/Photos/1.jpg"),
+    original: require("../Utils/Photos/1.jpg"),
+    width: 420,
+    height: 274,
     tags: [
       { value: "Fresher", title: "Fresher" },
       { value: "Party", title: "Party" },
@@ -22,17 +22,17 @@ const images = [
   },
   // Add more images as needed
   {
-    src: require("../Utils/Photos/4.jpg"),
-    original: require("../Utils/Photos/4.jpg"),
+    src: require("../Utils/Photos/2.jpg"),
+    original: require("../Utils/Photos/2.jpg"),
     width: 320,
-    height: 212,
+    height: 400,
     caption: "Boats (Jeshu John - designerspics.com)",
   },
   {
-    src: require("../Utils/Photos/5.jpg"),
-    original: require("../Utils/Photos/5.jpg"),
-    width: 320,
-    height: 512,
+    src: require("../Utils/Photos/3.jpg"),
+    original: require("../Utils/Photos/3.jpg"),
+    width: 520,
+    height: 312,
     caption: "Color Pencils (Jeshu John - designerspics.com)",
   },
   {
@@ -43,10 +43,10 @@ const images = [
     caption: "Red Apples with other Red Fruit (foodiesfeed.com)",
   },
   {
-    src: require("../Utils/Photos/7.jpg"),
-    original: require("../Utils/Photos/7.jpg"),
-    width: 320,
-    height: 183,
+    src: require("../Utils/Photos/5.jpg"),
+    original: require("../Utils/Photos/5.jpg"),
+    width: 560,
+    height: 683,
     caption: "37H (gratispgraphy.com)",
   },
   {
@@ -73,10 +73,24 @@ const images = [
     caption: "315H (gratisography.com)",
   },
   {
-    src: require("../Utils/Photos/10.jpg"),
-    original: require("../Utils/Photos/10.jpg"),
+    src: require("../Utils/Photos/14.jpg"),
+    original: require("../Utils/Photos/14.jpg"),
+    width: 420,
+    height: 613,
+    caption: "201H (gratisography.com)",
+  },
+  {
+    src: require("../Utils/Photos/15.jpg"),
+    original: require("../Utils/Photos/15.jpg"),
+    width: 620,
+    height: 413,
+    caption: "201H (gratisography.com)",
+  },
+  {
+    src: require("../Utils/Photos/16.jpg"),
+    original: require("../Utils/Photos/16.jpg"),
     width: 320,
-    height: 213,
+    height: 613,
     caption: "201H (gratisography.com)",
   },
 ];

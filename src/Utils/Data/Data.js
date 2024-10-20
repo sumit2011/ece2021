@@ -61,15 +61,15 @@ export const Datas = [
     },
     {
         "id": 6,
-        "name": "",
+        "name": "Balram Nishad",
         "initials": "sk",
-        "image": require('../Images/1.png'),
+        "image": require('../Images/50.jpg'),
         "link" : "",
-        "instagram" : "",
+        "instagram" : "https://www.instagram.com/mdsaif.in/nishad_balram0198",
         "twitter" : "",
         "facebook" : "",
-        "linkedin" : " ",
-        "enroll": ""
+        "linkedin" : "https://www.linkedin.com/in/balram-nishad/",
+        "enroll": "2021BECE050"
     },
     {
         "id": 7,

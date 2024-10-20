@@ -54,9 +54,13 @@ const Alert = styled.div`
 `;
 
 const Container = styled.div`
-  // display: grid;
-  // justify-content: center;
+display: grid;
+  grid-template-columns: repeat(2, 1fr); 
   margin-top: 40px;
+
+  @media (max-width: 968px) {
+    grid-template-columns: 1fr; 
+  }
 `;
 
 const Discussions = styled.div`
