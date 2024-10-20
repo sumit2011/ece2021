@@ -142,7 +142,7 @@ const Navbar = () => {
         </Link>
 
         <Link to="/discussionpage" style={{ textDecoration: "none", color: "white", width: "100%" }}  onClick={closeMenu}>
-          <SidebarDiv>Discussions</SidebarDiv>
+          <SidebarDiv>Discussions 💬</SidebarDiv>
         </Link>
 
 

@@ -56,6 +56,7 @@ const Button = styled.div`
   cursor: pointer;
   width: 97%;
   margin-top: 10px;
+  user-select: none;
 
 `;
 

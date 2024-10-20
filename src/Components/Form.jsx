@@ -107,7 +107,6 @@ const SubmitButton = styled.button`
 `;
 
 const Warning = styled.div`
-  text-align: center;
   background-color: #0a1f2d;
   border-radius: 10px;
   padding: 10px;
@@ -121,6 +120,7 @@ const Warning = styled.div`
   max-width: 400px;
   margin: 20px;
   margin-bottom: 0px;
+  text-align: justify;
 `;
 
 const CustomAlertContainer = styled.div`
@@ -222,7 +222,7 @@ const JoinForm = ({ onClose }) => {
   return (
     <>
       <ModalBackground alertVisible={alertVisible}>
-      <Warning><span>⚠️ </span><span>Try to fill up all the fields. and upload squared and zoomed photo for better visibility.(Only for ECE 2021 Batch)</span></Warning>
+      <Warning ><span>⚠️ </span><span>Try to fill up all the fields. Upload squared and zoomed photo for better visibility.(Only for ECE 2021 Batch)</span></Warning>
 
         <ModalContainer>
           <CloseButton onClick={onClose}>X</CloseButton>

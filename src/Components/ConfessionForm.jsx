@@ -18,6 +18,7 @@ const FormContainer = styled.div`
   margin: 50px auto;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   position: relative; // for the close button positioning
+
 `;
 
 const CloseButton = styled.button`
@@ -156,6 +157,7 @@ const NameMessageForm = () => {
   };
 
   return (
+    <>
     <Container>
       {formVisible && (
         <FormContainer>
@@ -193,6 +195,8 @@ const NameMessageForm = () => {
         </CustomAlertContainer>
       )}
     </Container>
+    </>
+
   );
 };
 

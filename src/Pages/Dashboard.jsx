@@ -62,6 +62,7 @@ text-align: center;
   cursor: pointer;
   width: 97%;
   margin-top: 10px;
+  user-select: none;
 `;
 
 const Footer = styled.div`
