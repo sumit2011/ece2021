@@ -85,15 +85,15 @@ export const Datas = [
     },
     {
         "id": 8,
-        "name": "",
-        "initials": "sk",
-        "image": require('../Images/1.png'),
-        "link" : "",
-        "instagram" : "",
-        "twitter" : "",
-        "facebook" : "",
-        "linkedin" : " ",
-        "enroll": ""
+        "name": "Shams Reza ",
+        "initials": "Ms",
+        "image": require('../Images/37.jpeg'),
+        "link" : "shamssahi2000@gmail.com",
+        "instagram" : "https://www.instagram.com/Arezshams084",
+        "twitter" : "https://x.com/Shams@Reza",
+        "facebook" : "https://www.facebook.com/Shamsreza",
+        "linkedin" : "https://www.linkedin.com/in/Shamsreza/",
+        "enroll": "2021BECE037"
     },
     {
         "id": 9,
