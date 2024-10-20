@@ -43,9 +43,9 @@ const images = [
     caption: "Red Apples with other Red Fruit (foodiesfeed.com)",
   },
   {
-    src: require("../Utils/Photos/8.jpg"),
-    original: require("../Utils/Photos/8.jpg"),
-    width: 120,
+    src: require("../Utils/Photos/7.jpg"),
+    original: require("../Utils/Photos/7.jpg"),
+    width: 320,
     height: 183,
     caption: "37H (gratispgraphy.com)",
   },
