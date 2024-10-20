@@ -6,9 +6,6 @@ import "yet-another-react-lightbox/styles.css";
 import Zoom from "yet-another-react-lightbox/plugins/zoom";
 import Fullscreen from "yet-another-react-lightbox/plugins/fullscreen";
 
-import Thumbnails from "yet-another-react-lightbox/plugins/thumbnails";
-import "yet-another-react-lightbox/plugins/thumbnails.css";
-
 
 
 const images = [
@@ -143,7 +140,7 @@ const GalleryImages = () => {
       />
       
       <Lightbox
-        plugins={[Zoom,Fullscreen,Thumbnails]}
+        plugins={[Zoom,Fullscreen]}
         slides={slides}
         open={index >= 0}
         index={index}
