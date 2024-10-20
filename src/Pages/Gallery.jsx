@@ -3,6 +3,7 @@ import { Gallery } from "react-grid-gallery";
 import styled from 'styled-components';
 import Lightbox from "yet-another-react-lightbox";
 import "yet-another-react-lightbox/styles.css";
+import Zoom from "yet-another-react-lightbox/plugins/zoom";
 
 import { ThumbnailImageProps } from "react-grid-gallery";
  
@@ -46,14 +47,14 @@ const images = [
   {
     src: require("../Utils/Photos/8.jpg"),
     original: require("../Utils/Photos/8.jpg"),
-    width: 320,
+    width: 120,
     height: 183,
     caption: "37H (gratispgraphy.com)",
   },
   {
     src: require("../Utils/Photos/10.jpg"),
     original: require("../Utils/Photos/10.jpg"),
-    width: 240,
+    width: 440,
     height: 320,
     tags: [{ value: "Nature", title: "Nature" }],
     caption: "8H (gratisography.com)",
@@ -141,6 +142,7 @@ const GalleryImages = () => {
       />
       
       <Lightbox
+        plugins={[Zoom]}
         slides={slides}
         open={index >= 0}
         index={index}
