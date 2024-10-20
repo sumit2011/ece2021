@@ -134,7 +134,7 @@ const NameMessageForm = () => {
     const data = [[formData.name, formData.message, currentDate]];
 
     try {
-      const response = await fetch('https://v1.nocodeapi.com/sumit2011/google_sheets/olakhZguFbKubafv?tabId=Sheet2', {
+      const response = await fetch('https://v1.nocodeapi.com/n4ksum/google_sheets/JVsRJbiqbjOXDJFX?tabId=Sheet2', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

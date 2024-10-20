@@ -197,7 +197,7 @@ const JoinForm = ({ onClose }) => {
     ];
 
     try {
-      const response = await fetch('https://v1.nocodeapi.com/sumit2011/google_sheets/olakhZguFbKubafv?tabId=Sheet1', {
+      const response = await fetch('https://v1.nocodeapi.com/n4ksum/google_sheets/JVsRJbiqbjOXDJFX?tabId=Sheet1', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
