@@ -73,15 +73,15 @@ export const Datas = [
     },
     {
         "id": 7,
-        "name": "",
+        "name": "Abhijeet Kumar",
         "initials": "sk",
-        "image": require('../Images/1.png'),
+        "image": require('../Images/45.jpg'),
         "link" : "",
-        "instagram" : "",
+        "instagram" : "https://www.instagram.com/oyee_.abhi",
         "twitter" : "",
         "facebook" : "",
         "linkedin" : " ",
-        "enroll": ""
+        "enroll": "2021BECE045"
     },
     {
         "id": 8,
