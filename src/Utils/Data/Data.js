@@ -145,6 +145,30 @@ export const Datas = [
     },
     {
         "id": 13,
+        "name": "Arjun Pandit",
+        "initials": "sk",
+        "image": require('../Images/68.jpeg'),
+        "link" : "",
+        "instagram" : "",
+        "twitter" : "",
+        "facebook" : "",
+        "linkedin" : " ",
+        "enroll": "2021BECE068"
+    },
+    {
+        "id": 14,
+        "name": "Md Ibrahim",
+        "initials": "sk",
+        "image": require('../Images/48.jpeg'),
+        "link" : "",
+        "instagram" : "https://www.instagram.com/",
+        "twitter" : "",
+        "facebook" : "",
+        "linkedin" : " ",
+        "enroll": "2021BECE048"
+    },
+    {
+        "id": 15,
         "name": "Waiting for you",
         "initials": "sk",
         "image": require('../Images/1.png'),
