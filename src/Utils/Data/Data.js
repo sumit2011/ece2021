@@ -133,15 +133,15 @@ export const Datas = [
     },
     {
         "id": 12,
-        "name": "Waiting for you",
+        "name": "Satyam Kumar",
         "initials": "sk",
-        "image": require('../Images/1.png'),
-        "link" : "",
-        "instagram" : "https://www.instagram.com/",
-        "twitter" : "",
-        "facebook" : "",
-        "linkedin" : " ",
-        "enroll": ""
+        "image": require('../Images/53.jpg'),
+        "link" : "mailto:satyam9128532410@gmail.com",
+        "instagram" : "https://www.instagram.com/_s4tyam_",
+        "twitter" : "https://www.twitter.com/Satyamkumar3110",
+        "facebook" : "https://www.facebook.com/s4tyam",
+        "linkedin" : "https://www.linkedin.com/in/satyam-kumar-04a0a3252",
+        "enroll": "2021BECE053"
     },
     {
         "id": 13,
