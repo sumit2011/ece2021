@@ -341,7 +341,7 @@ const JoinForm = ({ onClose }) => {
             </form>
           </FormContainer>
            {/* Submit button */}
-           <SubmitButton type="submit">
+           <SubmitButton type="submit" onClick={handleSubmit}>
                 Submit
               </SubmitButton>
         </ModalContainer>
