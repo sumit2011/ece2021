@@ -111,7 +111,7 @@ export const Datas = [
         "id": 10,
         "name": "Bhuvanesh",
         "initials": "sk",
-        "image": require('../Images/1.png'),
+        "image": require('../Images/49.jpeg'),
         "link" : "mailto:potabattulabhuvaneshbunny@gmail.com",
         "instagram" : "https://www.instagram.com/bhuvanesh__20",
         "twitter" : "",
