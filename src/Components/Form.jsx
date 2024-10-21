@@ -44,15 +44,29 @@ const FormContainer = styled.div`
   overflow-y: auto;
   padding-right: 10px;
   margin-top: 20px;
-    opacity: ${(props) => (props.alertVisible ? 0.1 : 1)}; // Conditional opacity
-  transition: opacity 0.3s ease; // Smooth transition for opacity change
+  opacity: ${(props) => (props.alertVisible ? 0.1 : 1)};
+  transition: opacity 0.3s ease;
 
+  /* Scrollbar styles for WebKit browsers (Chrome, Safari, etc.) */
   ::-webkit-scrollbar {
-    width: 0px;
-    background: transparent;
+    width: 12px; /* Width of the scrollbar */
   }
-  scrollbar-width: none;
+
+  ::-webkit-scrollbar-track {
+    background: #1a1a1a; /* Color of the scrollbar track */
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background-color: #00ff00; /* Scrollbar color */
+    border-radius: 10px; /* Rounded corners */
+    border: 3px solid #1a1a1a; /* Optional: Space around the scrollbar */
+  }
+
+  /* Scrollbar styles for Firefox */
+  scrollbar-width: thin; /* Thickness of the scrollbar */
+  scrollbar-color: #00ff00 #1a1a1a; /* Scrollbar thumb and track colors */
 `;
+
 
 const CloseButton = styled.button`
   position: absolute;
@@ -323,12 +337,13 @@ const JoinForm = ({ onClose }) => {
                   accept="image/*"
                 />
               </InputContainer>
-              {/* Submit button */}
-              <SubmitButton type="submit">
-                Submit
-              </SubmitButton>
+             
             </form>
           </FormContainer>
+           {/* Submit button */}
+           <SubmitButton type="submit">
+                Submit
+              </SubmitButton>
         </ModalContainer>
       </ModalBackground>
 
