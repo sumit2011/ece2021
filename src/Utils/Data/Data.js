@@ -145,15 +145,15 @@ export const Datas = [
     },
     {
         "id": 13,
-        "name": "Muskan",
-        "initials": "sk",
-        "image": require('../Images/56.jpeg'),
+        "name": "Mahi Soni",
+        "initials": "MS",
+        "image": require('../Images/62.jpeg'),
         "link" : "",
         "instagram" : "",
         "twitter" : "",
         "facebook" : "",
         "linkedin" : " ",
-        "enroll": "2021BECE056"
+        "enroll": "2021BECE062"
     },
     {
         "id": 14,
@@ -181,6 +181,18 @@ export const Datas = [
     },
     {
         "id": 16,
+        "name": "Sanskruti kakad",
+        "initials": "sk",
+        "image": require('../Images/63.jpeg'),
+        "link" : "",
+        "instagram" : "https://www.instagram.com/",
+        "twitter" : "",
+        "facebook" : "",
+        "linkedin" : " ",
+        "enroll": "2021BECE063"
+    },
+    {
+        "id": 17,
         "name": "Waiting for you",
         "initials": "sk",
         "image": require('../Images/1.png'),
@@ -188,7 +200,7 @@ export const Datas = [
         "instagram" : "https://www.instagram.com/",
         "twitter" : "",
         "facebook" : "",
-        "linkedin" : " ",
+        "linkedin" : "",
         "enroll": ""
     },
     
