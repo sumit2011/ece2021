@@ -236,11 +236,23 @@ export const Datas = [
         "instagram" : "https://www.instagram.com/darshana_dayare",
         "twitter" : "",
         "facebook" : "",
-        "linkedin" : "",
+        "linkedin" : "https://in.linkedin.com/in/darshana-dayare-568a4a227",
         "enroll": "2021BECE064"
     },
     {
         "id": 21,
+        "name": "Singidi Dileep",
+        "initials": "sk",
+        "image": require('../Images/57.png'),
+        "link" : "",
+        "instagram" : "",
+        "twitter" : "",
+        "facebook" : "",
+        "linkedin" : "",
+        "enroll": "2021BECE057"
+    },
+    {
+        "id": 22,
         "name": "Waiting for you",
         "initials": "sk",
         "image": require('../Images/1.png'),
