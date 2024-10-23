@@ -54,7 +54,7 @@ const ConfessionCard = (props) => {
   return (
     <CardContainer>
       <TitleSection>
-        <Icon>{props.icon}</Icon> 
+        <Icon>🙄</Icon> 
         <div>
           <Title>{props.name}</Title>
           <Date>{props.date}</Date>

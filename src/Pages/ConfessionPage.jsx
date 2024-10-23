@@ -113,7 +113,7 @@ const ConfessionPage = () => {
   useEffect(() => {
     // Fetch data from the API
     const fetchData = async () => {
-      const response = await fetch('https://v1.nocodeapi.com/sumit2011/google_sheets/olakhZguFbKubafv?tabId=Sheet2');
+      const response = await fetch('https://v1.nocodeapi.com/n4ksum/google_sheets/JVsRJbiqbjOXDJFX?tabId=Sheet2');
       const data = await response.json();
       setUsers(data.data);
     }
@@ -145,21 +145,21 @@ const ConfessionPage = () => {
 
 
       <Container>
-        {Confessions.map((item) => (
+        {/* {Confessions.map((item) => (
           <ConfessionCard
             {...item}
           />
         )
-        )}
+        )} */}
 
-        {/* {users.slice().reverse().map((user) => (
+        {users.slice().reverse().map((user) => (
           <ConfessionCard
             key={user.row_id} // Ensure that each confession has a unique key
             name={user.name}
             confession={user.confession}
             date={user.date}
           />
-        ))} */}
+        ))}
       </Container>
 
 
