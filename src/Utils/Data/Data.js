@@ -229,6 +229,18 @@ export const Datas = [
     },
     {
         "id": 20,
+        "name": "Darshana Dayare",
+        "initials": "DD",
+        "image": require('../Images/64.jpg'),
+        "link" : "",
+        "instagram" : "https://www.instagram.com/darshana_dayare",
+        "twitter" : "",
+        "facebook" : "",
+        "linkedin" : "",
+        "enroll": "2021BECE064"
+    },
+    {
+        "id": 21,
         "name": "Waiting for you",
         "initials": "sk",
         "image": require('../Images/1.png'),
@@ -239,8 +251,5 @@ export const Datas = [
         "linkedin" : "",
         "enroll": ""
     },
-    
-    
-    
     
 ];
