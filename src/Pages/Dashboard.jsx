@@ -156,15 +156,6 @@ const Dashboard = () => {
       </Container>
 
       <Hr />
-{/* 
-      <Header>
-        <h1 style={{ color: "white" }}>Community Features </h1>
-      </Header>
-        <FeatureContainer>
-
-            <h3>Interactive Dashboard</h3>
-
-        </FeatureContainer> */}
       
 
       <Footer>

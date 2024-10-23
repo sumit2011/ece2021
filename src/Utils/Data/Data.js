@@ -193,6 +193,42 @@ export const Datas = [
     },
     {
         "id": 17,
+        "name": "Shankar Munda",
+        "initials": "sk",
+        "image": require('../Images/95.png'),
+        "link" : "",
+        "instagram" : "https://www.instagram.com/_shankar_munda",
+        "twitter" : "",
+        "facebook" : "",
+        "linkedin" : "",
+        "enroll": "2021BECE097"
+    },
+    {
+        "id": 18,
+        "name": "Rokesh Mittal",
+        "initials": "sk",
+        "image": require('../Images/32.jpeg'),
+        "link" : "",
+        "instagram" : "https://www.instagram.com/rokeshmittal",
+        "twitter" : "",
+        "facebook" : "",
+        "linkedin" : "",
+        "enroll": "2021BECE032"
+    },
+    {
+        "id": 19,
+        "name": "Wakeel Ahmad Kumar",
+        "initials": "sk",
+        "image": require('../Images/65.png'),
+        "link" : "",
+        "instagram" : "https://www.instagram.com/_wakeelkumar_",
+        "twitter" : "",
+        "facebook" : "",
+        "linkedin" : "",
+        "enroll": "2021BECE065"
+    },
+    {
+        "id": 20,
         "name": "Waiting for you",
         "initials": "sk",
         "image": require('../Images/1.png'),
@@ -203,6 +239,7 @@ export const Datas = [
         "linkedin" : "",
         "enroll": ""
     },
+    
     
     
     
