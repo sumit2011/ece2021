@@ -253,6 +253,18 @@ export const Datas = [
     },
     {
         "id": 22,
+        "name": "Shivam Kumar",
+        "initials": "sk",
+        "image": require('../Images/83.png'),
+        "link" : "",
+        "instagram" : "https://www.instagram.com/shi_vam65_",
+        "twitter" : "",
+        "facebook" : "",
+        "linkedin" : "",
+        "enroll": "2021BECE083"
+    },
+    {
+        "id": 23,
         "name": "Waiting for you",
         "initials": "sk",
         "image": require('../Images/1.png'),
@@ -263,5 +275,6 @@ export const Datas = [
         "linkedin" : "",
         "enroll": ""
     },
+    
     
 ];
