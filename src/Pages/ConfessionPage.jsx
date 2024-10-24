@@ -145,21 +145,21 @@ const ConfessionPage = () => {
 
 
       <Container>
-        {/* {Confessions.map((item) => (
+        {Confessions.map((item) => (
           <ConfessionCard
             {...item}
           />
         )
-        )} */}
+        )}
 
-        {users.slice().reverse().map((user) => (
+        {/* {users.slice().reverse().map((user) => (
           <ConfessionCard
             key={user.row_id} // Ensure that each confession has a unique key
             name={user.name}
             confession={user.confession}
             date={user.date}
           />
-        ))}
+        ))} */}
       </Container>
 
 
