@@ -100,7 +100,7 @@ const Button = styled.div`
 const ConfessionPage = () => {
 
   const [isFormOpen, setIsFormOpen] = useState(false);
-  const [users, setUsers] = useState([]);
+  // const [users, setUsers] = useState([]);
 
   const handleClick = () => {
     setIsFormOpen(true);
@@ -110,16 +110,16 @@ const ConfessionPage = () => {
     setIsFormOpen(false);
   };
 
-  useEffect(() => {
-    // Fetch data from the API
-    const fetchData = async () => {
-      const response = await fetch('https://v1.nocodeapi.com/n4ksum/google_sheets/JVsRJbiqbjOXDJFX?tabId=Sheet2');
-      const data = await response.json();
-      setUsers(data.data);
-    }
+  // useEffect(() => {
+  //   // Fetch data from the API
+  //   const fetchData = async () => {
+  //     const response = await fetch('https://v1.nocodeapi.com/n4ksum/google_sheets/JVsRJbiqbjOXDJFX?tabId=Sheet2');
+  //     const data = await response.json();
+  //     setUsers(data.data);
+  //   }
 
-    fetchData();
-  }, []);
+  //   fetchData();
+  // }, []);
 
 
   return (
