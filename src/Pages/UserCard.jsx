@@ -91,8 +91,8 @@ const Card = (props) => {
                 <meta name="description" content={`Check out ${props.name}'s profile!`} />
                 <meta property="og:title" content={props.name} />
                 <meta property="og:description" content={`Learn more about ${props.name}.`} />
-                <meta property="og:image" content={props.image} />
-                <meta property="og:url" content={props.link} />
+                <meta property="og:image" content="https://linktr.ee/og/image/Sumit2011.jpg" />
+                <meta property="og:url" content="https://ece2021nitsgr.netlify.app/user/sumit-kumar" />
         </Helmet>
         <CardContainer >
           <Image src={props.image}/>
