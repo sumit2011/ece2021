@@ -6,13 +6,14 @@ import FacebookIcon from '@mui/icons-material/Facebook';
 import XIcon from '@mui/icons-material/X';
 import LaunchIcon from '@mui/icons-material/Launch';
 // import { useParams } from 'react-router-dom';
+import { Helmet } from 'react-helmet';
 
 const Wrapper = styled.div`
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 100vh; 
-    background-color: #101010; 
+    height: 100vh; // Full viewport height
+    background-color: #101010; // Optional: Background color to visually center the card
 `;
 
 const CardContainer = styled.div`
@@ -84,6 +85,14 @@ const Icon = styled.a`
 const Card = (props) => {
     return (
       <Wrapper>
+        <Helmet>
+                <title>{props.name}</title>
+                <meta name="description" content={`Check out ${props.name}'s profile!`} />
+                <meta property="og:title" content={props.name} />
+                <meta property="og:description" content={`Learn more about ${props.name}.`} />
+                <meta property="og:image" content={props.image} />
+                <meta property="og:url" content={props.link} />
+        </Helmet>
         <CardContainer >
           <Image src={props.image}/>
             <Name>{props.name}</Name>

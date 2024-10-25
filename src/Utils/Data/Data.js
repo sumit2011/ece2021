@@ -1,6 +1,8 @@
 export const Datas = [
     {
+        
         "id": 1,
+        "userid" : "sumit-kumar",
         "name": 'Sumit Kumar',
         "initials": "sk",
         "image": require('../Images/59.jpg'),
@@ -10,10 +12,13 @@ export const Datas = [
         "facebook" : "https://www.facebook.com/sumit2011",
         "linkedin" : " ",
         "enroll": "2021BECE059"
+        
+        
     },
     {
         "id": 2,
         "name": 'Sunny kr. kushwaha',
+        "userid" : "sunny-kushwaha",
         "initials": "sk",
         "image": require('../Images/54.jpeg'),
         "link" : "https://sunnykushwaha18.github.io/sunnykushwaha.github.io/",
@@ -25,6 +30,7 @@ export const Datas = [
     },
     {
         "id": 3,
+        "userid" : "prateek-kumar",
         "name": "Prateek Kumar",
         "initials": "Pk",
         "image": require('../Images/30.jpeg'),
@@ -37,6 +43,7 @@ export const Datas = [
     },
     {
         "id": 4,
+        "userid" : "md-saif",
         "name": "Md Saif",
         "initials": "Ms",
         "image": require('../Images/46.jpeg'),
@@ -49,10 +56,11 @@ export const Datas = [
     },
     {
         "id": 5,
+        "userid" : "nitendra-kumar",
         "name": "Nitendra Kumar",
         "initials": "Nk",
         "image": require('../Images/79.jpg'),
-        "link" : "",
+        "link" : "https://ece2021nitsgr.netlify.app/user/nitendra-kumar",
         "instagram" : "",
         "twitter" : "",
         "facebook" : "",
@@ -61,6 +69,7 @@ export const Datas = [
     },
     {
         "id": 6,
+        "userid" : "balram-nishad",
         "name": "Balram Nishad",
         "initials": "sk",
         "image": require('../Images/50.jpg'),
@@ -73,6 +82,7 @@ export const Datas = [
     },
     {
         "id": 7,
+        "userid" : "abhijeet-kumar",
         "name": "Abhijeet Kumar",
         "initials": "sk",
         "image": require('../Images/45.jpg'),
@@ -85,6 +95,7 @@ export const Datas = [
     },
     {
         "id": 8,
+        "userid" : "shams-reza",
         "name": "Shams Reza ",
         "initials": "Ms",
         "image": require('../Images/37.jpeg'),
@@ -97,6 +108,7 @@ export const Datas = [
     },
     {
         "id": 9,
+        "userid" : "ajaruddin-ansari",
         "name": "Ajaruddin Ansari",
         "initials": "AA",
         "image": require('../Images/47.jpg'),
@@ -109,6 +121,7 @@ export const Datas = [
     },
     {
         "id": 10,
+        "userid" : "bhuvanesh",
         "name": "Bhuvanesh",
         "initials": "sk",
         "image": require('../Images/49.jpeg'),
@@ -121,6 +134,7 @@ export const Datas = [
     },
     {
         "id": 11,
+        "userid" : "salman-zubair",
         "name": "Salman Zubair",
         "initials": "sk",
         "image": require('../Images/44.jpeg'),
@@ -133,6 +147,7 @@ export const Datas = [
     },
     {
         "id": 12,
+        "userid" : "satyam-kumar",
         "name": "Satyam Kumar",
         "initials": "sk",
         "image": require('../Images/53.jpg'),
@@ -145,6 +160,7 @@ export const Datas = [
     },
     {
         "id": 13,
+        "userid" : "mahi-soni",
         "name": "Mahi Soni",
         "initials": "MS",
         "image": require('../Images/62.jpeg'),
@@ -157,6 +173,7 @@ export const Datas = [
     },
     {
         "id": 14,
+        "userid" : "arjun-pandit",
         "name": "Arjun Pandit",
         "initials": "sk",
         "image": require('../Images/68.jpeg'),
@@ -169,6 +186,7 @@ export const Datas = [
     },
     {
         "id": 15,
+        "userid" : "md-ibrahim",
         "name": "Md Ibrahim",
         "initials": "sk",
         "image": require('../Images/48.jpeg'),
@@ -181,6 +199,7 @@ export const Datas = [
     },
     {
         "id": 16,
+        "userid" : "sanskruti-kakad",
         "name": "Sanskruti kakad",
         "initials": "sk",
         "image": require('../Images/63.jpeg'),
@@ -193,6 +212,7 @@ export const Datas = [
     },
     {
         "id": 17,
+        "userid" : "shankar-munda",
         "name": "Shankar Munda",
         "initials": "sk",
         "image": require('../Images/95.png'),
@@ -205,6 +225,7 @@ export const Datas = [
     },
     {
         "id": 18,
+        "userid" : "rokesh-mittal",
         "name": "Rokesh Mittal",
         "initials": "sk",
         "image": require('../Images/32.jpeg'),
@@ -217,6 +238,7 @@ export const Datas = [
     },
     {
         "id": 19,
+        "userid" : "wakeel-ahmad",
         "name": "Wakeel Ahmad Kumar",
         "initials": "sk",
         "image": require('../Images/65.png'),
@@ -229,6 +251,7 @@ export const Datas = [
     },
     {
         "id": 20,
+        "userid" : "darshana-dayare",
         "name": "Darshana Dayare",
         "initials": "DD",
         "image": require('../Images/64.jpg'),
@@ -241,6 +264,7 @@ export const Datas = [
     },
     {
         "id": 21,
+        "userid" : "singidi-dileep",
         "name": "Singidi Dileep",
         "initials": "sk",
         "image": require('../Images/57.png'),
@@ -253,6 +277,7 @@ export const Datas = [
     },
     {
         "id": 22,
+        "userid" : "shivam-kumar",
         "name": "Shivam Kumar",
         "initials": "sk",
         "image": require('../Images/83.png'),
@@ -265,6 +290,7 @@ export const Datas = [
     },
     {
         "id": 23,
+        "userid" : "",
         "name": "Waiting for you",
         "initials": "sk",
         "image": require('../Images/1.png'),
