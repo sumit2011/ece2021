@@ -86,6 +86,7 @@ const Card = (props) => {
     return (
       <Wrapper>
         <Helmet>
+                <meta charset="utf-8" />
                 <title>{props.name}</title>
                 <meta name="description" content={`Check out ${props.name}'s profile!`} />
                 <meta property="og:title" content={props.name} />

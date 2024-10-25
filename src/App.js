@@ -50,7 +50,7 @@ function UserDetail() {
     return <div>User not found</div>;
   }
 
-  return <UserCard {...user} />;
+  return <UserCard key={user.userid} {...user} />;
 }
 
 export default App;
