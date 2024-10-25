@@ -7,8 +7,16 @@ import XIcon from '@mui/icons-material/X';
 import LaunchIcon from '@mui/icons-material/Launch';
 // import { useParams } from 'react-router-dom';
 
+const Wrapper = styled.div`
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh; 
+    background-color: #101010; 
+`;
 
 const CardContainer = styled.div`
+
     max-width: 330px;
     max-height: 700px;
     background-color: #152515;
@@ -27,6 +35,7 @@ const CardContainer = styled.div`
         box-shadow: 0 0 50px 4px rgba(0,0,0,0.6);
         filter: brightness(1.1);
     }
+
     
 
 `
@@ -74,7 +83,7 @@ const Icon = styled.a`
 
 const Card = (props) => {
     return (
-      <>
+      <Wrapper>
         <CardContainer >
           <Image src={props.image}/>
             <Name>{props.name}</Name>
@@ -102,7 +111,7 @@ const Card = (props) => {
                 
             </Icons>
         </CardContainer>
-        </>
+        </Wrapper>
     )
 }
 
