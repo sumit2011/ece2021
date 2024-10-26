@@ -126,7 +126,7 @@ const Card = (props) => {
       <h1>
       {props.name}
       </h1>
-      <h3>Student | programmer | webdeveloper | Honest</h3>
+      <h3>Student | Competitive Programmer | Full Stack Developer | Honest | True Lover</h3>
       <p>
         hii 👋, My name is {props.name}. Currently
         i am pursuing btech at NIT Sringar in Electronics and Communication Enginearing.
