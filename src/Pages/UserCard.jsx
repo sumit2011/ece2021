@@ -8,6 +8,7 @@ import LaunchIcon from '@mui/icons-material/Launch';
 // import { useParams } from 'react-router-dom';
 import { Helmet } from 'react-helmet';
 import { Tilt } from "react-tilt";
+import Contact from './Contact';
 
 const Wrapper = styled.div`
     display: flex;
@@ -134,7 +135,7 @@ const Card = (props) => {
       <h1>
       {props.name}
       </h1>
-      <h3>Student | Competitive Programmer | Full Stack Developer | Honest | True Lover</h3>
+      <h3>Student | Competitive Programmer | Full Stack Developer | Honest</h3>
       <p>
         hii 👋, My name is {props.name}. Currently
         i am pursuing btech at NIT Sringar in Electronics and Communication Enginearing.
@@ -178,7 +179,7 @@ const Card = (props) => {
       </Icons>
 
 
-
+      <Contact />
 
       
       <Social>
