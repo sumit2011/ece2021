@@ -10,14 +10,17 @@ import { Helmet } from 'react-helmet';
 
 const Wrapper = styled.div`
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
-    height: 100vh; // Full viewport height
-    background-color: #101010; // Optional: Background color to visually center the card
+    color: white;
+    // height: 100vh; // Full viewport height
+    width: 80%;
+    margin : 0px auto;
+    
 `;
 
 const CardContainer = styled.div`
-
     max-width: 330px;
     max-height: 700px;
     background-color: #152515;
@@ -36,9 +39,7 @@ const CardContainer = styled.div`
         box-shadow: 0 0 50px 4px rgba(0,0,0,0.6);
         filter: brightness(1.1);
     }
-
     
-
 `
 
 const Image = styled.img`
@@ -72,7 +73,13 @@ const Icons = styled.div`
     color: white;
     padding-left: 10px;
     padding-right: 10px;
-    justify-content: space-between;
+    // justify-content: space-between;
+    gap: 40px;
+    width: 300px;
+    border: 2px solid green;
+    margin: 10px;
+    border-radius: 50px;
+    
 `
 
 
@@ -80,47 +87,93 @@ const Icon = styled.a`
     color: white;
     target: _blank;
     cursor: pointer;
+    margin-left: 20px;
 `
 
+const Title = styled.div``;
+
+const Social = styled.div``;
+
+
 const Card = (props) => {
-    return (
-      <Wrapper>
-        <Helmet>
-                <meta charset="utf-8" />
-                <title>{props.name}</title>
-                <meta name="description" content={`Check out ${props.name}'s profile!`} />
-                <meta property="og:title" content={props.name} />
-                <meta property="og:description" content={`Learn more about ${props.name}.`} />
-                <meta property="og:image" content="https://linktr.ee/og/image/Sumit2011.jpg" />
-                <meta property="og:url" content="https://ece2021nitsgr.netlify.app/user/sumit-kumar" />
-        </Helmet>
-        <CardContainer >
-          <Image src={props.image}/>
-            <Name>{props.name}</Name>
-            <Icons>
-              <Icon href={props.instagram} >
-                <InstagramIcon style={{height: "40px" , width: "40px"}} />
-              </Icon>
-              
-              <Icon href={props.facebook}>
-                <FacebookIcon style={{height: "40px" , width: "40px"}}/>
-              </Icon>
+  return (
+    <Wrapper>
+      <Helmet>
+        <meta charset="utf-8" />
+        <title>{props.name}</title>
+        <meta name="description" content={`Check out ${props.name}'s profile!`} />
+        <meta property="og:title" content={props.name} />
+        <meta property="og:description" content={`Learn more about ${props.name}.`} />
+        <meta property="og:image" content="https://linktr.ee/og/image/Sumit2011.jpg" />
+        <meta property="og:url" content="https://ece2021nitsgr.netlify.app/user/sumit-kumar" />
+      </Helmet>
+      <CardContainer >
+        <Image src={props.image} />
+        <Name>{props.name}</Name>
 
-              <Icon href={props.twitter}>
-                <XIcon style={{height: "40px" , width: "40px"}}/>
-              </Icon>
-                
-              <Icon href={props.linkedin}>
-                <LinkedInIcon style={{height: "40px" , width: "40px"}}/>
-              </Icon>
+      </CardContainer>
 
-              <Icon href={props.link} >
-                <LaunchIcon style={{height: "40px" , width: "40px"}}/>
-              </Icon>
-            </Icons>
-        </CardContainer>
-        </Wrapper>
-    )
+      <h1>
+      {props.name}
+      </h1>
+      <h3>Student | programmer | wevdeveloper | Honest</h3>
+      <p>
+        hii 👋, My name is {props.name} and i am from bhagalpur bihar. Currently
+        i am pursuing btech at NIT Sringar in Electronics and Communication Enginearing.
+      </p>
+
+      <Icons>
+        <Icon href={props.instagram} >
+          <InstagramIcon style={{ height: "40px", width: "40px" }} />
+        </Icon>
+        <h3>Instagram</h3>
+      </Icons>
+
+      <Icons>
+        <Icon href={props.facebook}>
+          <FacebookIcon style={{ height: "40px", width: "40px" }} />
+        </Icon>
+        <h3>Facebook</h3>
+      </Icons>
+
+      <Icons>
+
+        <Icon href={props.twitter}>
+          <XIcon style={{ height: "40px", width: "40px" }} />
+        </Icon>
+        <h3>Twitter</h3>
+      </Icons>
+
+      <Icons>
+        <Icon href={props.linkedin}>
+          <LinkedInIcon style={{ height: "40px", width: "40px" }} />
+        </Icon>
+        <h3> Linkedin</h3>
+      </Icons>
+
+      <Icons>
+      <Icon href={props.link} >
+        <LaunchIcon style={{ height: "40px", width: "40px" }} />
+      </Icon>
+        <h3> Portfolio</h3>
+      </Icons>
+
+
+
+
+      
+      <Social>
+        <div>
+          <Icon>
+
+          </Icon>
+          <Title>
+
+          </Title>
+        </div>
+      </Social>
+    </Wrapper>
+  )
 }
 
 
