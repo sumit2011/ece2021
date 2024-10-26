@@ -49,10 +49,18 @@ const CardContainer = styled.div`
 const Image = styled.img`
     width: 100%;
     height: 100%;
-    background-color: ${({ theme }) => theme.white};
     border-radius: 10px;
     box-shadow: 0 0 16px 2px rgba(0,0,0,0.3);
+
+    filter: grayscale();
+    transition: filter 0.4s ease-in-out;
+
+    &:hover {
+      filter: none;
+    }
 `
+
+
 
 
 const Name = styled.div`
@@ -115,7 +123,7 @@ const Card = (props) => {
       {/* <div style={{height: "100vh"}}> */}
       
       <CardContainer >
-        <Image src={props.image} />
+        <Image  src={props.image} />
         <Name>{props.name}</Name>
 
       </CardContainer>
