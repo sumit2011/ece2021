@@ -84,11 +84,12 @@ const Icons = styled.div`
     display: flex;
     align-items: center;
     color: white;
-    padding-left: 10px;
+    padding-left: 5px;
     padding-right: 10px;
     // justify-content: space-between;
+    width: 100%;
     gap: 40px;
-    width: 300px;
+    max-width: 300px;
     border: 2px solid green;
     margin: 10px;
     border-radius: 50px;
@@ -141,17 +142,17 @@ const Card = (props) => {
         i am pursuing btech at NIT Sringar in Electronics and Communication Enginearing.
         connect with me👇.
       </p>
-
+    <h1>Social Links</h1>
       <Icons>
         <Icon href={props.instagram} >
-          <InstagramIcon style={{ height: "40px", width: "40px" }} />
+          <InstagramIcon style={{ height: "30px", width: "30px" }} />
         </Icon>
         <h3>Instagram</h3>
       </Icons>
 
       <Icons>
         <Icon href={props.facebook}>
-          <FacebookIcon style={{ height: "40px", width: "40px" }} />
+          <FacebookIcon style={{ height: "30px", width: "30px" }} />
         </Icon>
         <h3>Facebook</h3>
       </Icons>
@@ -159,30 +160,60 @@ const Card = (props) => {
       <Icons>
 
         <Icon href={props.twitter}>
-          <XIcon style={{ height: "40px", width: "40px" }} />
+          <XIcon style={{ height: "30px", width: "30px" }} />
         </Icon>
         <h3>Twitter</h3>
       </Icons>
 
       <Icons>
         <Icon href={props.linkedin}>
-          <LinkedInIcon style={{ height: "40px", width: "40px" }} />
+          <LinkedInIcon style={{ height: "30px", width: "30px" }} />
         </Icon>
         <h3> Linkedin</h3>
       </Icons>
 
       <Icons>
       <Icon href={props.link} >
-        <LaunchIcon style={{ height: "40px", width: "40px" }} />
+        <LaunchIcon style={{ height: "30px", width: "30px" }} />
       </Icon>
         <h3> Portfolio</h3>
       </Icons>
+
+      <h1>Projects</h1>
+      <Icons>
+      <Icon href={props.link} >
+        <LaunchIcon style={{ height: "30px", width: "30px" }} />
+      </Icon>
+        <h3> Tiktaktoe</h3>
+      </Icons>
+
+      <Icons>
+      <Icon href={props.link} >
+        <LaunchIcon style={{ height: "30px", width: "30px" }} />
+      </Icon>
+        <h3> Snake</h3>
+      </Icons>
+
+      <Icons>
+      <Icon href={props.link} >
+        <LaunchIcon style={{ height: "30px", width: "30px" }} />
+      </Icon>
+        <h3> Under Water Object Detection</h3>
+      </Icons>
+
+      <Icons>
+      <Icon href={props.link} >
+        <LaunchIcon style={{ height: "30px", width: "30px" }} />
+      </Icon>
+        <h3>Annotation Tool</h3>
+      </Icons>
+
 
 
       <Contact />
 
       
-      <Social>
+      {/* <Social>
         <div>
           <Icon>
 
@@ -191,7 +222,12 @@ const Card = (props) => {
 
           </Title>
         </div>
-      </Social>
+      </Social> */}
+
+      
+
+
+
     </Wrapper>
   )
 }

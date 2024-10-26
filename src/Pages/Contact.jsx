@@ -10,7 +10,7 @@ const Container = styled.div`
 const FormContainer = styled.div`
   display: flex;
   flex-direction: column;
-  // align-items: center;
+  align-items: center;
   background-color: black;
   padding: 20px;
   border-radius: 10px;
@@ -66,33 +66,6 @@ const SubmitButton = styled.button`
   }
 `;
 
-const CustomAlertContainer = styled.div`
-  text-align: center;
-  z-index: 2000;
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  background-color: #0a1f2d;
-  border-radius: 10px;
-  padding: 10px;
-  max-width: 400px;
-  width: 220px;
-  border: 2px solid #1a6cff;
-  box-shadow: 0 0 15px 5px rgba(26, 108, 255, 0.5);
-  color: white;
-  font-family: Arial, sans-serif;
-`;
-
-const CustomAlertButton = styled.button`
-  background-color: #ff6347;
-  color: white;
-  border: none;
-  padding: 10px 20px;
-  border-radius: 5px;
-  cursor: pointer;
-  margin-top: 10px;
-`;
 
 
 
@@ -103,8 +76,6 @@ const NameMessageForm = () => {
     date: '', // added date field
   });
 
-  const [alertVisible, setAlertVisible] = useState(false);
-  const [formVisible, setFormVisible] = useState(true);
 
   const handleInputChange = (e) => {
     const { name, value } = e.target;
@@ -112,42 +83,11 @@ const NameMessageForm = () => {
   };
 
   const handleSubmit = async (e) => {
-    e.preventDefault();
-
-    // Capture the current date
-    const currentDate = new Date().toLocaleString();
-
-    // console.log('Form Data:', { ...formData, date: currentDate });
-
-    // Include the date in the data
-    const data = [[formData.name, formData.message, currentDate]];
-
-    try {
-      const response = await fetch('https://v1.nocodeapi.com/n4ksum/google_sheets/JVsRJbiqbjOXDJFX?tabId=Sheet2', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify(data),
-      });
-
-      if (response.ok) {
-        console.log('Form submitted successfully');
-        setAlertVisible(true); // Show alert after form submission
-        setFormVisible(false); // Hide the form after submission
-      } else {
-        const errorResponse = await response.json();
-        console.error('Error submitting form:', errorResponse);
-      }
-    } catch (error) {
-      console.error('Error:', error);
-    }
-  };
-
+  }
+    
   return (
     <>
     <Container>
-      {formVisible && (
         <FormContainer>
           <h1>Contact Me</h1>
           <form onSubmit={handleSubmit}>
@@ -155,6 +95,14 @@ const NameMessageForm = () => {
               type="text"
               name="name"
               placeholder="Enter your name"
+              value={formData.name}
+              onChange={handleInputChange}
+              required
+            />
+            <Input
+              type="text"
+              name="email"
+              placeholder="Enter your Email"
               value={formData.name}
               onChange={handleInputChange}
               required
@@ -170,17 +118,6 @@ const NameMessageForm = () => {
             <SubmitButton type="submit">Submit</SubmitButton>
           </form>
         </FormContainer>
-      )}
-
-      {alertVisible && (
-        <CustomAlertContainer>
-          <h3>Thank you, {formData.name}! 🎉</h3>
-          <p>Your confession will be added shortly.</p>
-          <CustomAlertButton onClick={() => setAlertVisible(false)}>
-            Close
-          </CustomAlertButton>
-        </CustomAlertContainer>
-      )}
     </Container>
     </>
 
