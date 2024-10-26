@@ -87,12 +87,13 @@ const Icons = styled.div`
     padding-left: 5px;
     padding-right: 10px;
     // justify-content: space-between;
-    width: 100%;
+    width: 88%;
     gap: 40px;
     max-width: 300px;
     border: 2px solid green;
     margin: 10px;
     border-radius: 50px;
+    height:50px;
     
 `
 
@@ -198,14 +199,14 @@ const Card = (props) => {
       <Icon href={props.link} >
         <LaunchIcon style={{ height: "30px", width: "30px" }} />
       </Icon>
-        <h3> Under Water Object Detection</h3>
+        <h3> Under Water </h3>
       </Icons>
 
       <Icons>
       <Icon href={props.link} >
         <LaunchIcon style={{ height: "30px", width: "30px" }} />
       </Icon>
-        <h3>Annotation Tool</h3>
+        <h3>Annotation</h3>
       </Icons>
 
 
