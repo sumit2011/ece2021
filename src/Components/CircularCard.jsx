@@ -18,7 +18,8 @@ const CardOverlay = styled.div`
   align-items: center;
 `;
 
-const CardContainer = styled.div``;
+const CardContainer = styled.div`
+`;
 
 
 const CircularCard = (props) => {

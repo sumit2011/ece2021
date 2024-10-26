@@ -112,11 +112,14 @@ const Card = (props) => {
         <meta property="og:url" content="https://ece2021nitsgr.netlify.app/user/sumit-kumar" />
       </Helmet>
       <Tilt>
+      {/* <div style={{height: "100vh"}}> */}
+      
       <CardContainer >
         <Image src={props.image} />
         <Name>{props.name}</Name>
 
       </CardContainer>
+      {/* </div> */}
       </Tilt>
       
 
