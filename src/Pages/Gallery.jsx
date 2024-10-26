@@ -12,8 +12,8 @@ const images = [
   {
     src: require("../Utils/Photos/1.jpg"),
     original: require("../Utils/Photos/1.jpg"),
-    width: 420,
-    height: 274,
+    width: 920,
+    height: 613,
     tags: [
       { value: "Fresher", title: "Fresher" },
       { value: "Party", title: "Party" },
@@ -25,14 +25,14 @@ const images = [
     src: require("../Utils/Photos/2.jpg"),
     original: require("../Utils/Photos/2.jpg"),
     width: 320,
-    height: 400,
+    height: 613,
     caption: "Boats (Jeshu John - designerspics.com)",
   },
   {
     src: require("../Utils/Photos/3.jpg"),
     original: require("../Utils/Photos/3.jpg"),
-    width: 520,
-    height: 312,
+    width: 920,
+    height: 613,
     caption: "Color Pencils (Jeshu John - designerspics.com)",
   },
   {
@@ -52,8 +52,8 @@ const images = [
   {
     src: require("../Utils/Photos/10.jpg"),
     original: require("../Utils/Photos/10.jpg"),
-    width: 440,
-    height: 320,
+    width: 920,
+    height: 613,
     tags: [{ value: "Nature", title: "Nature" }],
     caption: "8H (gratisography.com)",
   },
@@ -90,6 +90,13 @@ const images = [
     src: require("../Utils/Photos/16.jpg"),
     original: require("../Utils/Photos/16.jpg"),
     width: 320,
+    height: 613,
+    caption: "201H (gratisography.com)",
+  },
+  {
+    src: require("../Utils/Photos/19.jpeg"),
+    original: require("../Utils/Photos/19.jpeg"),
+    width: 920,
     height: 613,
     caption: "201H (gratisography.com)",
   },

@@ -117,8 +117,6 @@ const Card = (props) => {
               <Icon href={props.link} >
                 <LaunchIcon style={{height: "40px" , width: "40px"}}/>
               </Icon>
-                
-                
             </Icons>
         </CardContainer>
         </Wrapper>

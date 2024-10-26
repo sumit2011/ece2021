@@ -8,10 +8,10 @@ export const Confessions = [
     },
     {
         "id" : 2,
-        "name" : "turulob",
+        "name" : "Solid boyzz",
         "date" : "24-10-24",
         "icon" : "🫣",
-        "confession" : "Par katata to bas ladko ka hai😂...Ladke hote hin chutiye hain😂😂."
+        "confession" : "Bafana raa saai tujhe oo harjai"
     },
 
 
