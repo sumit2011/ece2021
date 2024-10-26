@@ -118,8 +118,9 @@ const Card = (props) => {
       </h1>
       <h3>Student | programmer | wevdeveloper | Honest</h3>
       <p>
-        hii 👋, My name is {props.name} and i am from bhagalpur bihar. Currently
+        hii 👋, My name is {props.name}. Currently
         i am pursuing btech at NIT Sringar in Electronics and Communication Enginearing.
+        connect with me👇.
       </p>
 
       <Icons>
