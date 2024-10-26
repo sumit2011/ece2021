@@ -290,6 +290,19 @@ export const Datas = [
     },
     {
         "id": 23,
+        "userid" : "pankaj-kumar",
+        "name": "Pankaj Kumar",
+        "initials": "pk",
+        "image": require('../Images/52.jpeg'),
+        "link" : "",
+        "instagram" : "",
+        "twitter" : "",
+        "facebook" : "",
+        "linkedin" : "",
+        "enroll": "2021BECE052"
+    },
+    {
+        "id": 24,
         "userid" : "",
         "name": "Waiting for you",
         "initials": "sk",
