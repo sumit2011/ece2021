@@ -5,6 +5,7 @@ import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import FacebookIcon from '@mui/icons-material/Facebook';
 import XIcon from '@mui/icons-material/X';
 import LaunchIcon from '@mui/icons-material/Launch';
+import { Tilt } from 'react-tilt';
 // import { useParams } from 'react-router-dom';
 
 
@@ -75,6 +76,9 @@ const Icon = styled.a`
 const Card = (props) => {
     return (
       <>
+      <Tilt>
+
+      
         <CardContainer >
           <Image src={props.image}/>
             <Name>{props.name}</Name>
@@ -102,6 +106,7 @@ const Card = (props) => {
                 
             </Icons>
         </CardContainer>
+        </Tilt>
         </>
     )
 }

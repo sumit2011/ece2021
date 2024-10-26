@@ -7,6 +7,7 @@ import XIcon from '@mui/icons-material/X';
 import LaunchIcon from '@mui/icons-material/Launch';
 // import { useParams } from 'react-router-dom';
 import { Helmet } from 'react-helmet';
+import { Tilt } from "react-tilt";
 
 const Wrapper = styled.div`
     display: flex;
@@ -39,8 +40,11 @@ const CardContainer = styled.div`
         box-shadow: 0 0 50px 4px rgba(0,0,0,0.6);
         filter: brightness(1.1);
     }
+
+    margin-top: 100px;
+
     
-`
+`;
 
 const Image = styled.img`
     width: 100%;
@@ -107,16 +111,19 @@ const Card = (props) => {
         <meta property="og:image" content="https://linktr.ee/og/image/Sumit2011.jpg" />
         <meta property="og:url" content="https://ece2021nitsgr.netlify.app/user/sumit-kumar" />
       </Helmet>
+      <Tilt>
       <CardContainer >
         <Image src={props.image} />
         <Name>{props.name}</Name>
 
       </CardContainer>
+      </Tilt>
+      
 
       <h1>
       {props.name}
       </h1>
-      <h3>Student | programmer | wevdeveloper | Honest</h3>
+      <h3>Student | programmer | webdeveloper | Honest</h3>
       <p>
         hii 👋, My name is {props.name}. Currently
         i am pursuing btech at NIT Sringar in Electronics and Communication Enginearing.

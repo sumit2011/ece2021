@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import styled from 'styled-components';
 import Card from './Card';
+import { Tilt } from 'react-tilt';
 
 const CardMain = styled.div`
 `;
@@ -43,6 +44,9 @@ const CircularCard = (props) => {
   return (
 
     <CardMain>
+      {/* <Tilt> */}
+
+      
       <img
         src={props.image}
         alt='Circular Card'
@@ -62,6 +66,8 @@ const CircularCard = (props) => {
           </CardContainer>
         </CardOverlay>
       )}
+
+{/* </Tilt> */}
     </CardMain>
   );
 };
