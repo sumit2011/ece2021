@@ -174,6 +174,23 @@ const Button = styled.div`
   padding: 5px;
 `;
 
+const Hr = styled.div`
+
+animation: pulse 1s ease infinite;
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+`;
+
 const Card = (props) => {
 
   const skill = ["Student", "Engineer 🍉", "Programmer", "Developer", "Honest"];
@@ -240,14 +257,16 @@ const Card = (props) => {
         you can connect with me on👇.
       </p>
     <h1>Social Links 🍅</h1>
-    <hr
+    <Hr
     style={{
-      backgroundColor: "#00ff00",  
+      backgroundColor: "green",  
       height: "2px",              
       width: "250px", 
-      border: "none",              
+      border: "1px solid green",              
       marginTop: "-10px",
       marginBottom: "20px",
+      borderRadius: "25px",
+
     }}
     />
       <Icons  href={props.instagram} target="_blank"> 
