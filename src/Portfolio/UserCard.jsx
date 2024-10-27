@@ -5,10 +5,10 @@ import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import FacebookIcon from '@mui/icons-material/Facebook';
 import XIcon from '@mui/icons-material/X';
 import LaunchIcon from '@mui/icons-material/Launch';
-// import { useParams } from 'react-router-dom';
 import { Helmet } from 'react-helmet';
 import { Tilt } from "react-tilt";
 import Typewriter from "typewriter-effect";
+import { green } from '@mui/material/colors';
 
 
 const Wrapper = styled.div`
@@ -20,6 +20,7 @@ const Wrapper = styled.div`
     // height: 100vh; // Full viewport height
     width: 80%;
     margin : 0px auto;
+    text-align: center;
     
 `;
 
@@ -153,7 +154,9 @@ const Span = styled.div`
   color: #00ff00;
 `;
 
-const Social = styled.div``;
+const Social = styled.div`
+margin-bottom: 50px;
+`;
 
 
 const Card = (props) => {
@@ -166,7 +169,7 @@ const Card = (props) => {
     
     <Wrapper>
 
-      {/* <Helmet>
+      <Helmet>
         <meta charset="utf-8" />
         <title>{props.name}</title>
         <meta name="description" content={`Check out ${props.name}'s profile!`} />
@@ -174,7 +177,7 @@ const Card = (props) => {
         <meta property="og:description" content={`Learn more about ${props.name}.`} />
         <meta property="og:image" content="https://linktr.ee/og/image/Sumit2011.jpg" />
         <meta property="og:url" content="https://ece2021nitsgr.netlify.app/user/sumit-kumar" />
-      </Helmet> */}
+      </Helmet>
 
       
       <Tilt>
@@ -205,14 +208,25 @@ const Card = (props) => {
                     />
                   </Span>
       </TextLoop>
+      
 
-      <h3>Student | Competitive Programmer | Full Stack Developer | Honest</h3>
-      <p>
+      <h3 >Student | Competitive Programmer | Full Stack Developer | Honest</h3>
+      <p >
         hii 👋, My name is {props.name}. Currently
         i am pursuing btech at NIT Sringar in Electronics and Communication Enginearing.
-        connect with me👇.
+        you can connect with me on👇.
       </p>
     <h1>Social Links</h1>
+    <hr
+    style={{
+      backgroundColor: "#00ff00",  
+      height: "2px",              
+      width: "200px", 
+      border: "none",              
+      marginTop: "-10px",
+      marginBottom: "20px",
+    }}
+    />
       <Icons  href={props.instagram} target="_blank"> 
         <Icon href={props.instagram} >
           <InstagramIcon style={{ height: "30px", width: "30px" }} />
@@ -249,23 +263,7 @@ const Card = (props) => {
         <h3> Portfolio</h3>
       </Icons>
 
-      
-
-      
-      {/* <Social>
-        <div>
-          <Icon>
-
-          </Icon>
-          <Title>
-
-          </Title>
-        </div>
-      </Social> */}
-
-      
-
-
+      <Social></Social>
 
     </Wrapper>
     </>
