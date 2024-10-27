@@ -10,6 +10,8 @@ import { Tilt } from "react-tilt";
 import Typewriter from "typewriter-effect";
 import { useNavigate } from 'react-router-dom';
 import KeyboardArrowLeftIcon from '@mui/icons-material/KeyboardArrowLeft';
+import ArrowBackIcon from '@mui/icons-material/ArrowBack';
+
 const Wrapper = styled.div`
     display: flex;
     flex-direction: column;
@@ -62,7 +64,7 @@ const CardContainer = styled.div`
         filter: brightness(1.1);
     }
     
-    margin-top: 70px;
+    margin-top: 90px;
 
     
 `;
@@ -161,7 +163,7 @@ margin-bottom: 50px;
 const Button = styled.div`
   position: fixed;
   z-index: 1000;
-  top: 12px;
+  top: 18px;
   left: 12px;
   background: none;
   color: white;
@@ -169,6 +171,7 @@ const Button = styled.div`
 
   cursor: pointer;
   border-radius: 50%;
+  padding: 5px;
 `;
 
 const Card = (props) => {
@@ -198,7 +201,7 @@ const Card = (props) => {
       </Helmet>
 
       <Button onClick={handleGoback} >
-        <KeyboardArrowLeftIcon style={{ height: "30px", width: "30px" , color:"#00ff00" }}/>
+        <ArrowBackIcon style={{ height: "30px", width: "30px" , color:"#00ff00" }}/>
       </Button>
 
       <div >
