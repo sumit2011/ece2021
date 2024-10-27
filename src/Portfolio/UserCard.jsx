@@ -35,7 +35,7 @@ font-weight: 700;
   }
 
   @media (max-width: 960px) {
-    font-size: 40px;
+    font-size: 35px;
     line-height: 48px;
     margin-bottom: 8px;
   }
@@ -56,12 +56,13 @@ const CardContainer = styled.div`
     flex-direction: column;
     gap: 14px;
     transition: all 0.5s ease-in-out;
+    
     &:hover {
         transform: translateY(-10px);
         box-shadow: 0 0 50px 4px rgba(0,0,0,0.6);
         filter: brightness(1.1);
     }
-
+    
     margin-top: 50px;
 
     
@@ -180,16 +181,15 @@ const Card = (props) => {
       </Helmet>
 
       
-      <Tilt>
-      {/* <div style={{height: "100vh"}}> */}
-      
+      <div >
+      <Tilt >
       <CardContainer >
         <Image  src={props.image} />
         <Name>{props.name}</Name>
 
       </CardContainer>
-      {/* </div> */}
       </Tilt>
+      </div>
       
 
       <Title style={{fontWeight:"bold"}}>
