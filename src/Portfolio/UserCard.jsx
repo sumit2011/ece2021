@@ -8,9 +8,8 @@ import LaunchIcon from '@mui/icons-material/Launch';
 import { Helmet } from 'react-helmet';
 import { Tilt } from "react-tilt";
 import Typewriter from "typewriter-effect";
-import { green } from '@mui/material/colors';
-
-
+import { useNavigate } from 'react-router-dom';
+import KeyboardArrowLeftIcon from '@mui/icons-material/KeyboardArrowLeft';
 const Wrapper = styled.div`
     display: flex;
     flex-direction: column;
@@ -63,7 +62,7 @@ const CardContainer = styled.div`
         filter: brightness(1.1);
     }
     
-    margin-top: 50px;
+    margin-top: 70px;
 
     
 `;
@@ -159,10 +158,28 @@ const Social = styled.div`
 margin-bottom: 50px;
 `;
 
+const Button = styled.div`
+  position: fixed;
+  z-index: 1000;
+  top: 12px;
+  left: 12px;
+  background: none;
+  color: white;
+  border: 2px solid green;
+
+  cursor: pointer;
+  border-radius: 50%;
+`;
 
 const Card = (props) => {
 
   const skill = ["Student", "Programmer", "Full Stack Developer", "Honest"];
+
+  const goback = useNavigate();
+
+  const handleGoback = () => {
+    goback(-1);
+  };
 
   return (
     <>
@@ -180,7 +197,10 @@ const Card = (props) => {
         <meta property="og:url" content="https://ece2021nitsgr.netlify.app/user/sumit-kumar" />
       </Helmet>
 
-      
+      <Button onClick={handleGoback} >
+        <KeyboardArrowLeftIcon style={{ height: "30px", width: "30px" , color:"#00ff00" }}/>
+      </Button>
+
       <div >
       <Tilt >
       <CardContainer >
