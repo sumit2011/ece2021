@@ -8,7 +8,8 @@ import LaunchIcon from '@mui/icons-material/Launch';
 // import { useParams } from 'react-router-dom';
 import { Helmet } from 'react-helmet';
 import { Tilt } from "react-tilt";
-import Contact from './Contact';
+import Typewriter from "typewriter-effect";
+
 
 const Wrapper = styled.div`
     display: flex;
@@ -19,6 +20,24 @@ const Wrapper = styled.div`
     // height: 100vh; // Full viewport height
     width: 80%;
     margin : 0px auto;
+    
+`;
+
+const Title = styled.div`
+font-weight: 700;
+  font-size: 50px;
+  color: white;
+  line-height: 68px;
+  font-weight: bold;
+  @media (max-width: 960px) {
+    text-align: center;
+  }
+
+  @media (max-width: 960px) {
+    font-size: 40px;
+    line-height: 48px;
+    margin-bottom: 8px;
+  }
     
 `;
 
@@ -80,7 +99,7 @@ const Name = styled.div`
 
 
 
-const Icons = styled.div`
+const Icons = styled.a`
     display: flex;
     align-items: center;
     color: white;
@@ -94,6 +113,9 @@ const Icons = styled.div`
     margin: 10px;
     border-radius: 50px;
     height:50px;
+    user-select: none;
+    text-decoration: none;
+    
     
 `
 
@@ -105,15 +127,46 @@ const Icon = styled.a`
     margin-left: 20px;
 `
 
-const Title = styled.div``;
+
+
+const TextLoop = styled.div`
+  font-weight: 600;
+  font-size: 32px;
+  display: flex;
+  gap: 12px;
+  color: white;
+  line-height: 68px;
+
+  @media (max-width: 960px) {
+    text-align: center;
+  }
+
+  @media (max-width: 960px) {
+    font-size: 22px;
+    line-height: 48px;
+    margin-bottom: 16px;
+  }
+`;
+
+const Span = styled.div`
+  cursor: pointer;
+  color: #00ff00;
+`;
 
 const Social = styled.div``;
 
 
 const Card = (props) => {
+
+  const skill = ["Student", "Programmer", "Full Stack Developer", "Honest"];
+
   return (
+    <>
+    {/* <Navbar /> */}
+    
     <Wrapper>
-      <Helmet>
+
+      {/* <Helmet>
         <meta charset="utf-8" />
         <title>{props.name}</title>
         <meta name="description" content={`Check out ${props.name}'s profile!`} />
@@ -121,7 +174,9 @@ const Card = (props) => {
         <meta property="og:description" content={`Learn more about ${props.name}.`} />
         <meta property="og:image" content="https://linktr.ee/og/image/Sumit2011.jpg" />
         <meta property="og:url" content="https://ece2021nitsgr.netlify.app/user/sumit-kumar" />
-      </Helmet>
+      </Helmet> */}
+
+      
       <Tilt>
       {/* <div style={{height: "100vh"}}> */}
       
@@ -134,9 +189,23 @@ const Card = (props) => {
       </Tilt>
       
 
-      <h1>
-      {props.name}
-      </h1>
+      <Title style={{fontWeight:"bold"}}>
+      Hi👋, I am <br/> {props.name}.
+      </Title>
+
+      <TextLoop>
+                  I am a
+                  <Span>
+                    <Typewriter
+                      options={{
+                        strings: skill,
+                        autoStart: true,
+                        loop: true,
+                      }}
+                    />
+                  </Span>
+      </TextLoop>
+
       <h3>Student | Competitive Programmer | Full Stack Developer | Honest</h3>
       <p>
         hii 👋, My name is {props.name}. Currently
@@ -144,21 +213,21 @@ const Card = (props) => {
         connect with me👇.
       </p>
     <h1>Social Links</h1>
-      <Icons>
+      <Icons  href={props.instagram} target="_blank"> 
         <Icon href={props.instagram} >
           <InstagramIcon style={{ height: "30px", width: "30px" }} />
         </Icon>
         <h3>Instagram</h3>
       </Icons>
 
-      <Icons>
+      <Icons  href={props.facebook} target="_blank">
         <Icon href={props.facebook}>
           <FacebookIcon style={{ height: "30px", width: "30px" }} />
         </Icon>
         <h3>Facebook</h3>
       </Icons>
 
-      <Icons>
+      <Icons href={props.twitter} target="_blank">
 
         <Icon href={props.twitter}>
           <XIcon style={{ height: "30px", width: "30px" }} />
@@ -166,17 +235,17 @@ const Card = (props) => {
         <h3>Twitter</h3>
       </Icons>
 
-      <Icons>
+      <Icons href={props.linkedin} target="_blank">
         <Icon href={props.linkedin}>
           <LinkedInIcon style={{ height: "30px", width: "30px" }} />
         </Icon>
         <h3> Linkedin</h3>
       </Icons>
 
-      <Icons>
-      <Icon href={props.link} >
-        <LaunchIcon style={{ height: "30px", width: "30px" }} />
-      </Icon>
+      <Icons href={props.link} target=" _blank">
+        <Icon href={props.link} >
+          <LaunchIcon style={{ height: "30px", width: "30px" }} />
+        </Icon>
         <h3> Portfolio</h3>
       </Icons>
 
@@ -199,6 +268,7 @@ const Card = (props) => {
 
 
     </Wrapper>
+    </>
   )
 }
 

@@ -11,7 +11,7 @@ import Gallery from './Pages/Gallery';
 import Help from './Pages/Help';
 import DiscussionPage from './Pages/DiscussionPage';
 import { Datas } from './Utils/Data/Data';
-import UserCard from './Pages/UserCard';
+import UserCard from './Portfolio/UserCard';
 
 const Container = styled.div`
   justify-content: center;
