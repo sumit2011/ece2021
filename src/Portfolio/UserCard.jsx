@@ -243,12 +243,12 @@ const Card = (props) => {
         i am pursuing btech at NIT Sringar in Electronics and Communication Enginearing.
         you can connect with me on👇.
       </p>
-    <h1>Social Links 🍅</h1>
+    <h1>Social Links</h1>
     <Hr
     style={{
       backgroundColor: "green",  
       height: "2px",              
-      width: "250px", 
+      width: "200px", 
       border: "1px solid green",              
       marginTop: "-10px",
       marginBottom: "20px",
