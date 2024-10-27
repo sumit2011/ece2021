@@ -295,7 +295,7 @@ export const Datas = [
         "initials": "pk",
         "image": require('../Images/52.jpeg'),
         "link" : "",
-        "instagram" : "",
+        "instagram" : "https://www.instagram.com/Pankajpkkr",
         "twitter" : "",
         "facebook" : "",
         "linkedin" : "",
@@ -310,7 +310,7 @@ export const Datas = [
         "link" : "",
         "instagram" : "https://www.instagram.com/",
         "twitter" : "",
-        "facebook" : "",
+        "facebook" : "https://www.facebook.com/profile.php?id=100030653735780&mibextid=ZbWKwL",
         "linkedin" : "",
         "enroll": ""
     },

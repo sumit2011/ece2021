@@ -42,7 +42,7 @@ const CardContainer = styled.div`
         filter: brightness(1.1);
     }
 
-    margin-top: 100px;
+    margin-top: 50px;
 
     
 `;
@@ -180,38 +180,7 @@ const Card = (props) => {
         <h3> Portfolio</h3>
       </Icons>
 
-      <h1>Projects</h1>
-      <Icons>
-      <Icon href={props.link} >
-        <LaunchIcon style={{ height: "30px", width: "30px" }} />
-      </Icon>
-        <h3> Tiktaktoe</h3>
-      </Icons>
-
-      <Icons>
-      <Icon href={props.link} >
-        <LaunchIcon style={{ height: "30px", width: "30px" }} />
-      </Icon>
-        <h3> Snake</h3>
-      </Icons>
-
-      <Icons>
-      <Icon href={props.link} >
-        <LaunchIcon style={{ height: "30px", width: "30px" }} />
-      </Icon>
-        <h3> Under Water </h3>
-      </Icons>
-
-      <Icons>
-      <Icon href={props.link} >
-        <LaunchIcon style={{ height: "30px", width: "30px" }} />
-      </Icon>
-        <h3>Annotation</h3>
-      </Icons>
-
-
-
-      <Contact />
+      
 
       
       {/* <Social>
