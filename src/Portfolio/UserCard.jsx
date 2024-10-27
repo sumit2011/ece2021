@@ -176,7 +176,7 @@ const Button = styled.div`
 
 const Card = (props) => {
 
-  const skill = ["Student", "Programmer", "Full Stack Developer", "Honest"];
+  const skill = ["Student", "Engineer 🍉", "Programmer", "Developer", "Honest"];
 
   const goback = useNavigate();
 
@@ -233,18 +233,18 @@ const Card = (props) => {
       </TextLoop>
       
 
-      <h3 >Student | Competitive Programmer | Full Stack Developer | Honest</h3>
+      <h3 >Student | Programmer | Engineer | Full Stack Developer | Honest</h3>
       <p style={{color: "rgb(200, 200, 200)"}} >
         hii 👋, My name is {props.name}. Currently
         i am pursuing btech at NIT Sringar in Electronics and Communication Enginearing.
         you can connect with me on👇.
       </p>
-    <h1>Social Links</h1>
+    <h1>Social Links 🍅</h1>
     <hr
     style={{
       backgroundColor: "#00ff00",  
       height: "2px",              
-      width: "200px", 
+      width: "250px", 
       border: "none",              
       marginTop: "-10px",
       marginBottom: "20px",
