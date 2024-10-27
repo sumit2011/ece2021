@@ -234,7 +234,7 @@ const Card = (props) => {
       
 
       <h3 >Student | Competitive Programmer | Full Stack Developer | Honest</h3>
-      <p >
+      <p style={{color: "rgb(200, 200, 200)"}} >
         hii 👋, My name is {props.name}. Currently
         i am pursuing btech at NIT Sringar in Electronics and Communication Enginearing.
         you can connect with me on👇.
