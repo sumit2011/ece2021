@@ -12,6 +12,8 @@ import Help from './Pages/Help';
 import DiscussionPage from './Pages/DiscussionPage';
 import { Datas } from './Utils/Data/Data';
 import UserCard from './Portfolio/UserCard';
+import Notfound from './Pages/Notfound';
+// import { Switch } from '@mui/material';
 
 const Container = styled.div`
   justify-content: center;
@@ -27,8 +29,11 @@ function App() {
       {!location.pathname.startsWith('/user/') && (
         <NavBar menuOpen={menuOpen} setMenuOpen={setMenuOpen} />
       )}
-      
+
+
       <Routes>
+
+        
         <Route path="/" element={<Dashboard />} />
         <Route path="/confessionpage" element={<ConfessionPage />} />
         <Route path='/main' element={<Main />} />
@@ -36,6 +41,7 @@ function App() {
         <Route path='/help' element={<Help />} />
         <Route path='/discussionpage' element={<DiscussionPage />} />
         <Route path='/user/:userid' element={<UserDetail  />} />
+        <Route path='*' element={<Notfound />} />
       </Routes>
     </Container>
   );

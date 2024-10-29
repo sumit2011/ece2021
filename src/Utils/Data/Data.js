@@ -303,6 +303,32 @@ export const Datas = [
     },
     {
         "id": 24,
+        "userid" : "sakshi",
+        "name": "Sakshi",
+        "initials": "sk",
+        "image": require('../Images/38.jpeg'),
+        "link" : "https://ece2021nitsgr.netlify.app/user/sakshi",
+        "instagram" : "https://www.instagram.com/sakshiagrawal8719",
+        "twitter" : "",
+        "facebook" : "",
+        "linkedin" : "",
+        "enroll": "2021BECE038"
+    },
+    {
+        "id": 25,
+        "userid" : "gugulothu-rahul-nayak",
+        "name": "Gugulothu Rahul Nayak",
+        "initials": "sk",
+        "image": require('../Images/1.png'),
+        "link" : "https://ece2021nitsgr.netlify.app/user/gugulothu-rahul-nayak",
+        "instagram" : "https://www.instagram.com/rahul_guguloth2",
+        "twitter" : "",
+        "facebook" : "",
+        "linkedin" : "",
+        "enroll": "2021BECE095"
+    },
+    {
+        "id": 26,
         "userid" : "",
         "name": "Waiting for you",
         "initials": "sk",
@@ -310,10 +336,9 @@ export const Datas = [
         "link" : "https://ece2021nitsgr.netlify.app",
         "instagram" : "https://www.instagram.com/",
         "twitter" : "",
-        "facebook" : "https://www.facebook.com/profile.php?id=100030653735780&mibextid=ZbWKwL",
+        "facebook" : "",
         "linkedin" : "",
         "enroll": ""
     },
-    
     
 ];
