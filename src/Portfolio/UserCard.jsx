@@ -185,7 +185,7 @@ const Card = (props) => {
   const goback = useNavigate();
 
   const handleGoback = () => {
-    goback(-1);
+    goback('/');
   };
 
   return (

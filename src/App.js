@@ -53,7 +53,7 @@ function UserDetail() {
   const user = Datas.find(user => user.userid === userid);
 
   if (!user) {
-    return <div>User not found</div>;
+    return <Notfound />
   }
 
   return <UserCard key={user.userid} {...user} />;
