@@ -19,6 +19,9 @@ const DiyaContainer = styled.div`
   bottom: 20px;
   right: 20px;
   z-index: 1000;
+  display: flex;
+  flex-direction: row;
+  gap: 12px;
 `;
 
 const DiyaWrapper = styled.div`
@@ -78,10 +81,39 @@ const Base = styled.div`
   border-radius: 15px 15px 0 0;
 `;
 
-// Main Component
+const Logo = styled.div`
+  display: flex;
+  align-items: center;
+  // padding-bottom: 0px;
+  align-self: flex-end;
+`;
+
+
+const LogoText = styled.span`
+  font-size: 24px;
+  font-weight: bold;
+  color: #FFD700; /* Yellow */
+  margin-left: 10px;
+  user-select: none;
+
+`;
+
+const SubLogoText = styled.span`
+  color: #FF1493; /* Pink for  */
+  font-size: 24px;
+  margin-left: 4px;
+`;
+
 const DiyaEffect = () => {
   return (
     <DiyaContainer>
+
+      <Logo  >
+          <LogoText >
+            Happy<SubLogoText>Diwali</SubLogoText>
+          </LogoText>
+        </Logo>
+
       <DiyaWrapper>
         <Flame>
           <InnerFlame />
