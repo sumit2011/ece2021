@@ -13,6 +13,7 @@ import DiscussionPage from './Pages/DiscussionPage';
 import { Datas } from './Utils/Data/Data';
 import UserCard from './Portfolio/UserCard';
 import Notfound from './Pages/Notfound';
+import DiyaEffect from './Components/Diya';
 // import { Switch } from '@mui/material';
 
 const Container = styled.div`
@@ -43,10 +44,30 @@ function App() {
         <Route path='/user/:userid' element={<UserDetail  />} />
         <Route path='*' element={<Notfound />} />
       </Routes>
+
+ 
+
+      <EmbeddedHtmlPage />
+      <DiyaEffect />
     </Container>
   );
 }
 
+
+function EmbeddedHtmlPage() {
+  return (
+    <iframe
+      src="/happy-diwali/dist/index.html" // Place the HTML file in the public folder and adjust the path accordingly
+      title="Embedded HTML Page"
+      style={{
+        
+        width: '100%',
+        height: '100vh',
+        border: 'none',
+      }}
+    />
+  );
+}
 
 function UserDetail() {
   const { userid } = useParams();

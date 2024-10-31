@@ -3,7 +3,6 @@ import { Datas } from '../Utils/Data/Data';
 import CircularCard from '../Components/CircularCard';
 import styled from 'styled-components';
 import JoinForm from '../Components/Form';
-import DiyaEffect from '../Components/Diya';
 
 
 const DashboardContainer = styled.div`
@@ -173,7 +172,6 @@ const Dashboard = () => {
       </Footer>
 
 
-        <DiyaEffect />
 
     </DashboardContainer>
   );
