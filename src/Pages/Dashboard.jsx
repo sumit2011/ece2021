@@ -6,6 +6,7 @@ import JoinForm from '../Components/Form';
 
 
 const DashboardContainer = styled.div`
+  position: relative;
   justify-content: center;
   align-items: center;
   width: 80%;
@@ -13,6 +14,7 @@ const DashboardContainer = styled.div`
   @media (max-width: 550px){
      width: 100%;
   }
+  
 `;
 
 

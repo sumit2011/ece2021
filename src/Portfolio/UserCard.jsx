@@ -13,6 +13,8 @@ import KeyboardArrowLeftIcon from '@mui/icons-material/KeyboardArrowLeft';
 import ArrowBackIcon from '@mui/icons-material/ArrowBack';
 
 const Wrapper = styled.div`
+    position: relative;  // for the fireworks happy diwali effect
+
     display: flex;
     flex-direction: column;
     align-items: center;

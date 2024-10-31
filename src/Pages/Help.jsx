@@ -3,6 +3,8 @@ import styled from 'styled-components';
 
 
 const Container = styled.div`
+  position: relative;  // for the fireworks happy diwali effect
+
   justify-content: center;
   align-items: center;
   width: 80%;

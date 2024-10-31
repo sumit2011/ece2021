@@ -4,6 +4,8 @@ import MainCard from '../Components/MainCard'
 import styled from 'styled-components';
 
 const MainContainer = styled.div`
+  position: relative;  // for the fireworks happy diwali effect
+
   margin: 10px;
   display: flex;
   flex-wrap: wrap;

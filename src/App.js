@@ -14,11 +14,21 @@ import { Datas } from './Utils/Data/Data';
 import UserCard from './Portfolio/UserCard';
 import Notfound from './Pages/Notfound';
 import DiyaEffect from './Components/Diya';
+import { px } from 'framer-motion';
 // import { Switch } from '@mui/material';
 
 const Container = styled.div`
   justify-content: center;
 `;
+
+
+const Firework = styled.div`
+  position: fixed;
+  // z-index: 3000;
+  width: 100%;
+`;
+
+
 
 function App() {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -31,6 +41,10 @@ function App() {
         <NavBar menuOpen={menuOpen} setMenuOpen={setMenuOpen} />
       )}
 
+      <Firework >
+
+        <EmbeddedHtmlPage />
+      </Firework>
 
       <Routes>
 
@@ -46,8 +60,9 @@ function App() {
       </Routes>
 
  
+      
 
-      <EmbeddedHtmlPage />
+      
       <DiyaEffect />
     </Container>
   );
@@ -57,10 +72,10 @@ function App() {
 function EmbeddedHtmlPage() {
   return (
     <iframe
-      src="/happy-diwali/dist/index.html" // Place the HTML file in the public folder and adjust the path accordingly
+      src="/happy-diwali/dist/index.html" 
       title="Embedded HTML Page"
       style={{
-        
+        marginTop: '0px',
         width: '100%',
         height: '100vh',
         border: 'none',

@@ -7,7 +7,8 @@ import Giscus from '@giscus/react';
 import ConfessionForm from '../Components/ConfessionForm';
 
 const MainContainer = styled.div`
-  
+    position: relative;  // for the fireworks happy diwali effect
+
   justify-content: center;
   align-items: center;
   width: 50%;

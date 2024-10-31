@@ -4,6 +4,7 @@ import LinkedInIcon from '@mui/icons-material/LinkedIn';
 
 // Styled Components
 const MainCardContainer = styled.div`
+
   background-color: #152515;
   color: #00ff00;
   border-radius: 15px;
