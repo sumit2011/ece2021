@@ -1,7 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
 
-// Styled Components for the card
 const CardContainer = styled.div`
   background-color: #152515;
   color: #00ff00;

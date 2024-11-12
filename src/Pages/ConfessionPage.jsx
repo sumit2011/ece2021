@@ -101,7 +101,7 @@ const Button = styled.div`
 const ConfessionPage = () => {
 
   const [isFormOpen, setIsFormOpen] = useState(false);
-  // const [users, setUsers] = useState([]);
+  
 
   const handleClick = () => {
     setIsFormOpen(true);
@@ -111,6 +111,8 @@ const ConfessionPage = () => {
     setIsFormOpen(false);
   };
 
+
+  // const [users, setUsers] = useState([]);
   // useEffect(() => {
   //   // Fetch data from the API
   //   const fetchData = async () => {

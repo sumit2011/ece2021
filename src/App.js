@@ -14,8 +14,7 @@ import { Datas } from './Utils/Data/Data';
 import UserCard from './Portfolio/UserCard';
 import Notfound from './Pages/Notfound';
 import DiyaEffect from './Components/Diya';
-import { px } from 'framer-motion';
-// import { Switch } from '@mui/material';
+
 
 const Container = styled.div`
   justify-content: center;
@@ -36,19 +35,16 @@ function App() {
 
   return (
     <Container>
-      {/* Render NavBar only if the current path is not '/sumit-kumar' */}
       {!location.pathname.startsWith('/user/') && (
-        <NavBar menuOpen={menuOpen} setMenuOpen={setMenuOpen} />
+        <>
+            <NavBar menuOpen={menuOpen} setMenuOpen={setMenuOpen} />
+        </>
       )}
-
-      <Firework >
-
-        <EmbeddedHtmlPage />
-      </Firework>
-
+            {/* <Firework >
+            <EmbeddedHtmlPage />
+            </Firework> */}
+      
       <Routes>
-
-        
         <Route path="/" element={<Dashboard />} />
         <Route path="/confessionpage" element={<ConfessionPage />} />
         <Route path='/main' element={<Main />} />
@@ -59,30 +55,13 @@ function App() {
         <Route path='*' element={<Notfound />} />
       </Routes>
 
- 
-      
-
-      
-      <DiyaEffect />
+      {/* <DiyaEffect /> */}
     </Container>
   );
 }
 
 
-function EmbeddedHtmlPage() {
-  return (
-    <iframe
-      src="/happy-diwali/dist/index.html" 
-      title="Embedded HTML Page"
-      style={{
-        marginTop: '0px',
-        width: '100%',
-        height: '100vh',
-        border: 'none',
-      }}
-    />
-  );
-}
+
 
 function UserDetail() {
   const { userid } = useParams();
@@ -96,3 +75,21 @@ function UserDetail() {
 }
 
 export default App;
+
+
+
+
+// function EmbeddedHtmlPage() {
+//   return (
+//     <iframe
+//       src="/happy-diwali/dist/index.html" 
+//       title="Embedded HTML Page"
+//       style={{
+//         marginTop: '0px',
+//         width: '100%',
+//         height: '100vh',
+//         border: 'none',
+//       }}
+//     />
+//   );
+// }

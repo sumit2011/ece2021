@@ -2,7 +2,6 @@ import React, { useState } from 'react';
 import styled from 'styled-components';
 import { Person, Email, Assignment, Instagram, Facebook, Twitter, LinkedIn, Link, Image as ImageIcon } from '@mui/icons-material';
 
-// Styled components
 const ModalBackground = styled.div`
   position: fixed;
   top: 0;
@@ -165,7 +164,6 @@ const CustomAlertButton = styled.button`
   margin-top: 10px;
 `;
 
-// Main component
 const JoinForm = ({ onClose }) => {
   const [formData, setFormData] = useState({
     name: '',
@@ -176,23 +174,20 @@ const JoinForm = ({ onClose }) => {
     twitterid: '',
     linkedinid: '',
     link: '',
-    image: null // To store image file
+    image: null 
   });
 
-  const [alertVisible, setAlertVisible] = useState(false); // State to control alert visibility
+  const [alertVisible, setAlertVisible] = useState(false); 
 
-  // Handle input changes
   const handleInputChange = (e) => {
     const { name, value } = e.target;
     setFormData({ ...formData, [name]: value });
   };
 
-  // Handle image file changes
   const handleImageChange = (e) => {
     setFormData({ ...formData, image: e.target.files[0] });
   };
 
-  // Handle form submission
   const handleSubmit = async (e) => {
     e.preventDefault();
     
@@ -221,7 +216,7 @@ const JoinForm = ({ onClose }) => {
 
       if (response.ok) {
         console.log('Form submitted successfully');
-        setAlertVisible(true); // Show the alert on successful submission
+        setAlertVisible(true); 
       } else {
         const errorResponse = await response.json();
         console.error('Error submitting form:', errorResponse);
@@ -230,7 +225,6 @@ const JoinForm = ({ onClose }) => {
       console.error('Error:', error);
     }
 
-    // Don't close the modal immediately after submission
   };
 
   return (
@@ -327,7 +321,7 @@ const JoinForm = ({ onClose }) => {
                   onChange={handleInputChange}
                 />
               </InputContainer>
-              {/* Image upload */}
+
               <InputContainer>
                 <InputIcon><ImageIcon /></InputIcon>
                 <Input
@@ -340,7 +334,7 @@ const JoinForm = ({ onClose }) => {
              
             </form>
           </FormContainer>
-           {/* Submit button */}
+       
            <SubmitButton type="submit" onClick={handleSubmit}>
                 Submit
               </SubmitButton>
